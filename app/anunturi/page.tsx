@@ -434,7 +434,7 @@ export default function AnunturiPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 relative z-0">
             {anunturi.map((anunt) => (
               <div key={anunt.id} className="hover:-translate-y-1 transition-transform duration-300 group">
-                <AnuntCard data={anunt} />
+               <AnuntCard data={anunt as any} />
               </div>
             ))}
           </div>

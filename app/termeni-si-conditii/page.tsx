@@ -252,7 +252,7 @@ export default function UltimateTermsAndConditionsPage() {
           </TermsSection>
 
           <TermsSection id="t5" title="5. Declarația Comercială: Funcționare 100% Gratuită" defaultOpen={true}>
-            <AlertBox type="success">
+          <AlertBox type="info">
               <h4 className="font-black text-xl mb-2 flex items-center gap-2">Zero Taxe. Zero Comisioane.</h4>
               <p className="mb-3">
                 Roomy a fost construit din dorința de a curăța piața imobiliară și de a oferi un instrument util comunității. De aceea, la acest moment, <strong>utilizarea platformei este absolut gratuită pentru toți utilizatorii</strong>.

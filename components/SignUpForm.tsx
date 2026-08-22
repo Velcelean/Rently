@@ -1,7 +1,13 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { createClient } from "@/lib/supabase/client";
+import { createBrowserClient } from "@supabase/ssr";
+
+function createClient() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
+  return createBrowserClient(supabaseUrl, supabaseKey);
+}
 
 export default function SignUpForm() {
   const [email, setEmail] = useState("");
