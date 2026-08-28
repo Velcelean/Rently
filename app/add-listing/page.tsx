@@ -64,7 +64,6 @@ export default function AddListingPage() {
 
   const [notification, setNotification] = useState<{show: boolean, type: 'success' | 'error' | 'warning', message: string}>({ show: false, type: 'success', message: '' });
 
-  // Verificare Sesiune
   useEffect(() => {
     async function checkUser() {
       const { data: { session } } = await supabase.auth.getSession();
@@ -74,9 +73,6 @@ export default function AddListingPage() {
     checkUser();
   }, [router, supabase]);
 
-  // ==========================================
-  // STĂRI FORMULAR
-  // ==========================================
   const [tipAnunt, setTipAnunt] = useState("oferta_camera");
   const [tipLocuinta, setTipLocuinta] = useState("camera_privata");
   const [titlu, setTitlu] = useState("");
@@ -104,7 +100,6 @@ export default function AddListingPage() {
   const [imagePreviews, setImagePreviews] = useState<string[]>([]);
   const [isDragging, setIsDragging] = useState(false);
 
-  // 🛡️ Filtru Text Anti-Spam
   const containsBadWords = (text: string) => {
     const normalizedText = text.toLowerCase();
     return BAD_WORDS_LIST.some(word => {
@@ -113,9 +108,6 @@ export default function AddListingPage() {
     });
   };
 
-  // ==========================================
-  // LOGICĂ NOUĂ: VALIDARE INTELIGENTĂ
-  // ==========================================
   const isFormValid = useMemo(() => {
     const isOferta = tipAnunt === "oferta_camera";
     const hasEnoughPhotos = isOferta ? imageFiles.length >= MIN_PHOTOS_REQUIRED : true;
@@ -130,7 +122,7 @@ export default function AddListingPage() {
   }, [titlu, descriere, pret, oras, imageFiles, tipAnunt]);
 
   const photoProgress = useMemo(() => {
-    if (tipAnunt === "cerere_camera") return 100; // Verde maxim pentru căutare (pozele sunt opționale)
+    if (tipAnunt === "cerere_camera") return 100; 
     return Math.min(100, (imageFiles.length / MIN_PHOTOS_REQUIRED) * 100);
   }, [imageFiles.length, tipAnunt]);
 
@@ -143,12 +135,8 @@ export default function AddListingPage() {
     setSelectedAmenities(prev => prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]);
   };
 
-  // ==========================================
-  // LOGICA FOTO 
-  // ==========================================
   const processFiles = (filesArray: File[]) => {
     const validImageFiles = filesArray.filter(file => file.type.startsWith('image/'));
-    
     if (validImageFiles.length !== filesArray.length) {
       showNotification('warning', 'Am ignorat fișierele care nu sunt imagini.');
     }
@@ -156,7 +144,6 @@ export default function AddListingPage() {
       showNotification('error', `Poți adăuga maxim ${MAX_PHOTOS_ALLOWED} poze în total.`);
       return;
     }
-
     const newFiles = [...imageFiles, ...validImageFiles];
     setImageFiles(newFiles);
     const newPreviews = newFiles.map(file => URL.createObjectURL(file));
@@ -187,14 +174,10 @@ export default function AddListingPage() {
     }
   };
 
-  // ==========================================
-  // SUBMIT SPRE SUPABASE
-  // ==========================================
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!user) return;
     
-    // Verificăm dacă oferă chirie și nu are destule poze
     if (tipAnunt === "oferta_camera" && imageFiles.length < MIN_PHOTOS_REQUIRED) {
       showNotification('error', `Ai nevoie de minim ${MIN_PHOTOS_REQUIRED} poze pentru a posta oferta.`);
       document.getElementById('photo-section')?.scrollIntoView({ behavior: 'smooth' });
@@ -211,6 +194,8 @@ export default function AddListingPage() {
 
     try {
       let imageUrls: string[] = [];
+      let uploadedFileNames: string[] = []; // Pentru a putea șterge pozele dacă AI-ul le respinge
+
       if (imageFiles.length > 0) {
         for (const file of imageFiles) {
           const fileExt = file.name.split('.').pop();
@@ -221,6 +206,30 @@ export default function AddListingPage() {
           
           const { data } = supabase.storage.from('listing-images').getPublicUrl(fileName);
           imageUrls.push(data.publicUrl);
+          uploadedFileNames.push(fileName);
+        }
+      }
+
+      // 🤖 SCUTUL AI: VERIFICĂM CONȚINUTUL ÎNAINTE DE A SALVA
+      if (imageUrls.length > 0 || combinedText) {
+        showNotification('warning', '🤖 AI-ul nostru scanează anunțul pentru siguranță...');
+        
+        const moderationRes = await fetch('/api/moderate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: combinedText, imageUrls })
+        });
+        
+        const moderationData = await moderationRes.json();
+        
+        if (!moderationData.safe) {
+          // Ștergem pozele proaspăt urcate din găleata de stocare pentru a nu păstra mizeria
+          if (uploadedFileNames.length > 0) {
+            await supabase.storage.from('listing-images').remove(uploadedFileNames);
+          }
+          showNotification('error', `🚫 Anunț blocat: ${moderationData.reason}`);
+          setLoading(false);
+          return; // OPRIM TOT!
         }
       }
 
@@ -234,7 +243,6 @@ export default function AddListingPage() {
         city: oras.trim(),
         adresa: adresa.trim(),
         utilitati_incluse: utilitatiIncluse,
-        // Salvăm "fara" garanție automat dacă este o cerere
         garantie: tipAnunt === "cerere_camera" ? "fara" : garantie,
         tip_camera: tipCamera,
         numar_bai: Number(numarBai),
@@ -262,9 +270,6 @@ export default function AddListingPage() {
     }
   };
 
-  // ==========================================
-  // COMPONENTE UI INTERNE
-  // ==========================================
   const ToggleSwitch = ({ checked, onChange, label, sublabel }: any) => (
     <div className={`cursor-pointer flex items-center justify-between p-5 border-2 rounded-2xl transition-all duration-300 ${checked ? 'border-blue-600 bg-blue-50/50 shadow-sm' : 'border-slate-200 hover:border-blue-300 bg-white'}`} onClick={() => onChange(!checked)}>
       <div>
@@ -290,7 +295,7 @@ export default function AddListingPage() {
       
       <div className="bg-slate-900 text-white text-xs font-bold text-center py-2 flex items-center justify-center gap-2">
         <Icons.Shield /> 
-        Platformă protejată de un filtru avansat de securitate.
+        Platformă protejată de un filtru AI avansat de securitate.
       </div>
 
       <div className={`fixed top-24 right-4 sm:right-8 z-50 transition-all duration-500 transform ${notification.show ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0 pointer-events-none'}`}>
@@ -313,7 +318,6 @@ export default function AddListingPage() {
         <div className="bg-white border border-slate-200 rounded-[2.5rem] p-6 sm:p-10 md:p-12 shadow-2xl shadow-slate-200/50">
           <form onSubmit={handleSubmit} className="space-y-14">
             
-            {/* 1. INFORMATII BAZA */}
             <section>
               <SectionBadge number="1" title="Informații de bază" colorClass="text-blue-600" bgClass="bg-blue-100" />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
@@ -339,7 +343,6 @@ export default function AddListingPage() {
                 <input type="text" required value={titlu} onChange={(e) => setTitlu(e.target.value)} placeholder="Ex: Cameră spațioasă și luminoasă" className="w-full px-5 py-4 bg-slate-50 border-2 border-slate-200 rounded-2xl text-lg font-bold focus:border-blue-600" />
               </div>
 
-              {/* RÂND DINAMIC: Dacă Oferă -> 3 coloane (Include Garanția). Dacă Caută -> 2 coloane */}
               <div className={`grid grid-cols-1 ${tipAnunt === 'oferta_camera' ? 'sm:grid-cols-3' : 'sm:grid-cols-2'} gap-6 mb-6`}>
                 <div>
                   <label className="block text-[11px] font-black text-slate-400 uppercase tracking-widest mb-2 ml-1">Oraș *</label>
@@ -381,7 +384,6 @@ export default function AddListingPage() {
                 </div>
               </div>
 
-              {/* 🗺️ GOOGLE MAPS LIVE PREVIEW */}
               {oras.length >= 2 && (
                 <div className="mb-8 animate-fade-in-up bg-slate-50 border border-slate-200 p-2 sm:p-4 rounded-[2rem] shadow-sm relative overflow-hidden">
                   <div className="flex justify-between items-center px-2 mb-3">
@@ -421,7 +423,6 @@ export default function AddListingPage() {
               </div>
             </section>
 
-            {/* 2. FACILITATI */}
             <section>
               <SectionBadge number="2" title="Detalii și Facilități" colorClass="text-indigo-600" bgClass="bg-indigo-100" />
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
@@ -462,7 +463,6 @@ export default function AddListingPage() {
               </div>
             </section>
 
-            {/* 3. REGULI */}
             <section>
               <SectionBadge number="3" title={tipAnunt === 'cerere_camera' ? 'Preferințe & Stil de Viață' : 'Reguli și Preferințe'} colorClass="text-pink-600" bgClass="bg-pink-100" />
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -502,7 +502,6 @@ export default function AddListingPage() {
               </div>
             </section>
 
-            {/* 4. FOTOGRAFII & SCUT */}
             <section id="photo-section" className="scroll-mt-24">
               <SectionBadge 
                 number="4" 
@@ -578,7 +577,6 @@ export default function AddListingPage() {
               </div>
             </section>
 
-            {/* BUTON SUBMIT */}
             <div className="pt-10 flex flex-col items-center justify-center border-t border-slate-100">
               {!isFormValid && !loading && (
                 <div className="mb-6 flex items-start gap-3 bg-amber-50 text-amber-800 px-5 py-4 rounded-2xl border border-amber-200 max-w-lg text-left animate-fade-in-up">
@@ -590,7 +588,7 @@ export default function AddListingPage() {
                 </div>
               )}
               <button type="submit" disabled={loading || !isFormValid} className="bg-slate-900 hover:bg-black text-white font-black py-5 px-16 rounded-[1.5rem] disabled:opacity-40 disabled:cursor-not-allowed text-lg flex items-center justify-center gap-3 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-                {loading ? "Se publică..." : !isFormValid ? <><Icons.Lock /> Formular Incomplet</> : "🚀 Postează Anunțul"}
+                {loading ? "Se verifică și publică..." : !isFormValid ? <><Icons.Lock /> Formular Incomplet</> : "🚀 Postează Anunțul"}
               </button>
             </div>
           </form>
