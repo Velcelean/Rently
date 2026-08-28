@@ -15,7 +15,7 @@ function createClient() {
 }
 
 // ==========================================
-// 2. TYPESCRIPT INTERFACES (Definiții Stricte)
+// 2. TYPESCRIPT INTERFACES
 // ==========================================
 interface DashboardStats {
   usersCount: number;
@@ -33,6 +33,14 @@ interface Listing {
   user_id: string;
   profiles?: { full_name: string; avatar_url: string };
   image_urls?: string[];
+}
+
+interface Profile {
+  id: string;
+  full_name: string;
+  avatar_url: string;
+  created_at: string;
+  email?: string;
 }
 
 interface Feedback {
@@ -114,6 +122,7 @@ export default function AdminCommandCenter() {
   // Stări Date (Database)
   const [stats, setStats] = useState<DashboardStats>({ usersCount: 0, listingsCount: 0, feedbackCount: 0, reportsCount: 0 });
   const [listings, setListings] = useState<Listing[]>([]);
+  const [profiles, setProfiles] = useState<Profile[]>([]);
   const [feedback, setFeedback] = useState<Feedback[]>([]);
   const [reports, setReports] = useState<Report[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -168,25 +177,28 @@ export default function AdminCommandCenter() {
         const [
           listingsRes,
           feedbackRes,
-          reportsRes
+          reportsRes,
+          profilesRes
         ] = await Promise.all([
           supabase.from("listings").select("*, profiles(full_name, avatar_url)").order("created_at", { ascending: false }),
           supabase.from("platform_feedback").select("*, profiles(full_name, email)").order("created_at", { ascending: false }),
-          supabase.from("reports").select("*, reporter:profiles(full_name)").order("created_at", { ascending: false })
+          supabase.from("reports").select("*, reporter:profiles(full_name)").order("created_at", { ascending: false }),
+          supabase.from("profiles").select("*").order("created_at", { ascending: false })
         ]);
 
         if (isMounted) {
           const lData = listingsRes.data || [];
           const fData = feedbackRes.data || [];
           const rData = reportsRes.data || [];
+          const pData = profilesRes.data || [];
 
           setListings(lData);
           setFeedback(fData);
           setReports(rData);
+          setProfiles(pData);
 
-          // Simulăm numărul de useri pentru că Auth necesită Edge Functions
           setStats({
-            usersCount: lData.length * 2 + 15, // Mock number pt design
+            usersCount: pData.length,
             listingsCount: lData.length,
             feedbackCount: fData.length,
             reportsCount: rData.length
@@ -290,9 +302,7 @@ export default function AdminCommandCenter() {
   return (
     <div className="min-h-screen bg-slate-50 flex font-sans selection:bg-blue-500 selection:text-white">
       
-      {/* ========================================== */}
       {/* MODAL GLOBAL ACȚIUNI */}
-      {/* ========================================== */}
       {deleteModal.isOpen && (
         <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm transition-opacity" onClick={() => !isProcessing && setDeleteModal({...deleteModal, isOpen: false})}></div>
@@ -318,9 +328,7 @@ export default function AdminCommandCenter() {
         </div>
       )}
 
-      {/* ========================================== */}
       {/* TOAST MANAGER */}
-      {/* ========================================== */}
       <div className="fixed top-6 right-6 z-[300] flex flex-col gap-3 pointer-events-none">
         {toasts.map(toast => (
           <div key={toast.id} className={`flex items-center gap-3 px-6 py-4 rounded-2xl shadow-2xl border backdrop-blur-md animate-fade-in pointer-events-auto ${toast.type === 'success' ? 'bg-emerald-900 border-emerald-700 text-emerald-50' : toast.type === 'error' ? 'bg-rose-900 border-rose-700 text-rose-50' : 'bg-amber-900 border-amber-700 text-amber-50'}`}>
@@ -330,9 +338,7 @@ export default function AdminCommandCenter() {
         ))}
       </div>
 
-      {/* ========================================== */}
       {/* SIDEBAR (Dark Mode Enterprise) */}
-      {/* ========================================== */}
       <aside className="w-72 bg-[#0f172a] text-slate-300 hidden lg:flex flex-col shrink-0 border-r border-slate-800 shadow-2xl relative z-20">
         <div className="p-8 border-b border-slate-800/50">
           <div className="flex items-center gap-3 text-white mb-1">
@@ -396,12 +402,10 @@ export default function AdminCommandCenter() {
         </div>
       </aside>
 
-      {/* ========================================== */}
       {/* MAIN CONTENT AREA */}
-      {/* ========================================== */}
       <div className="flex-grow flex flex-col h-screen overflow-hidden bg-slate-50">
         
-        {/* TOPBAR MOBILE (PENTRU RESPONSIVE) */}
+        {/* TOPBAR MOBILE */}
         <div className="lg:hidden bg-slate-900 text-white p-4 flex justify-between items-center z-20">
            <h2 className="font-black tracking-tight text-xl">Rently<span className="text-blue-500">OS</span></h2>
            <button onClick={() => router.push('/dashboard')} className="text-xs bg-slate-800 px-3 py-2 rounded-lg font-bold">Ieși</button>
@@ -414,11 +418,12 @@ export default function AdminCommandCenter() {
           <header className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
               <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight capitalize">
-                {activeTab.replace('_', ' ')}
+                {activeTab === 'users' ? 'Utilizatori Înregistrați' : activeTab.replace('_', ' ')}
               </h1>
               <p className="text-slate-500 font-medium mt-2 max-w-xl">
                 {activeTab === 'overview' && "Privire de ansamblu asupra performanței și sănătății platformei Rently."}
                 {activeTab === 'listings' && "Gestionează, filtrează și moderează toate anunțurile postate de utilizatori."}
+                {activeTab === 'users' && "Lista completă a conturilor înregistrate în baza de date Supabase."}
                 {activeTab === 'feedback' && "Citește ce spun utilizatorii despre platformă. Părerile lor contează."}
                 {activeTab === 'reports' && "Atenție necesară: investighează plângerile și asigură un mediu curat."}
               </p>
@@ -438,12 +443,9 @@ export default function AdminCommandCenter() {
             )}
           </header>
 
-          {/* ========================================== */}
-          {/* TAB 1: OVERVIEW (DASHBOARD CHARTS) */}
-          {/* ========================================== */}
+          {/* TAB 1: OVERVIEW */}
           {activeTab === "overview" && (
             <div className="animate-fade-in-up space-y-8">
-              {/* KPI WIDGETS */}
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
                 <div className="bg-white p-6 rounded-[2rem] border border-slate-200 shadow-sm flex items-center gap-5 hover:shadow-lg transition-shadow">
                   <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-[1.2rem] flex items-center justify-center shrink-0"><Icons.Users /></div>
@@ -475,7 +477,6 @@ export default function AdminCommandCenter() {
                 </div>
               </div>
 
-              {/* FAKE SVG CHART (Enterprise Feel without libraries) */}
               <div className="bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm">
                 <div className="flex justify-between items-center mb-8">
                   <div>
@@ -486,11 +487,9 @@ export default function AdminCommandCenter() {
                 </div>
                 
                 <div className="w-full h-64 relative">
-                  {/* Grid Lines */}
                   <div className="absolute inset-0 flex flex-col justify-between">
                     {[1,2,3,4,5].map(i => <div key={i} className="w-full border-t border-slate-100/80"></div>)}
                   </div>
-                  {/* Custom SVG Line Chart */}
                   <svg viewBox="0 0 1000 200" className="absolute inset-0 w-full h-full preserve-3d" preserveAspectRatio="none">
                     <defs>
                       <linearGradient id="gradientBlue" x1="0" x2="0" y1="0" y2="1">
@@ -498,11 +497,8 @@ export default function AdminCommandCenter() {
                         <stop offset="100%" stopColor="rgba(59, 130, 246, 0)" />
                       </linearGradient>
                     </defs>
-                    {/* Area fill */}
                     <path d="M0,180 L100,150 L300,160 L500,80 L700,100 L900,40 L1000,20 L1000,200 L0,200 Z" fill="url(#gradientBlue)" />
-                    {/* Line path */}
                     <path d="M0,180 L100,150 L300,160 L500,80 L700,100 L900,40 L1000,20" fill="none" stroke="#3b82f6" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-                    {/* Data Points */}
                     <circle cx="500" cy="80" r="6" fill="#fff" stroke="#3b82f6" strokeWidth="3" className="animate-pulse" />
                     <circle cx="900" cy="40" r="6" fill="#fff" stroke="#3b82f6" strokeWidth="3" className="animate-pulse" />
                   </svg>
@@ -514,9 +510,7 @@ export default function AdminCommandCenter() {
             </div>
           )}
 
-          {/* ========================================== */}
-          {/* TAB 2: LISTINGS (Tabel Avansat) */}
-          {/* ========================================== */}
+          {/* TAB 2: LISTINGS */}
           {activeTab === "listings" && (
             <div className="bg-white border border-slate-200 rounded-[2.5rem] shadow-sm overflow-hidden animate-fade-in-up">
               <div className="overflow-x-auto">
@@ -559,7 +553,7 @@ export default function AdminCommandCenter() {
                         </td>
                         <td className="px-8 py-5 text-right">
                           <div className="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <Link href={`/listing/${listing.id}`} target="_blank" className="p-2 bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white rounded-xl transition-colors tooltip-trigger" title="Vezi pe site">
+                            <Link href={`/listing/${listing.id}`} target="_blank" className="p-2 bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white rounded-xl transition-colors" title="Vezi pe site">
                               <Icons.Eye />
                             </Link>
                             <button onClick={() => setDeleteModal({isOpen: true, id: listing.id, type: 'listing', title: listing.title})} className="p-2 bg-rose-50 text-rose-600 hover:bg-rose-600 hover:text-white rounded-xl transition-colors" title="Șterge Forțat">
@@ -581,9 +575,54 @@ export default function AdminCommandCenter() {
             </div>
           )}
 
-          {/* ========================================== */}
-          {/* TAB 3: FEEDBACK (Recenzii Platformă) */}
-          {/* ========================================== */}
+          {/* TAB 3: USERS (ACUM FUNCTIONAL CU TABEL DE PROFILE) */}
+          {activeTab === "users" && (
+            <div className="bg-white border border-slate-200 rounded-[2.5rem] shadow-sm overflow-hidden animate-fade-in-up">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                  <thead className="bg-slate-50 border-b border-slate-200">
+                    <tr>
+                      <th className="px-8 py-5 text-[10px] font-black uppercase tracking-widest text-slate-400">Utilizator</th>
+                      <th className="px-8 py-5 text-[10px] font-black uppercase tracking-widest text-slate-400">ID Utilizator</th>
+                      <th className="px-8 py-5 text-[10px] font-black uppercase tracking-widest text-slate-400">Data Înregistrării</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {profiles.length > 0 ? profiles.map((user) => (
+                      <tr key={user.id} className="hover:bg-slate-50/80 transition-colors">
+                        <td className="px-8 py-5">
+                          <div className="flex items-center gap-3">
+                            <img 
+                              src={user.avatar_url || "https://ui-avatars.com/api/?name=" + (user.full_name || 'User')} 
+                              alt="avatar" 
+                              className="w-10 h-10 rounded-full bg-slate-200 object-cover" 
+                            />
+                            <span className="font-bold text-sm text-slate-900">{user.full_name || 'Utilizator Fără Nume'}</span>
+                          </div>
+                        </td>
+                        <td className="px-8 py-5">
+                          <span className="text-xs font-mono text-slate-500 bg-slate-100 px-2 py-1 rounded-md">{user.id}</span>
+                        </td>
+                        <td className="px-8 py-5">
+                          <span className="text-sm font-medium text-slate-600">
+                            {user.created_at ? formatDate(user.created_at) : 'N/A'}
+                          </span>
+                        </td>
+                      </tr>
+                    )) : (
+                      <tr>
+                        <td colSpan={3} className="px-8 py-16 text-center text-slate-400 font-medium">
+                          Niciun utilizator înregistrat în baza de date momentan.
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* TAB 4: FEEDBACK */}
           {activeTab === "feedback" && (
             <div className="animate-fade-in-up">
               {feedback.length === 0 ? (
@@ -630,9 +669,7 @@ export default function AdminCommandCenter() {
             </div>
           )}
 
-          {/* ========================================== */}
-          {/* TAB 4: REPORTS (Centru Moderație) */}
-          {/* ========================================== */}
+          {/* TAB 5: REPORTS */}
           {activeTab === "reports" && (
             <div className="animate-fade-in-up">
               {reports.length === 0 ? (

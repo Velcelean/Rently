@@ -72,10 +72,6 @@ export default function HomePage() {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
             
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md rounded-full px-5 py-2 text-xs md:text-sm font-bold text-blue-100 mb-8 shadow-lg">
-              ✨ Platforma #1 pentru chirii și colegi de apartament
-            </div>
-
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter leading-[1.1] drop-shadow-lg">
               Împarte chiria, <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-white">dublează bucuria.</span>
