@@ -101,8 +101,8 @@ export default function Header() {
     <header className="px-4 md:px-6 lg:px-12 h-20 flex items-center justify-between border-b border-slate-100 bg-white z-50 sticky top-0 relative">
       
       <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity z-50">
-        <img src="/logo.png" alt="Roomy Logo" className="h-14 md:h-16 lg:h-[4.5rem] w-auto object-contain transform origin-left" />
-        <span className="text-xl md:text-2xl font-black text-blue-600 tracking-tight">Roomy</span>
+        <img src="/logo.png" alt="Rently Logo" className="h-14 md:h-16 lg:h-[4.5rem] w-auto object-contain transform origin-left" />
+        <span className="text-xl md:text-2xl font-black text-blue-600 tracking-tight">Rently</span>
       </Link>
 
       {/* ========================================== */}

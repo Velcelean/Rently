@@ -95,7 +95,7 @@ export default function FAQPage() {
           </h1>
           
           <p className="text-xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed mb-10">
-            Află cum funcționează ecosistemul Roomy, cum să îți gestionezi anunțurile și cum să folosești platforma în deplină siguranță.
+            Află cum funcționează ecosistemul Rently, cum să îți gestionezi anunțurile și cum să folosești platforma în deplină siguranță.
           </p>
 
           {/* Quick Search Bar (Visual Only) */}
@@ -125,7 +125,7 @@ export default function FAQPage() {
               </h3>
               <nav className="space-y-1 text-sm font-bold">
                 <a href="#cat-despre" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-blue-700 hover:bg-blue-50 rounded-xl transition-all">
-                  <span className="text-xl">👋</span> 1. Despre Roomy
+                  <span className="text-xl">👋</span> 1. Despre Rently
                 </a>
                 <a href="#cat-cautare" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-blue-700 hover:bg-blue-50 rounded-xl transition-all">
                   <span className="text-xl">🔍</span> 2. Căutare & Vizionări
@@ -149,7 +149,7 @@ export default function FAQPage() {
               <p className="text-blue-100 mb-6 text-sm leading-relaxed relative z-10">
                 Suntem un proiect independent și răspundem personal la fiecare e-mail. Scrie-ne și te vom ajuta!
               </p>
-              <a href="mailto:contact@roomy.ro" className="inline-flex items-center justify-center w-full bg-white text-blue-700 font-bold py-3 px-6 rounded-xl hover:bg-blue-50 transition-colors shadow-md relative z-10">
+              <a href="mailto:contact@Rently.ro" className="inline-flex items-center justify-center w-full bg-white text-blue-700 font-bold py-3 px-6 rounded-xl hover:bg-blue-50 transition-colors shadow-md relative z-10">
                 Contactează-ne ✉️
               </a>
             </div>
@@ -159,11 +159,11 @@ export default function FAQPage() {
         {/* CONTINUT EXHAUSTIV FAQ */}
         <div className="w-full xl:w-[calc(100%-25rem)] pb-32">
           
-          {/* CATEGORIA 1: DESPRE ROOMY */}
-          <FaqCategory id="cat-despre" title="1. Despre Roomy" icon="👋">
-            <FaqItem question="Ce este Roomy și cu ce vă ocupați?" defaultOpen={true}>
+          {/* CATEGORIA 1: DESPRE Rently */}
+          <FaqCategory id="cat-despre" title="1. Despre Rently" icon="👋">
+            <FaqItem question="Ce este Rently și cu ce vă ocupați?" defaultOpen={true}>
               <p>
-                Roomy este o platformă digitală dedicată coabitării (închirierea de camere și găsirea de colegi de apartament) din România. Am creat acest spațiu pentru a rezolva haosul de pe rețelele sociale și pentru a elimina comisioanele agențiilor din procesul de închiriere. 
+                Rently este o platformă digitală dedicată coabitării (închirierea de camere și găsirea de colegi de apartament) din România. Am creat acest spațiu pentru a rezolva haosul de pe rețelele sociale și pentru a elimina comisioanele agențiilor din procesul de închiriere. 
               </p>
               <p>
                 Noi îți oferim <strong>tehnologia</strong> (site-ul, filtrele de căutare, mesageria sigură), iar tu interacționezi direct cu viitorul tău coleg sau cu proprietarul locuinței.
@@ -172,7 +172,7 @@ export default function FAQPage() {
             
             <FaqItem question="Trebuie să plătesc ceva? Există taxe ascunse?">
               <p>
-                <strong>Nu. Platforma Roomy este 100% gratuită.</strong>
+                <strong>Nu. Platforma Rently este 100% gratuită.</strong>
               </p>
               <p>
                 Spre deosebire de agențiile imobiliare clasice sau de alte site-uri de anunțuri, noi nu percepem comisioane din valoarea chiriei și nu percepem nicio taxă pentru postarea unui anunț. Poți căuta, posta și contacta alți utilizatori fără a scoate vreodată cardul bancar din portofel.
@@ -213,7 +213,7 @@ export default function FAQPage() {
           <FaqCategory id="cat-cautare" title="2. Căutare & Vizionări" icon="🔍">
             <FaqItem question="Cum încep să folosesc site-ul?">
               <p>
-                Poți căuta și vizualiza toate anunțurile de pe Roomy în mod complet anonim, fără să ai un cont. Totuși, <strong>pentru a posta un anunț sau pentru a putea trimite un mesaj altui utilizator, va trebui să îți creezi un cont.</strong>
+                Poți căuta și vizualiza toate anunțurile de pe Rently în mod complet anonim, fără să ai un cont. Totuși, <strong>pentru a posta un anunț sau pentru a putea trimite un mesaj altui utilizator, va trebui să îți creezi un cont.</strong>
               </p>
               <p>
                 Crearea contului este gratuită și durează sub un minut. Ai nevoie doar de o adresă de e-mail validă.
@@ -267,7 +267,7 @@ export default function FAQPage() {
 
             <FaqItem question="Cum adaug sau șterg fotografii din anunțul meu?">
               <p>
-                Pe Roomy, fiecare utilizator poate adăuga <strong>până la 10 fotografii gratuit</strong> per anunț.
+                Pe Rently, fiecare utilizator poate adăuga <strong>până la 10 fotografii gratuit</strong> per anunț.
               </p>
               <p>
                 În momentul în care creezi sau editezi anunțul, mergi la secțiunea "Fotografii". Apasă pe căsuța punctată pentru a selecta imagini din telefon sau calculator. Pentru a șterge o poză adăugată din greșeală, apasă pe micul <strong>„X” roșu</strong> din colțul acelei imagini.
@@ -304,7 +304,7 @@ export default function FAQPage() {
                 Luăm siguranța comunității extrem de în serios. Din acest motiv, dacă sistemele noastre automate (anti-spam) detectează ceva suspect în anunțul tău (ex: un preț mult prea mic pentru zona respectivă, prea multe link-uri externe în descriere, sau fotografii care par preluate de pe internet), anunțul tău intră automat în <strong>Carantină (Pending)</strong>.
               </p>
               <p>
-                Acest lucru înseamnă că un operator uman din echipa Roomy trebuie să îl verifice manual pentru a se asigura că nu este o fraudă. Această verificare durează, de obicei, sub o oră, după care anunțul tău va apărea public pe site.
+                Acest lucru înseamnă că un operator uman din echipa Rently trebuie să îl verifice manual pentru a se asigura că nu este o fraudă. Această verificare durează, de obicei, sub o oră, după care anunțul tău va apărea public pe site.
               </p>
             </FaqItem>
           </FaqCategory>
@@ -313,7 +313,7 @@ export default function FAQPage() {
           <FaqCategory id="cat-mesagerie" title="4. Mesagerie & Siguranță" icon="💬">
             <FaqItem question="Cum funcționează sistemul de mesaje (Chat)?">
               <p>
-                Când apeși pe „Trimite Mesaj” pe pagina unui anunț, se deschide o conversație privată în Inbox-ul Roomy între tine și proprietarul anunțului.
+                Când apeși pe „Trimite Mesaj” pe pagina unui anunț, se deschide o conversație privată în Inbox-ul Rently între tine și proprietarul anunțului.
               </p>
               <p>
                 <strong>De ce folosim mesageria proprie?</strong> Pentru că este cel mai sigur mod. Nu trebuie să îți publici numărul de telefon pe internet pentru toată lumea. Poți discuta, poți pune întrebări și abia când ești convins că cealaltă persoană este de încredere, îi poți lăsa numărul tău de WhatsApp pentru a stabili vizionarea.
@@ -325,7 +325,7 @@ export default function FAQPage() {
                 Toate conversațiile tale sunt salvate în siguranță în secțiunea <strong>Dashboard &rarr; Tab-ul "✉️ Conversații"</strong>.
               </p>
               <p>
-                Nu trebuie să stai toată ziua cu site-ul deschis. Când cineva îți trimite un mesaj nou, sistemul nostru îți va trimite imediat <strong>o alertă pe adresa ta personală de e-mail</strong>, notificându-te că ai un mesaj necitit pe Roomy.
+                Nu trebuie să stai toată ziua cu site-ul deschis. Când cineva îți trimite un mesaj nou, sistemul nostru îți va trimite imediat <strong>o alertă pe adresa ta personală de e-mail</strong>, notificându-te că ai un mesaj necitit pe Rently.
               </p>
             </FaqItem>
 
@@ -364,12 +364,12 @@ export default function FAQPage() {
               </p>
             </FaqItem>
 
-            <FaqItem question="Cum îmi închid/șterg definitiv contul Roomy?">
+            <FaqItem question="Cum îmi închid/șterg definitiv contul Rently?">
               <p>
                 Ai găsit colegul perfect și nu mai ai nevoie de noi? Ne bucurăm! 
               </p>
               <p>
-                Dacă vrei să îți radiezi complet prezența de pe site, o poți face tu însuți. Conform politicilor noastre GDPR de confidențialitate, la ștergerea contului vom distruge ireversibil toate anunțurile tale, profilul tău și istoricul tău de pe platformă. Dacă dorești să faci acest lucru, te rugăm să ne scrii un e-mail la <strong>privacy@roomy.ro</strong> de pe adresa ta înregistrată, iar contul tău va fi volatilizat în maxim 48 de ore.
+                Dacă vrei să îți radiezi complet prezența de pe site, o poți face tu însuți. Conform politicilor noastre GDPR de confidențialitate, la ștergerea contului vom distruge ireversibil toate anunțurile tale, profilul tău și istoricul tău de pe platformă. Dacă dorești să faci acest lucru, te rugăm să ne scrii un e-mail la <strong>privacy@Rently.ro</strong> de pe adresa ta înregistrată, iar contul tău va fi volatilizat în maxim 48 de ore.
               </p>
             </FaqItem>
           </FaqCategory>

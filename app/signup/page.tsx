@@ -117,7 +117,7 @@ export default function SignupPage() {
 
     } catch (error: any) {
       if (error.message.includes("already registered")) {
-        setErrorMsg("Acest email este deja înregistrat pe Roomy.");
+        setErrorMsg("Acest email este deja înregistrat pe Rently.");
       } else {
         setErrorMsg("Eroare la înregistrare: " + error.message);
       }
@@ -159,8 +159,8 @@ export default function SignupPage() {
 
         <div className="relative z-10">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity w-max">
-            <img src="/logo.png" alt="Roomy Logo" className="h-16 w-auto object-contain brightness-0 invert" />
-            <span className="text-4xl font-black text-white tracking-tighter">Roomy</span>
+            <img src="/logo.png" alt="Rently Logo" className="h-16 w-auto object-contain brightness-0 invert" />
+            <span className="text-4xl font-black text-white tracking-tighter">Rently</span>
           </Link>
         </div>
 
@@ -204,8 +204,8 @@ export default function SignupPage() {
         
         <div className="absolute top-6 left-6 lg:hidden flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Roomy Logo" className="h-10 w-auto object-contain" />
-            <span className="text-2xl font-black text-blue-600 tracking-tight">Roomy</span>
+            <img src="/logo.png" alt="Rently Logo" className="h-10 w-auto object-contain" />
+            <span className="text-2xl font-black text-blue-600 tracking-tight">Rently</span>
           </Link>
         </div>
 

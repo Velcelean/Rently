@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 // 1. METADATELE SITE-ULUI (SEO & Social Media)
 // ==========================================
 export const metadata: Metadata = {
-  title: "Roomy - Găsește colegi de apartament și chirii",
+  title: "Rently - Găsește colegi de apartament și chirii",
   description: "Platforma #1 din România pentru colegi de apartament și chirii pe termen lung. 100% gratuit, sigur și fără comisioane.",
 };
 

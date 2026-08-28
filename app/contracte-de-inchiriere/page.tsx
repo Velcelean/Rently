@@ -54,7 +54,7 @@ export default function ContracteInchirierePage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-xs font-black text-indigo-300 uppercase tracking-widest mb-6 backdrop-blur-md">
-            Ghid Juridic Roomy
+            Ghid Juridic Rently
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight text-white max-w-4xl leading-tight">
             Ghidul complet al <br className="hidden md:block"/>
@@ -160,7 +160,7 @@ export default function ContracteInchirierePage() {
             
             <h3 className="font-black text-2xl mb-3 relative z-10">Ai locuința pregătită?</h3>
             <p className="text-sm text-slate-400 mb-8 font-medium leading-relaxed relative z-10">
-              Un contract bun merge mână în mână cu un chiriaș de încredere. Găsește-l astăzi pe Roomy. Mii de oameni caută chiar acum.
+              Un contract bun merge mână în mână cu un chiriaș de încredere. Găsește-l astăzi pe Rently. Mii de oameni caută chiar acum.
             </p>
             
             <div className="space-y-4 relative z-10">
@@ -187,7 +187,7 @@ export default function ContracteInchirierePage() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:contact@roomy.ro" className="group flex items-center gap-3 text-slate-600 hover:text-indigo-600 font-bold transition-colors p-3 hover:bg-slate-50 rounded-xl -ml-3">
+                <a href="mailto:contact@Rently.ro" className="group flex items-center gap-3 text-slate-600 hover:text-indigo-600 font-bold transition-colors p-3 hover:bg-slate-50 rounded-xl -ml-3">
                   <div className="w-10 h-10 bg-slate-100 group-hover:bg-indigo-100 rounded-lg flex items-center justify-center text-lg transition-colors">✉️</div>
                   Contactează-ne
                 </a>

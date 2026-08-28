@@ -73,8 +73,8 @@ export default function UpdatePasswordPage() {
 
         <div className="relative z-10">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity w-max">
-            <img src="/logo.png" alt="Roomy Logo" className="h-16 w-auto object-contain brightness-0 invert" />
-            <span className="text-4xl font-black text-white tracking-tighter">Roomy</span>
+            <img src="/logo.png" alt="Rently Logo" className="h-16 w-auto object-contain brightness-0 invert" />
+            <span className="text-4xl font-black text-white tracking-tighter">Rently</span>
           </Link>
         </div>
 
@@ -104,7 +104,7 @@ export default function UpdatePasswordPage() {
             Alege o nouă <br/> parolă sigură.
           </h2>
           <p className="text-blue-100 text-lg font-medium leading-relaxed">
-            Asigură-te că folosești o parolă unică, pe care nu o mai folosești pe alte site-uri, pentru a-ți păstra contul Roomy în siguranță.
+            Asigură-te că folosești o parolă unică, pe care nu o mai folosești pe alte site-uri, pentru a-ți păstra contul Rently în siguranță.
           </p>
         </div>
       </div>
@@ -113,8 +113,8 @@ export default function UpdatePasswordPage() {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 relative">
         <div className="absolute top-6 left-6 lg:hidden flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Roomy Logo" className="h-10 w-auto object-contain" />
-            <span className="text-2xl font-black text-blue-600 tracking-tight">Roomy</span>
+            <img src="/logo.png" alt="Rently Logo" className="h-10 w-auto object-contain" />
+            <span className="text-2xl font-black text-blue-600 tracking-tight">Rently</span>
           </Link>
         </div>
 

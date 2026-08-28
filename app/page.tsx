@@ -67,7 +67,7 @@ export default function HomePage() {
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[100px] transform -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
           
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[12rem] md:text-[20rem] font-black text-white/[0.03] select-none pointer-events-none tracking-tighter">
-            ROOMY
+            Rently
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
@@ -82,7 +82,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-lg md:text-2xl text-blue-100 max-w-3xl mx-auto font-medium leading-relaxed mb-12 drop-shadow-md">
-              Sigur. Rapid. Transparent. Fie că oferi spre închiriere un apartament, ai o cameră liberă sau cauți un loc de stat, Roomy îți face legătura cu persoana potrivită.
+              Sigur. Rapid. Transparent. Fie că oferi spre închiriere un apartament, ai o cameră liberă sau cauți un loc de stat, Rently îți face legătura cu persoana potrivită.
             </p>
 
             {/* BUTOANELE MODIFICATE */}
@@ -121,7 +121,7 @@ export default function HomePage() {
               <div className="flex flex-col items-center text-center pt-8 md:pt-0 px-4">
                 <div className="w-16 h-16 bg-green-50 text-green-500 rounded-2xl flex items-center justify-center text-3xl mb-4 shadow-inner">💸</div>
                 <h3 className="font-black text-slate-900 text-xl mb-2">0% Comisioane</h3>
-                <p className="text-slate-500 font-medium text-sm">Roomy este complet gratuit pentru tine. Păstrează-ți banii pentru lucruri faine.</p>
+                <p className="text-slate-500 font-medium text-sm">Rently este complet gratuit pentru tine. Păstrează-ți banii pentru lucruri faine.</p>
               </div>
 
             </div>
@@ -237,7 +237,7 @@ export default function HomePage() {
               <div className="bg-white rounded-[2rem] border border-dashed border-slate-300 p-12 text-center max-w-2xl mx-auto shadow-sm">
                 <span className="text-6xl block mb-4">🏠</span>
                 <h3 className="text-2xl font-black text-slate-900 mb-2">Niciun anunț momentan</h3>
-                <p className="text-slate-500 mb-8 font-medium">Baza de date este goală. Fii primul care sparge gheața și postează un anunț pe platforma Roomy!</p>
+                <p className="text-slate-500 mb-8 font-medium">Baza de date este goală. Fii primul care sparge gheața și postează un anunț pe platforma Rently!</p>
                 <Link href="/add-listing" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-black py-4 px-10 rounded-xl transition-all shadow-lg hover:shadow-blue-600/30 hover:-translate-y-0.5">
                   Postează un anunț
                 </Link>

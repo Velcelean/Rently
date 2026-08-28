@@ -497,7 +497,7 @@ export default function AdDetailsPage() {
                         )}
                       </div>
                       <div>
-                        <h4 className="font-black text-slate-900 text-base">{ownerProfile?.full_name || "Utilizator Roomy"}</h4>
+                        <h4 className="font-black text-slate-900 text-base">{ownerProfile?.full_name || "Utilizator Rently"}</h4>
                         <span className="text-xs text-emerald-600 font-bold flex items-center gap-1 mt-0.5">✓ E-mail verificat</span>
                       </div>
                     </div>
@@ -545,7 +545,7 @@ export default function AdDetailsPage() {
           <div className="bg-white rounded-[2rem] w-full max-w-lg overflow-hidden shadow-2xl border border-slate-100 relative p-8">
             <button onClick={() => setShowContactModal(false)} className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-500 rounded-full transition-colors">✕</button>
             <h3 className="font-black text-2xl text-slate-900 mb-2">Ia legătura cu {ownerProfile?.full_name?.split(' ')[0] || "proprietarul"}</h3>
-            <p className="text-slate-500 font-medium text-sm mb-6">Trimite un mesaj direct pe Roomy.</p>
+            <p className="text-slate-500 font-medium text-sm mb-6">Trimite un mesaj direct pe Rently.</p>
             <textarea rows={4} value={quickMessage} onChange={(e) => setQuickMessage(e.target.value)} placeholder="Scrie mesajul tău..." className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium resize-none mb-4" />
             <button onClick={handleSendQuickMessage} disabled={!quickMessage.trim() || sendingMsg} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-xl shadow-lg transition-all disabled:opacity-50">
               {sendingMsg ? "Se trimite..." : "Trimite Primul Mesaj"}
@@ -564,7 +564,7 @@ export default function AdDetailsPage() {
               <span className="text-3xl">🚩</span>
               <h3 className="font-black text-2xl text-slate-900">Raportează Anunțul</h3>
             </div>
-            <p className="text-slate-500 font-medium text-xs mb-6">Ajută-ne să păstrăm comunitatea Roomy sigură. Rapoartele sunt 100% anonime.</p>
+            <p className="text-slate-500 font-medium text-xs mb-6">Ajută-ne să păstrăm comunitatea Rently sigură. Rapoartele sunt 100% anonime.</p>
 
             <form onSubmit={handleSendReport} className="space-y-4">
               <div>

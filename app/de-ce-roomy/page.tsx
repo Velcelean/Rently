@@ -4,7 +4,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export default function DeCeRoomyPage() {
+export default function DeCeRentlyPage() {
   return (
     <div className="min-h-screen bg-[#f8fafc] flex flex-col font-sans selection:bg-blue-200 selection:text-blue-900">
       <Header />
@@ -29,7 +29,7 @@ export default function DeCeRoomyPage() {
             </h1>
             
             <p className="text-xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
-              Am refăcut de la zero modul în care oamenii găsesc chirii și colegi de apartament. Mai rapid, mai sigur și complet gratuit. Iată de ce mii de tineri aleg Roomy.
+              Am refăcut de la zero modul în care oamenii găsesc chirii și colegi de apartament. Mai rapid, mai sigur și complet gratuit. Iată de ce mii de tineri aleg Rently.
             </p>
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function DeCeRoomyPage() {
               </div>
               <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 tracking-tight">Securitate și Intimitate pe bune. Fără spam.</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-6 font-medium">
-                Când postezi pe grupurile de Facebook, ești bombardat de conturi false și de comentarii irelevante. Pe Roomy, liniștea ta e garantată.
+                Când postezi pe grupurile de Facebook, ești bombardat de conturi false și de comentarii irelevante. Pe Rently, liniștea ta e garantată.
               </p>
               <ul className="space-y-4 text-slate-700 font-medium">
                 <li className="flex items-start gap-3">
@@ -168,7 +168,7 @@ export default function DeCeRoomyPage() {
             <p className="text-2xl md:text-4xl text-white font-medium leading-tight mb-8">
               Misiunea noastră este simplă: Să transformăm găsirea unei chirii dintr-un proces stresant, într-o experiență modernă și umană.
             </p>
-            <p className="text-blue-200 font-bold uppercase tracking-widest text-sm">Echipa Roomy</p>
+            <p className="text-blue-200 font-bold uppercase tracking-widest text-sm">Echipa Rently</p>
           </div>
         </div>
 
@@ -181,7 +181,7 @@ export default function DeCeRoomyPage() {
               <Link href="/despre-noi" className="group p-6 rounded-2xl border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 bg-slate-50 hover:bg-white">
                 <span className="text-3xl block mb-4 group-hover:scale-110 transition-transform">👋</span>
                 <h3 className="font-bold text-lg text-slate-900 mb-2">Povestea Noastră</h3>
-                <p className="text-sm text-slate-500 font-medium">Află cine suntem și de ce am construit Roomy.</p>
+                <p className="text-sm text-slate-500 font-medium">Află cine suntem și de ce am construit Rently.</p>
               </Link>
               
               <Link href="/programul-inchiriaza-o-camera" className="group p-6 rounded-2xl border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 bg-slate-50 hover:bg-white">

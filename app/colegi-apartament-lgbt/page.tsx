@@ -28,7 +28,7 @@ export default function LgbtFlatsharePage() {
               Să găsești locul perfect nu ține doar de buget, locație sau facilități. Ține în primul rând de sentimentul de siguranță și de a trăi alături de oameni care îți împărtășesc valorile.
             </p>
             <p>
-              Dacă ești în căutarea unei camere într-un apartament sau a unei case LGBTQ+ friendly, pe Roomy ai la dispoziție o comunitate întreagă. Cu sute de anunțuri active din toată România, platforma noastră te ajută să te conectezi rapid cu persoane deschise la minte.
+              Dacă ești în căutarea unei camere într-un apartament sau a unei case LGBTQ+ friendly, pe Rently ai la dispoziție o comunitate întreagă. Cu sute de anunțuri active din toată România, platforma noastră te ajută să te conectezi rapid cu persoane deschise la minte.
             </p>
             <p>
               Unele locuințe sunt formate exclusiv din membri ai comunității LGBTQ+, în timp ce altele sunt apartamente mixte, împărțite cu colegi aliați care pun preț pe respect reciproc, toleranță și un mediu lipsit de orice fel de prejudecăți.

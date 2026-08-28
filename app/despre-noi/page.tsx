@@ -71,7 +71,7 @@ export default function DespreNoiPage() {
                   Am căutat o alternativă, dar nu exista. Așa că am decis să o construiesc.
                 </p>
                 <p>
-                  <strong className="text-slate-900 bg-blue-100/50 px-2 py-1 rounded">Roomy nu este o corporație. Nu este o agenție imobiliară.</strong> Este un proiect independent, construit de la zero, din dorința de a aduce puțină ordine și mult mai multă umanitate în procesul de închiriere. 
+                  <strong className="text-slate-900 bg-blue-100/50 px-2 py-1 rounded">Rently nu este o corporație. Nu este o agenție imobiliară.</strong> Este un proiect independent, construit de la zero, din dorința de a aduce puțină ordine și mult mai multă umanitate în procesul de închiriere. 
                 </p>
                 <p>
                   Nu avem bugete de marketing de milioane de euro și nici un consiliu de administrație care să ne preseze să vindem datele utilizatorilor pentru profit. De fapt, la acest moment, <strong>platforma este susținută din fonduri proprii și oferită 100% gratuit</strong>, fără nicio taxă ascunsă sau plată cu cardul, pentru a ajuta comunitatea să crească organic.
@@ -83,7 +83,7 @@ export default function DespreNoiPage() {
                   R
                 </div>
                 <div>
-                  <p className="font-black text-slate-900 text-lg">Fondator Roomy</p>
+                  <p className="font-black text-slate-900 text-lg">Fondator Rently</p>
                   <p className="text-slate-500 text-sm font-bold uppercase tracking-wider">Solo Developer • România</p>
                 </div>
               </div>
@@ -122,7 +122,7 @@ export default function DespreNoiPage() {
               <ValueCard 
                 icon="⚡"
                 title="Tehnologie Modernă"
-                description="Am aruncat la gunoi interfețele învechite din anii 2000. Roomy este construit pe tehnologii Cloud de ultimă generație, oferind o experiență ultra-rapidă, sigură și optimizată perfect pentru telefonul tău."
+                description="Am aruncat la gunoi interfețele învechite din anii 2000. Rently este construit pe tehnologii Cloud de ultimă generație, oferind o experiență ultra-rapidă, sigură și optimizată perfect pentru telefonul tău."
               />
               <ValueCard 
                 icon="💬"
@@ -138,7 +138,7 @@ export default function DespreNoiPage() {
           </div>
         </div>
 
-        {/* COMPARATIE: OLD WAY VS ROOMY */}
+        {/* COMPARATIE: OLD WAY VS Rently */}
         <div className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-[#020617] rounded-[3rem] p-8 md:p-16 shadow-2xl relative overflow-hidden">
@@ -167,13 +167,13 @@ export default function DespreNoiPage() {
                   </ul>
                 </div>
 
-                {/* Modul Roomy */}
+                {/* Modul Rently */}
                 <div className="space-y-8 bg-blue-600/10 p-8 rounded-3xl border border-blue-500/20 relative">
                   <div className="absolute -top-4 -right-4 bg-blue-600 text-white text-xs font-black uppercase tracking-widest px-4 py-2 rounded-full shadow-lg transform rotate-3">
                     Evoluția
                   </div>
                   <h3 className="text-3xl font-black text-white flex items-center gap-3">
-                    <span className="text-green-400">✅</span> Modul Roomy
+                    <span className="text-green-400">✅</span> Modul Rently
                   </h3>
                   <ul className="space-y-6">
                     <li className="flex gap-4 items-start">
@@ -220,7 +220,7 @@ export default function DespreNoiPage() {
               <span>•</span>
               <Link href="/politica-de-confidentialitate" className="hover:text-blue-600 transition">Confidențialitate</Link>
               <span>•</span>
-              <a href="mailto:contact@roomy.ro" className="hover:text-blue-600 transition">Contactează-ne</a>
+              <a href="mailto:contact@Rently.ro" className="hover:text-blue-600 transition">Contactează-ne</a>
             </div>
           </div>
         </div>

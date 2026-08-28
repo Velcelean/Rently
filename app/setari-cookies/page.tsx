@@ -102,16 +102,16 @@ export default function AdvancedCookieSettingsPage() {
 
   // Generare UUID pentru Consent Receipt (Audit Trail)
   const generateConsentId = () => {
-    return 'roomy-' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+    return 'Rently-' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   };
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const savedPerformance = localStorage.getItem('roomy_cookie_performance') === 'true';
-      const savedFunctional = localStorage.getItem('roomy_cookie_functional') === 'true';
-      const savedTargeting = localStorage.getItem('roomy_cookie_targeting') === 'true';
-      const savedId = localStorage.getItem('roomy_consent_id');
-      const savedDate = localStorage.getItem('roomy_consent_date');
+      const savedPerformance = localStorage.getItem('Rently_cookie_performance') === 'true';
+      const savedFunctional = localStorage.getItem('Rently_cookie_functional') === 'true';
+      const savedTargeting = localStorage.getItem('Rently_cookie_targeting') === 'true';
+      const savedId = localStorage.getItem('Rently_consent_id');
+      const savedDate = localStorage.getItem('Rently_consent_date');
       
       setPerformanceCookies(savedPerformance);
       setFunctionalCookies(savedFunctional);
@@ -127,11 +127,11 @@ export default function AdvancedCookieSettingsPage() {
       const newConsentId = consentId === "Nu a fost generat încă" ? generateConsentId() : consentId;
       const currentDate = new Date().toISOString();
 
-      localStorage.setItem('roomy_cookie_performance', perf.toString());
-      localStorage.setItem('roomy_cookie_functional', func.toString());
-      localStorage.setItem('roomy_cookie_targeting', targ.toString());
-      localStorage.setItem('roomy_consent_id', newConsentId);
-      localStorage.setItem('roomy_consent_date', currentDate);
+      localStorage.setItem('Rently_cookie_performance', perf.toString());
+      localStorage.setItem('Rently_cookie_functional', func.toString());
+      localStorage.setItem('Rently_cookie_targeting', targ.toString());
+      localStorage.setItem('Rently_consent_id', newConsentId);
+      localStorage.setItem('Rently_consent_date', currentDate);
       
       setConsentId(newConsentId);
       setConsentDate(new Date(currentDate).toLocaleString('ro-RO'));
@@ -257,7 +257,7 @@ export default function AdvancedCookieSettingsPage() {
               <div className="mb-10">
                 <h2 className="text-3xl font-black text-slate-900 mb-4">Gestionați permisiunile de urmărire</h2>
                 <p className="text-slate-600 leading-relaxed">
-                  Când accesați platforma Roomy, stocăm fișiere de tip cookie în browserul dumneavoastră. Aceste tehnologii ne ajută să vă menținem contul securizat, să analizăm performanța serverelor și să vă oferim o experiență personalizată. Ne angajăm să nu vindem niciodată aceste date. Puteți alege să optați pentru excluderea (opt-out) din anumite categorii de urmărire mai jos.
+                  Când accesați platforma Rently, stocăm fișiere de tip cookie în browserul dumneavoastră. Aceste tehnologii ne ajută să vă menținem contul securizat, să analizăm performanța serverelor și să vă oferim o experiență personalizată. Ne angajăm să nu vindem niciodată aceste date. Puteți alege să optați pentru excluderea (opt-out) din anumite categorii de urmărire mai jos.
                 </p>
               </div>
 
@@ -287,7 +287,7 @@ export default function AdvancedCookieSettingsPage() {
 
                 <ToggleRow 
                   title="Cookie-uri de Targetare / Marketing Terț"
-                  description="Setate de partenerii noștri de publicitate (ex: Meta Pixel, rețele de remarketing). Acestea sunt utilizate pentru a construi un profil de utilizator și a vă afișa reclame relevante la serviciile Roomy atunci când navigați pe alte site-uri sau pe rețelele de socializare. Nu stochează date personale directe (precum numele), ci se bazează pe identificarea unică a browserului."
+                  description="Setate de partenerii noștri de publicitate (ex: Meta Pixel, rețele de remarketing). Acestea sunt utilizate pentru a construi un profil de utilizator și a vă afișa reclame relevante la serviciile Rently atunci când navigați pe alte site-uri sau pe rețelele de socializare. Nu stochează date personale directe (precum numele), ci se bazează pe identificarea unică a browserului."
                   state={targetingCookies}
                   setState={setTargetingCookies}
                 />
@@ -345,21 +345,21 @@ export default function AdvancedCookieSettingsPage() {
                     {/* STRICTLY NECESSARY */}
                     <tr className="hover:bg-slate-50 transition-colors">
                       <td className="px-6 py-4 font-mono text-blue-600 font-bold">__Secure-next-auth.session-token</td>
-                      <td className="px-6 py-4 font-medium">.roomy.ro (1st Party)</td>
+                      <td className="px-6 py-4 font-medium">.Rently.ro (1st Party)</td>
                       <td className="px-6 py-4"><span className="bg-slate-100 px-2 py-1 rounded text-xs font-bold text-slate-700">Strict Necesare</span></td>
                       <td className="px-6 py-4">30 Zile</td>
                       <td className="px-6 py-4 whitespace-normal min-w-[250px]">Menține sesiunea criptată a utilizatorului după logare (JWT).</td>
                     </tr>
                     <tr className="hover:bg-slate-50 transition-colors">
                       <td className="px-6 py-4 font-mono text-blue-600 font-bold">__Host-next-auth.csrf-token</td>
-                      <td className="px-6 py-4 font-medium">.roomy.ro (1st Party)</td>
+                      <td className="px-6 py-4 font-medium">.Rently.ro (1st Party)</td>
                       <td className="px-6 py-4"><span className="bg-slate-100 px-2 py-1 rounded text-xs font-bold text-slate-700">Strict Necesare</span></td>
                       <td className="px-6 py-4">Sesiune</td>
                       <td className="px-6 py-4 whitespace-normal min-w-[250px]">Previne atacurile de tip Cross-Site Request Forgery la formulare.</td>
                     </tr>
                     <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="px-6 py-4 font-mono text-blue-600 font-bold">roomy_cookie_consent_*</td>
-                      <td className="px-6 py-4 font-medium">.roomy.ro (1st Party)</td>
+                      <td className="px-6 py-4 font-mono text-blue-600 font-bold">Rently_cookie_consent_*</td>
+                      <td className="px-6 py-4 font-medium">.Rently.ro (1st Party)</td>
                       <td className="px-6 py-4"><span className="bg-slate-100 px-2 py-1 rounded text-xs font-bold text-slate-700">Strict Necesare</span></td>
                       <td className="px-6 py-4">1 An</td>
                       <td className="px-6 py-4 whitespace-normal min-w-[250px]">Memorează exact preferințele alese de dvs. în acest panou.</td>
@@ -430,8 +430,8 @@ export default function AdvancedCookieSettingsPage() {
             <Accordion title="3. Cookie-uri First-Party vs. Third-Party">
               <p>Pentru o transparență deplină, trebuie să înțelegeți diferența de proveniență a fișierelor de urmărire:</p>
               <ul>
-                <li><strong>Cookie-uri First-Party (Primă Parte):</strong> Sunt create, plasate și citite exclusiv de serverele și codul aparținând domeniului <em>roomy.ro</em>. Acestea gestionează lucruri de bază: sesiunea dumneavoastră, protecția antifraudă și setările interne.</li>
-                <li><strong>Cookie-uri Third-Party (Terță Parte):</strong> Sunt fișiere stocate de alte domenii decât cel pe care îl vizitați. Pentru a vă oferi o experiență modernă (ex: hărți interactive, analiza traficului pentru a îmbunătăți serverele, sau publicitate relevantă), integrăm cod de la furnizori externi (Google, Meta). Acești terți pot stoca propriile lor cookie-uri prin intermediul site-ului nostru. Operatorul Roomy nu are acces direct de citire sau scriere la aceste cookie-uri terțe, iar gestionarea lor se supune politicilor respectivilor furnizori.</li>
+                <li><strong>Cookie-uri First-Party (Primă Parte):</strong> Sunt create, plasate și citite exclusiv de serverele și codul aparținând domeniului <em>Rently.ro</em>. Acestea gestionează lucruri de bază: sesiunea dumneavoastră, protecția antifraudă și setările interne.</li>
+                <li><strong>Cookie-uri Third-Party (Terță Parte):</strong> Sunt fișiere stocate de alte domenii decât cel pe care îl vizitați. Pentru a vă oferi o experiență modernă (ex: hărți interactive, analiza traficului pentru a îmbunătăți serverele, sau publicitate relevantă), integrăm cod de la furnizori externi (Google, Meta). Acești terți pot stoca propriile lor cookie-uri prin intermediul site-ului nostru. Operatorul Rently nu are acces direct de citire sau scriere la aceste cookie-uri terțe, iar gestionarea lor se supune politicilor respectivilor furnizori.</li>
               </ul>
             </Accordion>
 
@@ -446,7 +446,7 @@ export default function AdvancedCookieSettingsPage() {
             </Accordion>
 
             <Accordion title="5. Cum să gestionați Cookies direct la nivel de Browser (Ghid Tehnic)">
-              <p>Dincolo de acest Privacy Center pe care vi-l punem la dispoziție, aveți opțiunea nucleară de a bloca orice tentativă de stocare de date direct din inima browserului dumneavoastră. Rețineți însă că dezactivarea globală a cookie-urilor web (inclusiv a celor First-Party) va face complet imposibilă crearea unui cont sau autentificarea pe platforma Roomy.</p>
+              <p>Dincolo de acest Privacy Center pe care vi-l punem la dispoziție, aveți opțiunea nucleară de a bloca orice tentativă de stocare de date direct din inima browserului dumneavoastră. Rețineți însă că dezactivarea globală a cookie-urilor web (inclusiv a celor First-Party) va face complet imposibilă crearea unui cont sau autentificarea pe platforma Rently.</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noreferrer" className="block p-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors">
                   <strong className="block text-slate-800">Google Chrome</strong>

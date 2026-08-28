@@ -402,7 +402,7 @@ export default function InboxPage() {
                       <div className="truncate flex-grow flex flex-col justify-center">
                         <div className="flex items-center justify-between mb-1">
                           <h4 className={`text-lg truncate transition-colors group-hover:text-blue-600 ${hasUnread ? 'font-black text-slate-900' : 'font-bold text-slate-800'}`}>
-                            {conv.otherUser?.full_name || "Utilizator Roomy"}
+                            {conv.otherUser?.full_name || "Utilizator Rently"}
                           </h4>
                           
                           {lastMsg && (

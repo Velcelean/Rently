@@ -111,7 +111,7 @@ export default function UltimatePrivacyPolicyPage() {
                 Politica Globală <br className="hidden md:block" /> de Confidențialitate
               </h1>
               <p className="text-slate-400 text-lg md:text-2xl leading-relaxed font-light max-w-4xl">
-                Cadrul normativ exhaustiv privind guvernanța datelor, arhitectura de securitate informatică, prelucrarea, retenția și protecția datelor cu caracter personal în ecosistemul Roomy.
+                Cadrul normativ exhaustiv privind guvernanța datelor, arhitectura de securitate informatică, prelucrarea, retenția și protecția datelor cu caracter personal în ecosistemul Rently.
               </p>
             </div>
             
@@ -193,7 +193,7 @@ export default function UltimatePrivacyPolicyPage() {
             icon={<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" /></svg>}
           >
             <p className="lead text-xl text-slate-700 mb-6 font-medium">
-              Bine ai venit pe Roomy. Această platformă s-a născut dintr-o nevoie reală a comunității, fiind dezvoltată exclusiv ca un proiect independent de către un singur programator (Solo Developer). Nu suntem o corporație, nu avem asociați ascunși și nu răspundem în fața unor consilii de administrație obsedate de monetizarea datelor.
+              Bine ai venit pe Rently. Această platformă s-a născut dintr-o nevoie reală a comunității, fiind dezvoltată exclusiv ca un proiect independent de către un singur programator (Solo Developer). Nu suntem o corporație, nu avem asociați ascunși și nu răspundem în fața unor consilii de administrație obsedate de monetizarea datelor.
             </p>
             <p>
               În conformitate cu principiul transparenței prevăzut de legislația europeană, acest document masiv reprezintă instrumentul fundamental prin care vă informăm, detaliat la nivel de cod și infrastructură, cu privire la guvernanța datelor dumneavoastră personale.
@@ -226,7 +226,7 @@ export default function UltimatePrivacyPolicyPage() {
           </PolicySection>
 
           <PolicySection id="c3" title="3. Definiții Extinse și Glosar Tehnic">
-            <p>Pentru a exclude orice fel de echivoc, interpretăm termenii de mai jos exact conform Articolului 4 din GDPR, adaptați la contextul tehnic al platformei Roomy:</p>
+            <p>Pentru a exclude orice fel de echivoc, interpretăm termenii de mai jos exact conform Articolului 4 din GDPR, adaptați la contextul tehnic al platformei Rently:</p>
             <div className="space-y-4 mt-6">
               <div className="p-5 border-l-4 border-blue-500 bg-white shadow-sm rounded-r-xl">
                 <h4 className="font-black text-slate-900 m-0 text-lg">Date cu Caracter Personal</h4>
@@ -234,7 +234,7 @@ export default function UltimatePrivacyPolicyPage() {
               </div>
               <div className="p-5 border-l-4 border-purple-500 bg-white shadow-sm rounded-r-xl">
                 <h4 className="font-black text-slate-900 m-0 text-lg">Categorii Speciale (Date Sensibile - Art. 9)</h4>
-                <p className="text-slate-600 mt-2">Sunt un sub-set de date ultra-protejate. Ele dezvăluie originea rasială/etnică, opiniile politice, date biometrice de sănătate sau <strong>orientarea sexuală / viața sexuală</strong>. Pe Roomy, selectarea filtrului opțional "LGBTQ+ Friendly" se încadrează strict în această categorie sensibilă.</p>
+                <p className="text-slate-600 mt-2">Sunt un sub-set de date ultra-protejate. Ele dezvăluie originea rasială/etnică, opiniile politice, date biometrice de sănătate sau <strong>orientarea sexuală / viața sexuală</strong>. Pe Rently, selectarea filtrului opțional "LGBTQ+ Friendly" se încadrează strict în această categorie sensibilă.</p>
               </div>
               <div className="p-5 border-l-4 border-blue-500 bg-white shadow-sm rounded-r-xl">
                 <h4 className="font-black text-slate-900 m-0 text-lg">Prelucrare (Processing)</h4>
@@ -242,7 +242,7 @@ export default function UltimatePrivacyPolicyPage() {
               </div>
               <div className="p-5 border-l-4 border-emerald-500 bg-white shadow-sm rounded-r-xl">
                 <h4 className="font-black text-slate-900 m-0 text-lg">Operator (Data Controller)</h4>
-                <p className="text-slate-600 mt-2">Persoana fizică sau juridică care determină „de ce” (scopul) și „cum” (mijloacele) sunt prelucrate datele. Operatorul este entitatea care răspunde legal în fața dumneavoastră. În acest caz, fondatorul independent al Roomy.</p>
+                <p className="text-slate-600 mt-2">Persoana fizică sau juridică care determină „de ce” (scopul) și „cum” (mijloacele) sunt prelucrate datele. Operatorul este entitatea care răspunde legal în fața dumneavoastră. În acest caz, fondatorul independent al Rently.</p>
               </div>
               <div className="p-5 border-l-4 border-amber-500 bg-white shadow-sm rounded-r-xl">
                 <h4 className="font-black text-slate-900 m-0 text-lg">Persoană Împuternicită (Data Processor)</h4>
@@ -277,7 +277,7 @@ export default function UltimatePrivacyPolicyPage() {
                   <div>
                     <p className="text-slate-400 mb-1 text-sm font-bold uppercase tracking-wider">Contact Oficial (Data Protection):</p>
                     <p className="font-black text-2xl text-white mb-6 hover:text-blue-300 transition-colors">
-                      <a href="mailto:privacy@roomy.ro">privacy@roomy.ro</a>
+                      <a href="mailto:privacy@Rently.ro">privacy@Rently.ro</a>
                     </p>
                     
                     <p className="text-slate-400 mb-1 text-sm font-bold uppercase tracking-wider">Jurisdicție Suverană de Operare:</p>
@@ -295,7 +295,7 @@ export default function UltimatePrivacyPolicyPage() {
             <InfoBox type="success">
               <h4 className="font-black text-xl mb-3 flex items-center gap-2">Platformă Liberă. Fără Carduri. Fără IBAN-uri.</h4>
               <p className="mb-4">
-                Spre deosebire de alte platforme corporatiste imobiliare care vă cer bani pentru fiecare publicare sau "reactualizare" de anunț, Roomy este conceput într-un mod complet deschis și oferit gratuit comunității pentru a facilita găsirea colegilor de apartament.
+                Spre deosebire de alte platforme corporatiste imobiliare care vă cer bani pentru fiecare publicare sau "reactualizare" de anunț, Rently este conceput într-un mod complet deschis și oferit gratuit comunității pentru a facilita găsirea colegilor de apartament.
               </p>
               <p className="mb-4">
                 Aceasta este o veste extraordinară pentru confidențialitatea datelor dumneavoastră. Pentru că nu vindem nimic, <strong>eliminăm complet din sistemul nostru clasa celor mai sensibile date din lume: datele financiare.</strong>
@@ -306,13 +306,13 @@ export default function UltimatePrivacyPolicyPage() {
                 <li>NU cerem adrese de facturare și nu solicităm Codul Numeric Personal (<strong>CNP</strong>).</li>
               </ul>
               <p className="mt-5 text-sm text-green-700 font-bold uppercase tracking-wide border-t border-green-200 pt-4">
-                ⚠️ Avertisment de Securitate: Dacă primiți vreodată un SMS, un mesaj pe WhatsApp sau un E-mail care conține logoul Roomy și prin care vi se cere "o taxă de validare a contului" sau "un avans pentru proprietar", sunteți ținta unei tentative externe de fraudă (Scam/Phishing). Blocați imediat acel expeditor!
+                ⚠️ Avertisment de Securitate: Dacă primiți vreodată un SMS, un mesaj pe WhatsApp sau un E-mail care conține logoul Rently și prin care vi se cere "o taxă de validare a contului" sau "un avans pentru proprietar", sunteți ținta unei tentative externe de fraudă (Scam/Phishing). Blocați imediat acel expeditor!
               </p>
             </InfoBox>
           </PolicySection>
 
           <PolicySection id="c6" title="6. Cele 6 Principii ale Prelucrării (Articolul 5 din GDPR)">
-            <p className="mb-6">Sistemul nostru informatic a fost codat de la zero având în minte cele 6 principii de fier ale Regulamentului European. Fiecare funcție nouă adăugată pe site este auditată mental împotriva acestei liste:</p>
+            <p className="mb-6">Sistemul nostru informatic a fost codat de la zero având în minte cele 6 principii de fier ale Regulamentului European. Fiecare funcție nouă adăugată pe site este auditată mental împotriva acestei listei:</p>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="p-6 bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
@@ -405,7 +405,7 @@ export default function UltimatePrivacyPolicyPage() {
           </PolicySection>
 
           <PolicySection id="c8" title="8. Telemetrie, Syslogs și Colectare Automată (Sub Capotă)">
-            <p className="mb-4">O platformă web complexă nu poate funcționa fără a colecta anumite metadate de rețea. În momentul în care accesați <code>roomy.ro</code>, browser-ul dumneavoastră „discută” cu serverul nostru și ne lasă automat următoarea "amprentă" tehnică:</p>
+            <p className="mb-4">O platformă web complexă nu poate funcționa fără a colecta anumite metadate de rețea. În momentul în care accesați <code>Rently.ro</code>, browser-ul dumneavoastră „discută” cu serverul nostru și ne lasă automat următoarea "amprentă" tehnică:</p>
             
             <div className="bg-slate-900 text-slate-300 p-6 md:p-8 rounded-2xl font-mono text-sm leading-relaxed overflow-x-auto shadow-inner">
               <span className="text-green-400 font-bold mb-4 block">// Date colectate invizibil, la nivel de infrastructură HTTP/TCP:</span>
@@ -423,7 +423,7 @@ export default function UltimatePrivacyPolicyPage() {
             <InfoBox type="warning">
               <h4 className="font-black text-lg mb-2">Politica privitoare la caracteristicile vizând viața privată</h4>
               <p className="mb-4">Conform Articolului 9 din GDPR, datele care dezvăluie (chiar și indirect) originile etnice, opiniile politice, afilierile religioase sau orientarea / viața sexuală beneficiază de cel mai înalt grad de protecție legislativă (sunt interzise la prelucrare, cu excepții punctuale).</p>
-              <p className="mb-4">Pe platforma Roomy, am introdus filtrul și bifa de compatibilitate <strong>„LGBTQ+ Friendly” 🌈</strong>.</p>
+              <p className="mb-4">Pe platforma Rently, am introdus filtrul și bifa de compatibilitate <strong>„LGBTQ+ Friendly” 🌈</strong>.</p>
               <ul className="list-disc pl-5 space-y-2 font-bold mt-2">
                 <li>Acest filtru a fost introdus la cererea comunității, deoarece spațiul de coabitare (camera de apartament) reprezintă nucleul intimității umane. Este esențial ca viitorii colegi de apartament să beneficieze de un mediu 100% sigur (Safe Space), fără judecăți sau conflicte izvorâte din preconcepții.</li>
                 <li><strong>Acționarea acestei bife este 100% Voluntară (Opțională).</strong> Nu veți fi niciodată obligat sau constrâns să o folosiți pentru a posta un anunț.</li>
@@ -510,7 +510,7 @@ export default function UltimatePrivacyPolicyPage() {
               În sensul strict al <strong>Articolului 22 din GDPR</strong>, o decizie exclusiv automatizată care "produce efecte juridice" sau vă "afectează în mod similar semnificativ" înseamnă de exemplu: un algoritm de inteligență artificială care vă respinge complet automat cererea de credit la bancă fără ca un om să se uite pe dosar.
             </p>
             <p className="mb-4">
-              Platforma Roomy <strong>NU implementează și nu se bazează pe niciun sistem AI sau algoritm decizional de această magnitudine</strong>. Orice excludere permanentă a unui utilizator din comunitate (Banare Definitivă) este rezultatul unei investigații și decizii manuale umane luată de fondatorul proiectului.
+              Platforma Rently <strong>NU implementează și nu se bazează pe niciun sistem AI sau algoritm decizional de această magnitudine</strong>. Orice excludere permanentă a unui utilizator din comunitate (Banare Definitivă) este rezultatul unei investigații și decizii manuale umane luată de fondatorul proiectului.
             </p>
             <p>
               Singurele componente pur automatizate din sistemul nostru sunt la nivel tehnic de protecție: filtre software care taie temporar accesul la server dacă un IP face 100 de cereri pe secundă (lucru imposibil fizic pentru un om, indicând un atac DdoS sau un scraper bot), sau trigger-e de siguranță care te scot din cont dacă detectează un token expirat.
@@ -523,14 +523,14 @@ export default function UltimatePrivacyPolicyPage() {
             </p>
             <ul className="list-disc pl-5 mt-4 space-y-3 text-slate-700">
               <li><strong>Sisteme de Recomandare și Sortare:</strong> Algoritmul nostru va încerca (dacă avem destule date implementate pe viitor) să vă arate pe prima pagină apartamente din orașul din care ați căutat cel mai des, în baza istoricului de căutare salvat local (în browser) sau asociat contului.</li>
-              <li><strong>Targetare Marketing (Doar cu acord):</strong> Dacă, și numai dacă, ați acceptat explicit cookie-urile de Marketing din centrul de preferințe, partenerii noștri (ex: Facebook Pixel) vor asocia o mică bucată de cod browser-ului dvs. pentru a crea un profil de "persoană care caută chirie", arătându-vă reclame la Roomy când derulați pe rețelele de social media. Această profilare este standard în industria de E-commerce și nu afectează integritatea dvs.</li>
+              <li><strong>Targetare Marketing (Doar cu acord):</strong> Dacă, și numai dacă, ați acceptat explicit cookie-urile de Marketing din centrul de preferințe, partenerii noștri (ex: Facebook Pixel) vor asocia o mică bucată de cod browser-ului dvs. pentru a crea un profil de "persoană care caută chirie", arătându-vă reclame la Rently când derulați pe rețelele de social media. Această profilare este standard în industria de E-commerce și nu afectează integritatea dvs.</li>
             </ul>
           </PolicySection>
 
           <PolicySection id="c13" title="13. Confidențialitatea și Scanarea Mesajelor Interne" defaultOpen={true}>
             <InfoBox type="warning">
               <strong className="block text-lg mb-2">Lipsa Criptării End-to-End (E2E)</strong>
-              <p className="mb-0">Spre deosebire de aplicațiile dedicate precum WhatsApp sau Signal, sistemul de chat intern de pe site-ul Roomy <strong>nu beneficiază de criptare E2E.</strong> Acest lucru înseamnă din punct de vedere tehnic că baza noastră de date stochează mesajele în format text citibil (plain text), nu într-o "cutie încuiată" la care aveți doar voi cheia.</p>
+              <p className="mb-0">Spre deosebire de aplicațiile dedicate precum WhatsApp sau Signal, sistemul de chat intern de pe site-ul Rently <strong>nu beneficiază de criptare E2E.</strong> Acest lucru înseamnă din punct de vedere tehnic că baza noastră de date stochează mesajele în format text citibil (plain text), nu într-o "cutie încuiată" la care aveți doar voi cheia.</p>
             </InfoBox>
             
             <h4 className="font-bold text-slate-900 mt-6 mb-3 text-lg">De ce este gândit așa sistemul?</h4>
@@ -556,7 +556,7 @@ export default function UltimatePrivacyPolicyPage() {
 
           <PolicySection id="c14" title="14. Transparența Anti-Fraudă (Avertisment de Risc)">
             <p className="mb-4 text-slate-700">
-              Vă rugăm imperativ să nu folosiți chat-ul nostru pentru a trimite parole, coduri PIN, date de buletin sau numere de card de credit. Responsabilitatea morală și legală a oricărei sume de bani (avansuri, garanții, luni de chirie) expediate „în orb” către o altă persoană necunoscută pe internet vă aparține dumneavoastră în totalitate (conform Cap. 13 din Termeni și Condiții, Platforma Roomy se exonerează de responsabilitate financiară pentru faptele ilicite ale terților).
+              Vă rugăm imperativ să nu folosiți chat-ul nostru pentru a trimite parole, coduri PIN, date de buletin sau numere de card de credit. Responsabilitatea morală și legală a oricărei sume de bani (avansuri, garanții, luni de chirie) expediate „în orb” către o altă persoană necunoscută pe internet vă aparține dumneavoastră în totalitate (conform Cap. 13 din Termeni și Condiții, Platforma Rently se exonerează de responsabilitate financiară pentru faptele ilicite ale terților).
             </p>
             <p className="text-slate-700">
               Reiterăm faptul că noi <strong>nu validăm actele de proprietate, nu inspectăm casele fizic și nu verificăm cazierul utilizatorilor</strong> (fiind o platformă gratuită și un proiect solo). Efectuarea „Due Diligence” (vizionarea fizică, verificarea calității de proprietar) este sarcina dumneavoastră înainte de semnarea oricărui contract.
@@ -570,7 +570,7 @@ export default function UltimatePrivacyPolicyPage() {
               <span className="text-6xl mb-4 block relative z-10 drop-shadow-lg">🚫 💰</span>
               <h4 className="font-black text-2xl md:text-4xl text-white mb-4 relative z-10 tracking-tight">Garanția Anti-Vânzare de Date</h4>
               <p className="text-slate-300 text-lg m-0 relative z-10 max-w-2xl mx-auto leading-relaxed">
-                Roomy <strong className="text-white underline decoration-red-500 underline-offset-4 decoration-2">NU</strong> este și nu va deveni un Data Broker. Ne angajăm solemn, sub incidența sancțiunilor legale imense impuse de GDPR, că <strong>NU vom vinde, închiria, tranzacționa sau ceda accesul comercial direct</strong> la lista noastră de utilizatori, baze de date cu numere de telefon sau profile imobiliare către agenții de publicitate, firme de telemarketing sau brokeri externi.
+                Rently <strong className="text-white underline decoration-red-500 underline-offset-4 decoration-2">NU</strong> este și nu va deveni un Data Broker. Ne angajăm solemn, sub incidența sancțiunilor legale imense impuse de GDPR, că <strong>NU vom vinde, închiria, tranzacționa sau ceda accesul comercial direct</strong> la lista noastră de utilizatori, baze de date cu numere de telefon sau profile imobiliare către agenții de publicitate, firme de telemarketing sau brokeri externi.
               </p>
             </div>
             
@@ -733,7 +733,7 @@ export default function UltimatePrivacyPolicyPage() {
             <InfoBox type="success">
               <p>
                 <strong>Mit spulberat: „Ne-au spart hackerii și ne-au furat parolele”.</strong><br/><br/>
-                Sistemele moderne, cum e cel cu care am construit Roomy, fac din furtul parolelor o muncă inutilă pentru hackeri. Când dumneavoastră setați parola "PisicaMea123!" la crearea contului, funcțiile interne o trec instant de mii de ori printr-un algoritm criptografic specializat lent (ca Bycript sau Argon2).
+                Sistemele moderne, cum e cel cu care am construit Rently, fac din furtul parolelor o muncă inutilă pentru hackeri. Când dumneavoastră setați parola "PisicaMea123!" la crearea contului, funcțiile interne o trec instant de mii de ori printr-un algoritm criptografic specializat lent (ca Bycript sau Argon2).
                 <br/><br/>
                 Așa că în baza noastră de date, noi vom salva un Hash (o înșiruire absurdă de caractere care arată așa: <code>$2b$10$C823j...</code>). 
                 <br/><br/>
@@ -787,7 +787,7 @@ export default function UltimatePrivacyPolicyPage() {
 
               <div className="bg-white border-l-4 border-red-500 p-6 rounded-r-2xl shadow-sm hover:shadow-md transition">
                 <h4 className="font-black text-lg text-slate-900 mb-2">3. Dreptul la Ștergere / A fi uitat (Art. 17)</h4>
-                <p className="text-slate-600 text-sm">Butonul de aur. Dreptul ca, în lipsa unui temei legal imperativ care să ne blocheze (cum ar fi faptul că ați înșelat pe cineva și Vă caută Poliția), să ne impuneți să vă radiem (ștergem) complet din arhiva Roomy. Fără scuze.</p>
+                <p className="text-slate-600 text-sm">Butonul de aur. Dreptul ca, în lipsa unui temei legal imperativ care să ne blocheze (cum ar fi faptul că ați înșelat pe cineva și Vă caută Poliția), să ne impuneți să vă radiem (ștergem) complet din arhiva Rently. Fără scuze.</p>
               </div>
 
               <div className="bg-white border-l-4 border-amber-500 p-6 rounded-r-2xl shadow-sm hover:shadow-md transition">
@@ -817,7 +817,7 @@ export default function UltimatePrivacyPolicyPage() {
                   <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold">1</span>
                   <div>
                     <strong className="block text-slate-900 text-lg mb-1">Inițierea Cererii</strong>
-                    <p>Către cine? Scrieți simplu, direct pe e-mail către <strong className="text-blue-700 text-lg">privacy@roomy.ro</strong>. <br/><br/>
+                    <p>Către cine? Scrieți simplu, direct pe e-mail către <strong className="text-blue-700 text-lg">privacy@Rently.ro</strong>. <br/><br/>
                     <strong className="text-red-600 uppercase tracking-widest text-xs">Atenție (Barieră critică de securitate):</strong> Nu vom procesa NICIO cerere dacă este trimisă de pe adresa <em>"bogdan444@yahoo.com"</em> și cereți ștergerea contului de pe <em>"alexandra_chirii@gmail.com"</em>. Ca să putem garanta legal că sunteți "chiar dumneavoastră", trebuie să trimiteți cererea direct din cutia de e-mail asociată contului pe care l-ați făcut la noi. Altfel ne supunem riscului ridicat ca hackeri să închidă conturi aleatorii (Social Engineering attacks).</p>
                   </div>
                 </li>
@@ -857,7 +857,7 @@ export default function UltimatePrivacyPolicyPage() {
               Semnarea unor contracte de coabitare (împărțirea unor chirii), a unor contracte de comodat cu un proprietar și angajarea răspunderii financiare pe chirii de sute de euro reprezintă acțiuni care depășesc simpla gestiune zilnică; ele necesită, prin esența reglementărilor din Codul Civil al României, dobândirea prealabilă a capacității de exercițiu depline. 
             </p>
             <p className="mb-4 font-bold text-slate-800">
-              Coroborând acest fapt de mai sus cu Art. 8 din Regulamentul GDPR: Platforma Roomy interzice strict și absolut crearea de conturi și operarea de către persoanele fizice sub limita vârstei de 18 ani. Noi nu urmărim, nu targetăm cu reclame și nu proiectăm interfețe tehnice de gamificare care să atragă copiii. 
+              Coroborând acest fapt de mai sus cu Art. 8 din Regulamentul GDPR: Platforma Rently interzice strict și absolut crearea de conturi și operarea de către persoanele fizice sub limita vârstei de 18 ani. Noi nu urmărim, nu targetăm cu reclame și nu proiectăm interfețe tehnice de gamificare care să atragă copiii. 
             </p>
             <div className="p-5 border-l-4 border-red-500 bg-white shadow-sm mt-4">
               <strong className="text-red-700 block mb-2">Procedura de ștergere automată (Minor Ban):</strong>
@@ -868,7 +868,7 @@ export default function UltimatePrivacyPolicyPage() {
           </PolicySection>
 
           <PolicySection id="c28" title="28. Guvernanța Cookie-urilor (ePrivacy Act)">
-            <p className="mb-6">Când accesați pe domeniul web `roomy.ro`, este posibil să salvăm fragmente de fișiere subțiri (texte) sau cod direct în inima browser-ului pe care îl folosiți (pe hard disk-ul propriu), denumite generic Cookies sau „Local Storage / Local Session”. Funcțiile, justificarea logică și temeiul de reglementare în Europa a lor le detaliem astfel:</p>
+            <p className="mb-6">Când accesați pe domeniul web `Rently.ro`, este posibil să salvăm fragmente de fișiere subțiri (texte) sau cod direct în inima browser-ului pe care îl folosiți (pe hard disk-ul propriu), denumite generic Cookies sau „Local Storage / Local Session”. Funcțiile, justificarea logică și temeiul de reglementare în Europa a lor le detaliem astfel:</p>
 
             <div className="overflow-x-auto shadow-sm border border-slate-200 rounded-2xl mb-6">
               <table className="min-w-full text-sm text-left">
@@ -892,7 +892,7 @@ export default function UltimatePrivacyPolicyPage() {
                   </tr>
                   <tr>
                     <td className="p-4"><span className="bg-green-100 text-green-800 px-3 py-1 rounded font-bold text-xs">Targetare și Reclame</span></td>
-                    <td className="p-4 text-slate-600 leading-relaxed">În cazul de marketing digital, ne aliem cu firme publicitare de rețea. Exemplu clasic: Ați dat acceptul și Cookie-ul pus de <code>Meta Pixel/Facebook</code> intră în contact cu dumneavoastră pe site-ul nostru, iar el citește codul intern. Peste o lună, când navigați liniștit pe feed-ul de la Instagram, Facebook vă detectează ca utilizator care anterior căuta colegi de apartament și, ghiciți ce, vă va afișa într-un Ad precis și elegant reclamele proiectului nostru independent "Vino pe Roomy!". Noi îi plătim lui Meta pentru eficiență, iar dvs beneficiați de publicitate personalizată targetată la milimetru, în detrimentul publicității banale ("Mărci de ciocolată").</td>
+                    <td className="p-4 text-slate-600 leading-relaxed">În cazul de marketing digital, ne aliem cu firme publicitare de rețea. Exemplu clasic: Ați dat acceptul și Cookie-ul pus de <code>Meta Pixel/Facebook</code> intră în contact cu dumneavoastră pe site-ul nostru, iar el citește codul intern. Peste o lună, când navigați liniștit pe feed-ul de la Instagram, Facebook vă detectează ca utilizator care anterior căuta colegi de apartament și, ghiciți ce, vă va afișa într-un Ad precis și elegant reclamele proiectului nostru independent "Vino pe Rently!". Noi îi plătim lui Meta pentru eficiență, iar dvs beneficiați de publicitate personalizată targetată la milimetru, în detrimentul publicității banale ("Mărci de ciocolată").</td>
                     <td className="p-4 font-bold text-green-600 text-center"><span className="text-xl block mb-1">✋</span> Consimțământ Voluntar Prealabil (OPT-IN)</td>
                   </tr>
                 </tbody>
@@ -937,8 +937,8 @@ export default function UltimatePrivacyPolicyPage() {
                   <span className="text-4xl">📧</span>
                   <div className="w-full overflow-hidden">
                     <span className="block text-slate-400 text-xs font-bold uppercase tracking-wider mb-2">Trimite-ne un e-mail către DPO la</span>
-                    <a href="mailto:privacy@roomy.ro" className="text-white font-black hover:text-blue-400 transition-colors text-2xl md:text-3xl break-all relative">
-                      privacy@roomy.ro
+                    <a href="mailto:privacy@Rently.ro" className="text-white font-black hover:text-blue-400 transition-colors text-2xl md:text-3xl break-all relative">
+                      privacy@Rently.ro
                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
                     </a>
                   </div>

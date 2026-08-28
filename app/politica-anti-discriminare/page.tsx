@@ -91,7 +91,7 @@ export default function DiscriminationPolicyPage() {
             </span>
           </h1>
           <p className="text-slate-400 text-lg md:text-2xl leading-relaxed font-light max-w-4xl">
-            Roomy este un spațiu dedicat tuturor. Monitorizăm anunțurile pentru a ne asigura că respectă legislația națională și europeană. Află ce trebuie să știe proprietarii, agenții și colegii de apartament.
+            Rently este un spațiu dedicat tuturor. Monitorizăm anunțurile pentru a ne asigura că respectă legislația națională și europeană. Află ce trebuie să știe proprietarii, agenții și colegii de apartament.
           </p>
         </div>
       </div>
@@ -103,7 +103,7 @@ export default function DiscriminationPolicyPage() {
           <div className="sticky top-10 bg-white p-6 rounded-[2rem] border border-slate-200 shadow-2xl shadow-slate-200/50">
             <h3 className="font-black text-slate-900 mb-6 uppercase tracking-widest text-[11px] border-b border-slate-100 pb-4">Cuprinsul Politicii</h3>
             <nav className="space-y-1 text-[13px] font-bold h-[calc(100vh-220px)] overflow-y-auto pr-3 custom-scrollbar">
-              <a href="#d1" className="block px-4 py-2.5 text-slate-500 hover:text-blue-700 hover:bg-blue-50/80 rounded-xl transition-all">1. Angajamentul Roomy</a>
+              <a href="#d1" className="block px-4 py-2.5 text-slate-500 hover:text-blue-700 hover:bg-blue-50/80 rounded-xl transition-all">1. Angajamentul Rently</a>
               <a href="#d2" className="block px-4 py-2.5 text-slate-500 hover:text-blue-700 hover:bg-blue-50/80 rounded-xl transition-all">2. Reguli pentru Proprietari / Agenți</a>
               <a href="#d3" className="block px-4 py-2.5 text-slate-500 hover:text-blue-700 hover:bg-blue-50/80 rounded-xl transition-all">3. Coabitare: Când cauți un coleg</a>
               <a href="#d4" className="block px-4 py-2.5 text-slate-500 hover:text-blue-700 hover:bg-blue-50/80 rounded-xl transition-all">4. Cum scriem un anunț corect</a>
@@ -117,12 +117,12 @@ export default function DiscriminationPolicyPage() {
         {/* MAIN CONTENT */}
         <div className="w-full xl:w-[calc(100%-25rem)] pb-32">
           
-          <PolicySection id="d1" title="1. Angajamentul Roomy" defaultOpen={true} icon={<span className="text-3xl">🤝</span>}>
+          <PolicySection id="d1" title="1. Angajamentul Rently" defaultOpen={true} icon={<span className="text-3xl">🤝</span>}>
             <p className="lead text-xl text-slate-700 mb-6 font-medium">
               Abordarea noastră depășește cerințele minime legale. Nu este vorba doar despre ceea ce este sau nu este legal în România – este vorba despre a trata oamenii așa cum ți-ai dori să fii tratat tu.
             </p>
             <p>
-              Roomy se angajează ferm să ofere oportunități egale. Toate anunțurile sunt filtrate de sistemele noastre și de echipa de suport pentru a ne asigura că respectă legislația privind combaterea discriminării (inclusiv O.G. 137/2000 și directivele UE). Anunțurile care conțin limbaj ofensator, restrictiv nejustificat sau discriminatoriu vor fi șterse imediat.
+              Rently se angajează ferm să ofere oportunități egale. Toate anunțurile sunt filtrate de sistemele noastre și de echipa de suport pentru a ne asigura că respectă legislația privind combaterea discriminării (inclusiv O.G. 137/2000 și directivele UE). Anunțurile care conțin limbaj ofensator, restrictiv nejustificat sau discriminatoriu vor fi șterse imediat.
             </p>
           </PolicySection>
 
@@ -161,7 +161,7 @@ export default function DiscriminationPolicyPage() {
             <div className="bg-blue-50 border border-blue-200 p-6 rounded-2xl">
               <h4 className="font-bold text-blue-900 text-lg mb-3">Cum exprimăm o preferință?</h4>
               <p className="text-sm text-blue-800 m-0 leading-relaxed">
-                Acolo unde preferințele sunt permise (ex: gen, stil de viață, profesie), ne așteptăm ca advertiserii de pe Roomy să le exprime într-un mod <strong>pozitiv și respectuos</strong>, explicând contextul, și NU folosind un limbaj de excludere sau agresiv.
+                Acolo unde preferințele sunt permise (ex: gen, stil de viață, profesie), ne așteptăm ca advertiserii de pe Rently să le exprime într-un mod <strong>pozitiv și respectuos</strong>, explicând contextul, și NU folosind un limbaj de excludere sau agresiv.
               </p>
             </div>
           </PolicySection>
@@ -206,7 +206,7 @@ export default function DiscriminationPolicyPage() {
 
           <PolicySection id="d6" title="6. Venituri și Ajutoare Sociale" icon={<span className="text-3xl">💳</span>}>
             <p className="mb-4">
-              Pe platforma Roomy, susținem incluziunea socială. Un proprietar își dorește, pe bună dreptate, chiriași care pot plăti chiria la timp. Totuși, <strong>sursa legală a veniturilor</strong> nu ar trebui să fie un motiv de respingere automată.
+              Pe platforma Rently, susținem incluziunea socială. Un proprietar își dorește, pe bună dreptate, chiriași care pot plăti chiria la timp. Totuși, <strong>sursa legală a veniturilor</strong> nu ar trebui să fie un motiv de respingere automată.
             </p>
             <p className="mb-4">
               Este împotriva practicilor bune să folosiți etichete discriminatorii referitoare la sursa de venit, cum ar fi:
@@ -223,7 +223,7 @@ export default function DiscriminationPolicyPage() {
 
           <PolicySection id="d7" title="7. Raportarea Abuzurilor și Sancțiuni" icon={<span className="text-3xl">🛑</span>} defaultOpen={true}>
             <p className="mb-6">
-              Roomy își rezervă dreptul absolut de a interveni asupra oricărui Conținut Generat de Utilizator (UGC) care încalcă prezenta politică.
+              Rently își rezervă dreptul absolut de a interveni asupra oricărui Conținut Generat de Utilizator (UGC) care încalcă prezenta politică.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -243,7 +243,7 @@ export default function DiscriminationPolicyPage() {
               <p className="text-slate-300 text-sm mb-6 max-w-2xl mx-auto">
                 Dacă observi un anunț sau primești un mesaj care încalcă regulile de mai sus, te rugăm să folosești imediat butonul <strong>„Raportează”</strong> de pe profilul utilizatorului sau să ne trimiți un e-mail direct. Vom investiga problema în câteva minute.
               </p>
-              <a href="mailto:contact@roomy.ro" className="inline-flex items-center justify-center bg-white text-slate-900 font-bold py-3 px-8 rounded-xl hover:bg-slate-100 transition-colors">
+              <a href="mailto:contact@Rently.ro" className="inline-flex items-center justify-center bg-white text-slate-900 font-bold py-3 px-8 rounded-xl hover:bg-slate-100 transition-colors">
                 Raportează o problemă &rarr;
               </a>
             </div>

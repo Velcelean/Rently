@@ -8,12 +8,12 @@ export default function Analytics() {
 
   useEffect(() => {
     // Verificăm în memoria browser-ului dacă utilizatorul a fost de acord
-    const consent = localStorage.getItem('roomy_cookie_performance') === 'true';
+    const consent = localStorage.getItem('Rently_cookie_performance') === 'true';
     setHasConsent(consent);
 
     // Opțional: Ascultăm dacă utilizatorul își schimbă preferințele în timp real
     const handleStorageChange = () => {
-      const updatedConsent = localStorage.getItem('roomy_cookie_performance') === 'true';
+      const updatedConsent = localStorage.getItem('Rently_cookie_performance') === 'true';
       setHasConsent(updatedConsent);
     };
 

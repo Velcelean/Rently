@@ -124,12 +124,12 @@ export default function InchiriazaOCameraPage() {
                 <RuleCard 
                   isAllowed={false} 
                   title="Proprietăți Separate" 
-                  desc="Apartamentele complet separate de locuința ta (ex: ai o garsonieră la etajul 2 și tu stai la etajul 4) se supun regulilor clasice de închiriere integrală, nu conceptului de Roomy/Flatshare."
+                  desc="Apartamentele complet separate de locuința ta (ex: ai o garsonieră la etajul 2 și tu stai la etajul 4) se supun regulilor clasice de închiriere integrală, nu conceptului de Rently/Flatshare."
                 />
                 <RuleCard 
                   isAllowed={false} 
                   title="Regim Hotelier (Airbnb)" 
-                  desc="Închirierea cu ziua/ora necesită certificate de clasificare turistică de la Ministerul Turismului. Roomy este strict pentru locuire rezidențială (luni/ani)."
+                  desc="Închirierea cu ziua/ora necesită certificate de clasificare turistică de la Ministerul Turismului. Rently este strict pentru locuire rezidențială (luni/ani)."
                 />
               </div>
             </div>
@@ -171,7 +171,7 @@ export default function InchiriazaOCameraPage() {
             Închirierea unei camere libere din propria locuință este una dintre cele mai simple și sigure modalități prin care poți câștiga bani, fără a deveni un „mogul imobiliar” cu zeci de proprietăți de gestionat.
           </p>
           <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-            Secretul succesului nu stă în contracte, ci în <strong>găsirea persoanei potrivite</strong>. Să fii confortabil sub același acoperiș este esențial. Exact aici intervine Roomy: creează un anunț gratuit și noi te punem în legătură doar cu oameni care au un stil de viață compatibil cu al tău.
+            Secretul succesului nu stă în contracte, ci în <strong>găsirea persoanei potrivite</strong>. Să fii confortabil sub același acoperiș este esențial. Exact aici intervine Rently: creează un anunț gratuit și noi te punem în legătură doar cu oameni care au un stil de viață compatibil cu al tău.
           </p>
 
         </div>
@@ -184,7 +184,7 @@ export default function InchiriazaOCameraPage() {
             <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl"></div>
             
             <h3 className="font-black text-2xl mb-3 relative z-10">Ai o cameră liberă?</h3>
-            <p className="text-sm text-amber-900/80 mb-8 font-medium leading-relaxed relative z-10">Mii de studenți și tineri profesioniști caută o cameră pe Roomy chiar acum. Fără agenții. Fără comisioane.</p>
+            <p className="text-sm text-amber-900/80 mb-8 font-medium leading-relaxed relative z-10">Mii de studenți și tineri profesioniști caută o cameră pe Rently chiar acum. Fără agenții. Fără comisioane.</p>
             
             <div className="space-y-4 relative z-10">
               <Link href="/add-listing" className="flex items-center justify-center gap-3 w-full bg-amber-950 hover:bg-black text-white font-black py-4 px-6 rounded-xl transition-all shadow-lg hover:shadow-amber-900/30 hover:-translate-y-0.5">
@@ -204,7 +204,7 @@ export default function InchiriazaOCameraPage() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:contact@roomy.ro" className="group flex items-center gap-3 text-slate-600 hover:text-blue-600 font-bold transition-colors p-3 hover:bg-slate-50 rounded-xl -ml-3">
+                <a href="mailto:contact@Rently.ro" className="group flex items-center gap-3 text-slate-600 hover:text-blue-600 font-bold transition-colors p-3 hover:bg-slate-50 rounded-xl -ml-3">
                   <div className="w-10 h-10 bg-slate-100 group-hover:bg-blue-100 rounded-lg flex items-center justify-center text-lg transition-colors">✉️</div>
                   Contactează Suportul
                 </a>

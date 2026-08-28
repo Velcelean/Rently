@@ -40,7 +40,7 @@ export default function DeCeSaImpartiChiriaPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-xs font-black text-blue-300 uppercase tracking-widest mb-6 backdrop-blur-md">
-            Ghid Roomy • Baza Cunoștințelor
+            Ghid Rently • Baza Cunoștințelor
           </div>
           <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight text-white max-w-3xl">
             Tot ce trebuie să știi despre <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-300">împărțirea chiriei</span>
@@ -90,7 +90,7 @@ export default function DeCeSaImpartiChiriaPage() {
 
             <h2 className="text-3xl font-black tracking-tight">Cu cine vei locui?</h2>
             <p>
-              Absolut oricine folosește Roomy. Platforma noastră nu discriminează, iar baza noastră de date include:
+              Absolut oricine folosește Rently. Platforma noastră nu discriminează, iar baza noastră de date include:
             </p>
             <ul className="space-y-2 font-medium">
               <li><strong>Studenți în primul an</strong> care caută colegi cu același program haotic și chef de viață.</li>
@@ -104,8 +104,8 @@ export default function DeCeSaImpartiChiriaPage() {
             <BenefitCard 
               icon="🛡️"
               color="blue"
-              title="Dar riscurile? Siguranța pe Roomy"
-              text="La fel ca în orice interacțiune interumană, există mici riscuri. Însă noi am construit Roomy tocmai pentru a anula haosul grupurilor de Facebook. Pe Roomy, ai un profil clar, poți vedea link-uri către social media (Instagram/Facebook) pentru a confirma identitatea persoanei. Nu îți publicăm numărul de telefon și ai la dispoziție mesageria noastră internă pentru a face 'filtrarea' la rece înainte să vă întâlniți."
+              title="Dar riscurile? Siguranța pe Rently"
+              text="La fel ca în orice interacțiune interumană, există mici riscuri. Însă noi am construit Rently tocmai pentru a anula haosul grupurilor de Facebook. Pe Rently, ai un profil clar, poți vedea link-uri către social media (Instagram/Facebook) pentru a confirma identitatea persoanei. Nu îți publicăm numărul de telefon și ai la dispoziție mesageria noastră internă pentru a face 'filtrarea' la rece înainte să vă întâlniți."
             />
 
             <h2 className="text-3xl font-black tracking-tight">Sunt proprietar. Pot lua pe cineva în gazdă?</h2>
@@ -150,7 +150,7 @@ export default function DeCeSaImpartiChiriaPage() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:contact@roomy.ro" className="group flex items-center gap-3 text-slate-600 hover:text-blue-600 font-bold transition-colors p-3 hover:bg-blue-50 rounded-xl -ml-3">
+                <a href="mailto:contact@Rently.ro" className="group flex items-center gap-3 text-slate-600 hover:text-blue-600 font-bold transition-colors p-3 hover:bg-blue-50 rounded-xl -ml-3">
                   <div className="w-10 h-10 bg-slate-100 group-hover:bg-blue-100 rounded-lg flex items-center justify-center text-lg transition-colors">✉️</div>
                   Scrie-ne pe E-mail
                 </a>

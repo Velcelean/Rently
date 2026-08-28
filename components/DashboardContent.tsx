@@ -108,7 +108,7 @@ export default function DashboardContent() {
       <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 sm:px-8">
           <span className="text-xl font-bold tracking-tight text-gray-900">
-            SpareRoom RO
+            Rently
           </span>
 
           <button

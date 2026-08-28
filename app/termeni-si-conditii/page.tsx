@@ -108,7 +108,7 @@ export default function UltimateTermsAndConditionsPage() {
                 Termeni și <br className="hidden md:block" /> Condiții Generale
               </h1>
               <p className="text-slate-400 text-lg md:text-2xl leading-relaxed font-light max-w-4xl">
-                Regulamentul oficial, extins și imperativ al platformei Roomy. Acest document guvernează drepturile, obligațiile și limitele de răspundere dintre utilizatori și Operator.
+                Regulamentul oficial, extins și imperativ al platformei Rently. Acest document guvernează drepturile, obligațiile și limitele de răspundere dintre utilizatori și Operator.
               </p>
             </div>
             
@@ -192,11 +192,11 @@ export default function UltimateTermsAndConditionsPage() {
             <AlertBox type="info">
               <strong className="block text-lg mb-2">Acord cu Forță Juridică Deplină</strong>
               <p>
-                Prin accesarea, vizitarea, înregistrarea pe, sau utilizarea oricărei funcționalități a platformei web <strong>Roomy</strong> (și a oricăror subdomenii sau aplicații asociate), confirmați în mod expres, liber și neechivoc că ați citit, înțeles și acceptat să fiți legat juridic de toate prevederile acestui document.
+                Prin accesarea, vizitarea, înregistrarea pe, sau utilizarea oricărei funcționalități a platformei web <strong>Rently</strong> (și a oricăror subdomenii sau aplicații asociate), confirmați în mod expres, liber și neechivoc că ați citit, înțeles și acceptat să fiți legat juridic de toate prevederile acestui document.
               </p>
             </AlertBox>
             <p>
-              Prezentul document, intitulat „Termeni și Condiții Generale” (denumit în continuare „Acordul”, „Termenii” sau „Contractul”), reprezintă contractul-cadru cu forță obligatorie încheiat între dumneavoastră, în calitate de Utilizator, și Operatorul independent al platformei Roomy.
+              Prezentul document, intitulat „Termeni și Condiții Generale” (denumit în continuare „Acordul”, „Termenii” sau „Contractul”), reprezintă contractul-cadru cu forță obligatorie încheiat între dumneavoastră, în calitate de Utilizator, și Operatorul independent al platformei Rently.
             </p>
             <p>
               Dacă nu sunteți de acord, în totalitate sau parțial, cu regulile, disclaimerele sau limitările de răspundere expuse mai jos, aveți obligația absolută de a părăsi imediat platforma și de a nu utiliza serviciile noastre. Continuarea navigării echivalează juridic cu o semnătură olografă pe un contract scris, fiindu-i aplicabile prevederile legii privind comerțul electronic.
@@ -204,12 +204,12 @@ export default function UltimateTermsAndConditionsPage() {
           </TermsSection>
 
           <TermsSection id="t2" title="2. Identitatea Operatorului și Natura Proiectului">
-            <p>Platforma Roomy este dezvoltată, administrată și menținută exclusiv ca un <strong>Proiect Independent (Solo Developer / Persoană Fizică)</strong>, și nu ca o entitate corporatistă (SRL, SA, PFA) în această fază a ciclului său de viață.</p>
+            <p>Platforma Rently este dezvoltată, administrată și menținută exclusiv ca un <strong>Proiect Independent (Solo Developer / Persoană Fizică)</strong>, și nu ca o entitate corporatistă (SRL, SA, PFA) în această fază a ciclului său de viață.</p>
             
             <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl mt-4">
               <ul className="list-disc pl-5 space-y-2 text-slate-700">
                 <li><strong>Jurisdicție:</strong> Proiectul este operat din teritoriul României și se supune legilor statului român și ale Uniunii Europene.</li>
-                <li><strong>Contact Juridic:</strong> Orice corespondență referitoare la încălcări ale prezentului acord, raportări de abuz sau solicitări de natură legală trebuie îndreptată exclusiv și în scris către adresa: <strong className="text-indigo-600">contact@roomy.ro</strong>.</li>
+                <li><strong>Contact Juridic:</strong> Orice corespondență referitoare la încălcări ale prezentului acord, raportări de abuz sau solicitări de natură legală trebuie îndreptată exclusiv și în scris către adresa: <strong className="text-indigo-600">contact@Rently.ro</strong>.</li>
               </ul>
             </div>
           </TermsSection>
@@ -219,7 +219,7 @@ export default function UltimateTermsAndConditionsPage() {
             <div className="space-y-4">
               <div className="p-4 border-l-4 border-indigo-500 bg-white shadow-sm rounded-r-lg">
                 <h4 className="font-bold text-slate-900 m-0">Platforma (sau Site-ul)</h4>
-                <p className="text-sm text-slate-600 mt-1">Întregul ecosistem digital găzduit la adresa <em>roomy.ro</em>, incluzând infrastructura backend, bazele de date, codul sursă, interfețele grafice și orice actualizări viitoare.</p>
+                <p className="text-sm text-slate-600 mt-1">Întregul ecosistem digital găzduit la adresa <em>Rently.ro</em>, incluzând infrastructura backend, bazele de date, codul sursă, interfețele grafice și orice actualizări viitoare.</p>
               </div>
               <div className="p-4 border-l-4 border-indigo-500 bg-white shadow-sm rounded-r-lg">
                 <h4 className="font-bold text-slate-900 m-0">Utilizator</h4>
@@ -242,7 +242,7 @@ export default function UltimateTermsAndConditionsPage() {
 
           <TermsSection id="t4" title="4. Natura Serviciului („As-Is” și „As-Available”)">
             <p className="mb-4">
-              Înțelegeți și sunteți de acord că Platforma Roomy vă este furnizată strict pe baza principiului <strong>„așa cum este” (As-Is)</strong> și <strong>„în funcție de disponibilitate” (As-Available)</strong>.
+              Înțelegeți și sunteți de acord că Platforma Rently vă este furnizată strict pe baza principiului <strong>„așa cum este” (As-Is)</strong> și <strong>„în funcție de disponibilitate” (As-Available)</strong>.
             </p>
             <ul className="list-disc pl-5 space-y-2 text-slate-700">
               <li>Nu garantăm că platforma va fi neîntreruptă, complet lipsită de erori tehnice (bug-uri) sau complet sigură împotriva unor atacuri cibernetice de nivel statal.</li>
@@ -255,24 +255,24 @@ export default function UltimateTermsAndConditionsPage() {
           <AlertBox type="info">
               <h4 className="font-black text-xl mb-2 flex items-center gap-2">Zero Taxe. Zero Comisioane.</h4>
               <p className="mb-3">
-                Roomy a fost construit din dorința de a curăța piața imobiliară și de a oferi un instrument util comunității. De aceea, la acest moment, <strong>utilizarea platformei este absolut gratuită pentru toți utilizatorii</strong>.
+                Rently a fost construit din dorința de a curăța piața imobiliară și de a oferi un instrument util comunității. De aceea, la acest moment, <strong>utilizarea platformei este absolut gratuită pentru toți utilizatorii</strong>.
               </p>
               <ul className="list-disc pl-6 mt-2 space-y-1 font-bold text-green-900">
                 <li>Nu percepem taxe de publicare a anunțurilor.</li>
                 <li>Nu percepem comisioane procentuale din valoarea chiriei sau a garanțiilor tranzacționate între utilizatori (precum o fac agențiile imobiliare clasice).</li>
-                <li>Nu integrăm procesatori de plăți (Stripe/Paypal) pe site și nu vă vom cere NICIODATĂ să introduceți datele cardului bancar în niciun câmp de pe Roomy.ro.</li>
+                <li>Nu integrăm procesatori de plăți (Stripe/Paypal) pe site și nu vă vom cere NICIODATĂ să introduceți datele cardului bancar în niciun câmp de pe Rently.ro.</li>
               </ul>
             </AlertBox>
           </TermsSection>
 
           <TermsSection id="t6" title="6. Statutul Juridic (Intermediar Digital Tehnic)">
             <p className="mb-4">
-              Este imperativ să înțelegeți poziția noastră limitată în arhitectura oricărei tranzacții. Roomy funcționează exclusiv ca un <strong>avizier digital inteligent (hosting provider / bulletin board)</strong>.
+              Este imperativ să înțelegeți poziția noastră limitată în arhitectura oricărei tranzacții. Rently funcționează exclusiv ca un <strong>avizier digital inteligent (hosting provider / bulletin board)</strong>.
             </p>
             <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
               <ul className="list-disc pl-5 space-y-3 text-slate-700">
                 <li><strong>Nu suntem Agenție Imobiliară:</strong> Nu acționăm în calitate de agent, broker, mandatar, dezvoltator imobiliar, administrator de proprietăți sau reprezentant legal pentru niciun Utilizator.</li>
-                <li><strong>Nu intermediem contracte:</strong> Orice contract de locațiune, înțelegere de împărțire a costurilor (split-rent), contract de comodat sau plată a garanțiilor se negociază, se redactează și se semnează <strong>strict, direct și exclusiv</strong> între dumneavoastră și celălalt utilizator. Operatorul Roomy nu este parte semnatară, nu vizează și nu mediază aceste contracte în lumea fizică.</li>
+                <li><strong>Nu intermediem contracte:</strong> Orice contract de locațiune, înțelegere de împărțire a costurilor (split-rent), contract de comodat sau plată a garanțiilor se negociază, se redactează și se semnează <strong>strict, direct și exclusiv</strong> între dumneavoastră și celălalt utilizator. Operatorul Rently nu este parte semnatară, nu vizează și nu mediază aceste contracte în lumea fizică.</li>
               </ul>
             </div>
           </TermsSection>
@@ -311,7 +311,7 @@ export default function UltimateTermsAndConditionsPage() {
                 <div className="bg-slate-900 text-white w-10 h-10 rounded-xl flex items-center justify-center font-black shrink-0">⚖️</div>
                 <div>
                   <strong className="text-slate-900 block mb-1">Lipsa Interdicțiilor</strong>
-                  <p className="text-sm text-slate-600 m-0">Confirmați că nu vă este interzis printr-o hotărâre judecătorească să accesați servicii online și că nu ați fost anterior banat definitiv de pe Roomy pentru fraude, limbaj abuziv sau încălcarea acestor Termeni.</p>
+                  <p className="text-sm text-slate-600 m-0">Confirmați că nu vă este interzis printr-o hotărâre judecătorească să accesați servicii online și că nu ați fost anterior banat definitiv de pe Rently pentru fraude, limbaj abuziv sau încălcarea acestor Termeni.</p>
                 </div>
               </li>
             </ul>
@@ -321,7 +321,7 @@ export default function UltimateTermsAndConditionsPage() {
             <p className="mb-4">Anumite funcționalități critice (contactarea unui proprietar, publicarea unei camere) necesită înregistrarea unui cont. Vă asumați următoarele obligații operaționale:</p>
             <div className="space-y-4 text-slate-700">
               <p><strong>Acuratețea Datelor:</strong> Vă obligați să furnizați o adresă de e-mail reală, funcțională și controlată de dumneavoastră. Este strict interzisă utilizarea unor adrese de email de unică folosință (temporare / burner emails) pentru a vă masca identitatea sau a rula scripturi de creare de conturi în masă.</p>
-              <p><strong>Securitatea Credențialelor:</strong> Sunteți unicul responsabil pentru păstrarea confidențialității parolei setate. Roomy stochează parolele exclusiv în format criptat ireversibil, deci nu vi le putem "spune" dacă le uitați. Orice acțiune derulată din contul dumneavoastră (inclusiv postarea unor anunțuri false sau trimiterea de spam în mesagerie) se prezumă a fi fost efectuată de dumneavoastră personal și vă asumați răspunderea pentru ea.</p>
+              <p><strong>Securitatea Credențialelor:</strong> Sunteți unicul responsabil pentru păstrarea confidențialității parolei setate. Rently stochează parolele exclusiv în format criptat ireversibil, deci nu vi le putem "spune" dacă le uitați. Orice acțiune derulată din contul dumneavoastră (inclusiv postarea unor anunțuri false sau trimiterea de spam în mesagerie) se prezumă a fi fost efectuată de dumneavoastră personal și vă asumați răspunderea pentru ea.</p>
               <p><strong>Notificarea Breșelor:</strong> În cazul în care constatați sau suspectați compromiterea contului dumneavoastră (furtul parolei), aveți obligația de a ne notifica imediat pentru a putea îngheța contul.</p>
             </div>
           </TermsSection>
@@ -329,7 +329,7 @@ export default function UltimateTermsAndConditionsPage() {
           <TermsSection id="t10" title="10. Regula Contului Unic (Anti-Sybil Policy)">
             <AlertBox type="warning">
               <p>
-                Pentru a asigura o piață corectă, transparentă și pentru a preveni manipularea algoritmilor noștri de vizibilitate, <strong>Roomy implementează o politică strictă de „Un Cont per Persoană Fizică”.</strong>
+                Pentru a asigura o piață corectă, transparentă și pentru a preveni manipularea algoritmilor noștri de vizibilitate, <strong>Rently implementează o politică strictă de „Un Cont per Persoană Fizică”.</strong>
               </p>
               <p className="mt-2">
                 Crearea de conturi multiple (Sybils / Clone) de către același utilizator în vederea:
@@ -342,7 +342,7 @@ export default function UltimateTermsAndConditionsPage() {
           </TermsSection>
 
           <TermsSection id="t11" title="11. Codul de Conduită Acceptabilă (Restricții Generale)" icon="🛑">
-            <p className="mb-6 font-bold text-slate-800">Când accesați și navigați pe Roomy, vă angajați imperativ să NU întreprindeți, să nu facilitați și să nu încurajați terții să întreprindă următoarele acțiuni:</p>
+            <p className="mb-6 font-bold text-slate-800">Când accesați și navigați pe Rently, vă angajați imperativ să NU întreprindeți, să nu facilitați și să nu încurajați terții să întreprindă următoarele acțiuni:</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-slate-50 border border-slate-200 p-5 rounded-xl">
@@ -368,7 +368,7 @@ export default function UltimateTermsAndConditionsPage() {
             <p className="mb-4">Protejarea infrastructurii tehnice și a liniștii utilizatorilor noștri este prioritatea numărul unu. Prin urmare, sunt strict interzise sub sancțiunea atragerii răspunderii civile (pentru daune) și penale:</p>
             <ul className="list-disc pl-6 space-y-3 text-slate-700">
               <li><strong>Spam și Marketing Nesolicitat:</strong> Utilizarea bazei de date de anunțuri sau a mesageriei interne pentru a trimite comunicări comerciale nesolicitate, oferte de credite, servicii de mutări mobilă, scheme piramidale (MLM) sau linkuri către alte platforme imobiliare concurente.</li>
-              <li><strong>Data Scraping:</strong> Utilizarea oricăror roboți, spideri, crawlere, scripturi automate, add-on-uri de browser sau a oricărei alte metode tehnologice pentru a extrage, copia sau clona masiv (scraping) arhitectura site-ului, adresele de email, prețurile sau fotografiile de pe Roomy în vederea creării unei baze de date paralele.</li>
+              <li><strong>Data Scraping:</strong> Utilizarea oricăror roboți, spideri, crawlere, scripturi automate, add-on-uri de browser sau a oricărei alte metode tehnologice pentru a extrage, copia sau clona masiv (scraping) arhitectura site-ului, adresele de email, prețurile sau fotografiile de pe Rently în vederea creării unei baze de date paralele.</li>
               <li><strong>Atacuri de Infrastructură:</strong> Orice tentativă deliberată de a supraîncărca serverele (atacuri DDoS / Rate Limit Evasion), de a găsi vulnerabilități în cod, de a injecta scripturi malițioase (SQLi, XSS) sau de a distribui viruși și troieni prin intermediul funcției de încărcare imagini.</li>
             </ul>
           </TermsSection>
@@ -401,7 +401,7 @@ export default function UltimateTermsAndConditionsPage() {
             <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
               <ul className="list-disc pl-5 space-y-3 text-slate-700 text-sm">
                 <li><strong>Autenticitatea Imaginilor:</strong> Pozele trebuie să prezinte starea actuală a apartamentului. Este <strong>strict interzisă</strong> folosirea de randări 3D (dacă nu este clar menționat acest lucru pentru blocurile în construcție), a fotografiilor generate de Inteligența Artificială (AI), a pozelor furate de pe site-urile hotelurilor sau din portofoliile altor agenții imobiliare.</li>
-                <li><strong>Fără Watermark-uri Comerciale:</strong> Nu acceptăm fotografii care conțin ștampile vizuale (watermarks), texte promoționale, link-uri sau numere de telefon suprapuse cu Photoshop peste imagine, în special dacă fac reclamă unor platforme concurente.</li>
+                <li><strong>Fără Watermark-uri Comerciale:</strong> Nu acceptăm fotografii care conțin ștampile vizuale (watermarks), texte promoționale, link-uri sau numere de telefon suprapuse cu Photoshop peste imagine.</li>
                 <li><strong>Imagini Inadecvate:</strong> Este interzisă încărcarea de imagini cu caracter pornografic, nuditate, violență sau care nu au absolut nicio legătură cu piața imobiliară (ex: poze cu mașini la vânzare, meme-uri pe internet).</li>
               </ul>
             </div>
@@ -412,7 +412,7 @@ export default function UltimateTermsAndConditionsPage() {
 
           <TermsSection id="t15" title="15. Monitorizarea Mesageriei Interne și Confidențialitatea" icon="👁️">
             <p className="mb-4 text-slate-700">
-              Roomy vă pune la dispoziție un sistem intern de chat pentru a facilita primele contacte fără a fi nevoie să vă publicați numărul de telefon. Pentru securitatea comunității, trebuie să cunoașteți cum funcționează acest sistem:
+              Rently vă pune la dispoziție un sistem intern de chat pentru a facilita primele contacte fără a fi nevoie să vă publicați numărul de telefon. Pentru securitatea comunității, trebuie să cunoașteți cum funcționează acest sistem:
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
@@ -438,7 +438,7 @@ export default function UltimateTermsAndConditionsPage() {
             <AlertBox type="critical">
               <h4 className="font-black text-xl mb-4 uppercase tracking-widest text-red-900">Pericol Major de Pierdere Financiară</h4>
               <p className="mb-4 font-bold">
-                Din calitatea de furnizor tehnic independent (care doar ține site-ul pornit), ROOMY NU ARE CAPACITATEA FIZICĂ DE A VĂ RECUPERA BANII dacă alegeți să îi trimiteți de bunăvoie unui escroc. Trebuie să citiți și să aplicați următoarele reguli de aur:
+                Din calitatea de furnizor tehnic independent (care doar ține site-ul pornit), Rently NU ARE CAPACITATEA FIZICĂ DE A VĂ RECUPERA BANII dacă alegeți să îi trimiteți de bunăvoie unui escroc. Trebuie să citiți și să aplicați următoarele reguli de aur:
               </p>
               
               <div className="bg-white p-5 rounded-xl border border-red-100 mt-4 text-slate-800">
@@ -452,18 +452,18 @@ export default function UltimateTermsAndConditionsPage() {
             </AlertBox>
           </TermsSection>
 
-          <TermsSection id="t17" title="17. Proprietatea Intelectuală (IP) a Platformei Roomy">
+          <TermsSection id="t17" title="17. Proprietatea Intelectuală (IP) a Platformei Rently">
             <p className="mb-4">
               Arhitectura completă a platformei — incluzând, dar fără a se limita la, codul sursă (front-end în React/Next.js, back-end), interfața grafică (UI/UX), designul, logo-ul, mărcile comerciale, paletele de culori, algoritmii de sortare și textele de pe paginile statice (cum este și acest document) — reprezintă proprietatea exclusivă a Operatorului și este protejată de legislația națională (Legea nr. 8/1996) și tratatele internaționale privind dreptul de autor.
             </p>
             <p className="font-bold text-slate-800 bg-slate-100 p-4 rounded-xl border border-slate-200">
-              Accesul dumneavoastră pe site constituie strict o licență limitată, revocabilă și non-exclusivă de a utiliza funcționalitățile software-ului în scopul declarat. Nu dobândiți niciun drept de proprietate asupra codului sau brandului Roomy. Vă este strict interzis să decompilați (reverse engineer), să copiați structura vizuală sau să încercați să clonați site-ul pentru a lansa un serviciu concurent.
+              Accesul dumneavoastră pe site constituie strict o licență limitată, revocabilă și non-exclusivă de a utiliza funcționalitățile software-ului în scopul declarat. Nu dobândiți niciun drept de proprietate asupra codului sau brandului Rently. Vă este strict interzis să decompilați (reverse engineer), să copiați structura vizuală sau să încercați să clonați site-ul pentru a lansa un serviciu concurent.
             </p>
           </TermsSection>
 
           <TermsSection id="t18" title="18. Licențierea Conținutului Generat de Utilizator (UGC)">
             <p className="mb-4">
-              În mod clar: <strong>Dumneavoastră rămâneți proprietarul de drept al textelor și fotografiilor</strong> pe care le postați pe platformă. Roomy nu vă fură dreptul de autor asupra pozelor din dormitorul dumneavoastră.
+              În mod clar: <strong>Dumneavoastră rămâneți proprietarul de drept al textelor și fotografiilor</strong> pe care le postați pe platformă. Rently nu vă fură dreptul de autor asupra pozelor din dormitorul dumneavoastră.
             </p>
             <p className="mb-4">
               Totuși, pentru ca internetul și serverele să funcționeze tehnic (pentru a vă putea salva pozele pe hard-disk-ul nostru de Cloud, pentru a le redimensiona ca să se încarce rapid pe ecranele telefoanelor și pentru a le afișa miilor de vizitatori), legea impune să ne acordați permisiunea de a face asta.
@@ -471,7 +471,7 @@ export default function UltimateTermsAndConditionsPage() {
             <div className="bg-indigo-50 border-l-4 border-indigo-600 p-5 rounded-r-xl">
               <strong className="text-indigo-900 block mb-1">Acordarea Licenței:</strong>
               <p className="text-sm text-indigo-800 m-0">
-                Prin simplul fapt al publicării unui anunț pe Roomy, ne acordați automat, cu titlu gratuit, o licență non-exclusivă, transferabilă și aplicabilă la nivel mondial pentru a stoca, reproduce, prelucra tehnic, formata, afișa public și distribui acel conținut (inclusiv pe canalele noastre de Social Media, cum ar fi Instagram/TikTok, exclusiv în scopul promovării anunțului dumneavoastră și al ecosistemului). Această licență tehnică încetează logic din secunda în care dumneavoastră apăsați butonul de ștergere a anunțului.
+                Prin simplul fapt al publicării unui anunț pe Rently, ne acordați automat, cu titlu gratuit, o licență non-exclusivă, transferabilă și aplicabilă la nivel mondial pentru a stoca, reproduce, prelucra tehnic, formata, afișa public și distribui acel conținut (inclusiv pe canalele noastre de Social Media, cum ar fi Instagram/TikTok, exclusiv în scopul promovării anunțului dumneavoastră și al ecosistemului). Această licență tehnică încetează logic din secunda în care dumneavoastră apăsați butonul de ștergere a anunțului.
               </p>
             </div>
             <p className="mt-4 text-sm text-slate-600">
@@ -481,14 +481,14 @@ export default function UltimateTermsAndConditionsPage() {
 
           <TermsSection id="t19" title="19. Raportarea Încălcărilor Drepturilor de Autor (Procedura DMCA/Takedown)">
             <p className="mb-4">
-              În conformitate cu reglementările de Safe Harbor privind comerțul electronic, Roomy funcționează tehnic ca un furnizor de servicii de „găzduire” (Hosting) și nu are obligația (nici capacitatea tehnică absolută) de a monitoriza proactiv fiecare poză urcată pe site pentru a verifica dacă încalcă drepturile de autor ale altcuiva.
+              În conformitate cu reglementările de Safe Harbor privind comerțul electronic, Rently funcționează tehnic ca un furnizor de servicii de „găzduire” (Hosting) și nu are obligația (nici capacitatea tehnică absolută) de a monitoriza proactiv fiecare poză urcată pe site pentru a verifica dacă încalcă drepturile de autor ale altcuiva.
             </p>
             <p className="mb-4 font-bold text-slate-800">
-              Dacă reprezentați o agenție imobiliară, un site concurent sau sunteți un proprietar care observă că pozele sale au fost furate și postate nelegitim pe Roomy, punem la dispoziție următoarea procedură (Notice and Takedown):
+              Dacă reprezentați o agenție imobiliară, un site concurent sau sunteți un proprietar care observă că pozele sale au fost furate și postate nelegitim pe Rently, punem la dispoziție următoarea procedură (Notice and Takedown):
             </p>
             <ol className="list-decimal pl-6 space-y-2 text-sm text-slate-700 bg-white border border-slate-200 p-6 rounded-2xl shadow-sm">
-              <li>Trimiteți o Notificare Oficială la <strong>contact@roomy.ro</strong>.</li>
-              <li>Includeți URL-ul (linkul) exact al paginii de pe Roomy unde apare conținutul care vă încalcă drepturile.</li>
+              <li>Trimiteți o Notificare Oficială la <strong>contact@Rently.ro</strong>.</li>
+              <li>Includeți URL-ul (linkul) exact al paginii de pe Rently unde apare conținutul care vă încalcă drepturile.</li>
               <li>Atașați dovada calității dumneavoastră de proprietar al drepturilor (ex: link către prima publicare oficială pe site-ul dvs, actul de proprietate, fotografiile brute RAW).</li>
               <li>Formulați o declarație sub sancțiunea falsului în înscrisuri cum că sunteți persoana vătămată sau reprezentantul autorizat al acesteia.</li>
             </ol>
@@ -504,14 +504,14 @@ export default function UltimateTermsAndConditionsPage() {
             <div className="bg-slate-100 p-5 rounded-2xl border border-slate-200">
               <strong className="block text-slate-900 mb-2">Exonerare:</strong>
               <p className="text-sm text-slate-700 m-0">
-                Includerea acestor link-uri pe Roomy este oferită strict pentru comoditatea utilizatorilor și <strong>nu constituie o aprobare, susținere sau garanție</strong> din partea noastră cu privire la securitatea, calitatea sau legalitatea acelor site-uri externe. Din momentul în care faceți click și părăsiți domeniul <code>roomy.ro</code>, navigați exclusiv pe propriul risc și vă supuneți termenilor și politicilor acelui site terț. Roomy nu poate fi făcut responsabil pentru nicio daună cibernetică (ex: viruși) preluată de pe site-uri externe.
+                Includerea acestor link-uri pe Rently este oferită strict pentru comoditatea utilizatorilor și <strong>nu constituie o aprobare, susținere sau garanție</strong> din partea noastră cu privire la securitatea, calitatea sau legalitatea acelor site-uri externe. Din momentul în care faceți click și părăsiți domeniul <code>Rently.ro</code>, navigați exclusiv pe propriul risc și vă supuneți termenilor și politicilor acelui site terț. Rently nu poate fi făcut responsabil pentru nicio daună cibernetică (ex: viruși) preluată de pe site-uri externe.
               </p>
             </div>
           </TermsSection>
 
           <TermsSection id="t21" title="21. Dreptul Absolut de Suspendare și Banare (Shadowban / IP Ban)" icon="🔨">
             <p className="mb-4">
-              Platforma Roomy, fiind o proprietate digitală administrată privat, nu este un spațiu public al statului. Accesul dumneavoastră aici este un privilegiu, nu un drept constituțional absolut.
+              Platforma Rently, fiind o proprietate digitală administrată privat, nu este un spațiu public al statului. Accesul dumneavoastră aici este un privilegiu, nu un drept constituțional absolut.
             </p>
             <p className="mb-4 font-bold text-red-600 bg-red-50 p-4 rounded-xl border border-red-100">
               Ne rezervăm dreptul absolut, discreționar și inatacabil de a vă restricționa, suspenda temporar sau bana definitiv (inclusiv blocarea clasei de IP sau a ID-ului dispozitivului) de pe platformă, ÎN ORICE MOMENT, IMEDIAT și FĂRĂ NICIO NOTIFICARE PREALABILĂ sau explicație, în situația în care:
@@ -520,7 +520,7 @@ export default function UltimateTermsAndConditionsPage() {
               <li>Încălcați, în litera sau în spiritul ei, oricare dintre clauzele expuse în acești Termeni și Condiții (în special Codul de Conduită de la Cap. 11 și 12).</li>
               <li>Atrageți mai multe „Raportări” (Reports) legitime din partea altor utilizatori pentru comportament toxic, agresivitate în chat sau limbaj neadecvat.</li>
               <li>Avem suspiciunea rezonabilă și tehnică că utilizați platforma pentru spălare de bani, escrocherii imobiliare (Scam) sau postarea de anunțuri false („momeală”).</li>
-              <li>Aduceți un prejudiciu de imagine brandului Roomy sau periclitați funcționarea infrastructurii tehnice a serverului.</li>
+              <li>Aduceți un prejudiciu de imagine brandului Rently sau periclitați funcționarea infrastructurii tehnice a serverului.</li>
             </ul>
             <p className="mt-4 text-sm text-slate-500 italic">
               *În cazul unei banări definitive, orice licență acordată prin prezentul document este revocată instantaneu. Nu aveți dreptul la nicio procedură de "apel" tehnic.
@@ -553,10 +553,10 @@ export default function UltimateTermsAndConditionsPage() {
               </p>
               <div className="space-y-4 text-red-900/90 text-sm md:text-base leading-relaxed font-medium uppercase text-justify">
                 <p>
-                  ÎN MĂSURA MAXIMĂ PERMISĂ DE LEGEA APLICABILĂ, OPERATORUL ROOMY (INCLUSIV FONDATORUL SĂU, ANGAJAȚII SAU COLABORATORII SĂI, DACĂ VA FI CAZUL PE VIITOR) RESPINGE ÎN MOD EXPRES ORICE FEL DE GARANȚII, EXPRESE SAU IMPLICITE.
+                  ÎN MĂSURA MAXIMĂ PERMISĂ DE LEGEA APLICABILĂ, OPERATORUL Rently (INCLUSIV FONDATORUL SĂU, ANGAJAȚII SAU COLABORATORII SĂI, DACĂ VA FI CAZUL PE VIITOR) RESPINGE ÎN MOD EXPRES ORICE FEL DE GARANȚII, EXPRESE SAU IMPLICITE.
                 </p>
                 <p>
-                  SUB NICIO CIRCUMSTANȚĂ, ROOMY NU VA FI RĂSPUNZĂTOR FAȚĂ DE DUMNEAVOASTRĂ SAU FAȚĂ DE ORICE TERȚĂ PARTE PENTRU NICIUN FEL DE DAUNE DIRECTE, INDIRECTE, INCIDENTALE, SPECIALE, PUNITIVE SAU CONSECVENTE, INCLUZÂND, DAR FĂRĂ A SE LIMITA LA:
+                  SUB NICIO CIRCUMSTANȚĂ, Rently NU VA FI RĂSPUNZĂTOR FAȚĂ DE DUMNEAVOASTRĂ SAU FAȚĂ DE ORICE TERȚĂ PARTE PENTRU NICIUN FEL DE DAUNE DIRECTE, INDIRECTE, INCIDENTALE, SPECIALE, PUNITIVE SAU CONSECVENTE, INCLUZÂND, DAR FĂRĂ A SE LIMITA LA:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 normal-case font-bold">
                   <li>Pierderea de bani (avansuri, chirii, garanții) cauzată de escrocherii, țepe imobiliare sau fraude orchestrate de alți utilizatori ai platformei pe care nu i-ați verificat;</li>
@@ -568,7 +568,7 @@ export default function UltimateTermsAndConditionsPage() {
               <div className="mt-6 bg-red-900 text-white p-5 rounded-xl border border-red-700">
                 <strong className="block mb-2 text-red-300 uppercase tracking-widest text-xs">Plafonarea Maximă a Răspunderii (Maximum Liability Cap)</strong>
                 <p className="text-sm m-0 leading-relaxed font-bold">
-                  ÎN SITUAȚIA EXTREMĂ ÎN CARE O INSTANȚĂ JUDECĂTOREASCĂ DIN ROMÂNIA ANULEAZĂ PREVEDERILE DE MAI SUS ȘI STABILEȘTE O CULPĂ DIRECTĂ A OPERATORULUI ROOMY, RECUNOAȘTEȚI ȘI ACCEPTAȚI CĂ RĂSPUNDEREA FINANCIARĂ MAXIMĂ, CUMULATĂ, A PLATFORMEI PENTRU ORICE PRETENȚIE NU VA DEPĂȘI NICIODATĂ SUMA DE 50 RON (CINCIZECI LEI NOI). ACEASTĂ PLAFONARE FIXĂ REFLECTĂ NATURA GRATUITĂ A SERVICIULUI OFERIT.
+                  ÎN SITUAȚIA EXTREMĂ ÎN CARE O INSTANȚĂ JUDECĂTOREASCĂ DIN ROMÂNIA ANULEAZĂ PREVEDERILE DE MAI SUS ȘI STABILEȘTE O CULPĂ DIRECTĂ A OPERATORULUI Rently, RECUNOAȘTEȚI ȘI ACCEPTAȚI CĂ RĂSPUNDEREA FINANCIARĂ MAXIMĂ, CUMULATĂ, A PLATFORMEI PENTRU ORICE PRETENȚIE NU VA DEPĂȘI NICIODATĂ SUMA DE 50 RON (CINCIZECI LEI NOI). ACEASTĂ PLAFONARE FIXĂ REFLECTĂ NATURA GRATUITĂ A SERVICIULUI OFERIT.
                 </p>
               </div>
             </AlertBox>
@@ -579,12 +579,12 @@ export default function UltimateTermsAndConditionsPage() {
               În contrapartidă cu utilizarea gratuită a ecosistemului nostru, vă asumați întreaga responsabilitate pentru actele dumneavoastră juridice, digitale și fizice.
             </p>
             <p className="bg-slate-50 border border-slate-200 p-6 rounded-2xl text-slate-700 font-medium">
-              Vă angajați în mod ferm și irevocabil să apărați, să despăgubiți pe deplin și să mențineți Operatorul Roomy complet inofensiv și exonerat de orice răspundere împotriva oricăror cereri de chemare în judecată, plângeri, datoriilor, daunelor, amenzilor (inclusiv amenzi GDPR cauzate de faptele dvs), costurilor sau cheltuielilor (incluzând onorarii avocațiale și taxe de timbru rezonabile) inițiate de o terță parte sau de autorități, care decurg direct sau indirect din:
+              Vă angajați în mod ferm și irevocabil să apărați, să despăgubiți pe deplin și să mențineți Operatorul Rently complet inofensiv și exonerat de orice răspundere împotriva oricăror cereri de chemare în judecată, plângeri, datoriilor, daunelor, amenzilor (inclusiv amenzi GDPR cauzate de faptele dvs), costurilor sau cheltuielilor (incluzând onorarii avocațiale și taxe de timbru rezonabile) inițiate de o terță parte sau de autorități, care decurg direct sau indirect din:
             </p>
             <ul className="list-disc pl-8 mt-4 space-y-2 text-slate-700">
               <li>Încălcarea de către dumneavoastră a oricărei clauze din acești Termeni și Condiții;</li>
               <li>Evaziunea fiscală, neînregistrarea contractelor de închiriere la ANAF sau neplata impozitelor pe venit aferente chiriilor obținute prin platformă;</li>
-              <li>Încălcarea drepturilor de autor ale unui fotograf sau ale unei agenții prin publicarea de poze furate pe Roomy;</li>
+              <li>Încălcarea drepturilor de autor ale unui fotograf sau ale unei agenții prin publicarea de poze furate pe Rently;</li>
               <li>Orice conflict violent, neînțelegere contractuală sau litigiu survenit în lumea reală între dumneavoastră și un chiriaș/proprietar cunoscut pe site.</li>
             </ul>
           </TermsSection>
@@ -597,7 +597,7 @@ export default function UltimateTermsAndConditionsPage() {
 
           <TermsSection id="t26" title="26. Forța Majoră și Căderi Tehnice">
             <p className="mb-4">
-              Principiul Forței Majore, așa cum este definit de Codul Civil Român, se aplică în totalitate acestui acord. Roomy nu va fi ținut răspunzător pentru nicio întârziere, neexecutare sau ștergere de date cauzată de circumstanțe care scapă complet controlului nostru rezonabil.
+              Principiul Forței Majore, așa cum este definit de Codul Civil Român, se aplică în totalitate acestui acord. Rently nu va fi ținut răspunzător pentru nicio întârziere, neexecutare sau ștergere de date cauzată de circumstanțe care scapă complet controlului nostru rezonabil.
             </p>
             <p className="mb-2 font-bold text-slate-800">În lumea arhitecturii web Cloud, „Forța Majoră” include, pe lângă calamitățile clasice, următoarele:</p>
             <ul className="list-disc pl-6 space-y-2 text-slate-700 text-sm">
@@ -615,12 +615,12 @@ export default function UltimateTermsAndConditionsPage() {
           </TermsSection>
 
           <TermsSection id="t28" title="28. Soluționarea Litigiilor și Competența Teritorială" icon="⚖️">
-            <p className="mb-4">Orice comunitate implică fricțiuni, însă fondatorul Roomy susține rezolvarea elegantă a oricărei discrepanțe tehnice sau contractuale. Ca atare, sunteți de acord cu următorul proces în doi pași obligatorii:</p>
+            <p className="mb-4">Orice comunitate implică fricțiuni, însă fondatorul Rently susține rezolvarea elegantă a oricărei discrepanțe tehnice sau contractuale. Ca atare, sunteți de acord cu următorul proces în doi pași obligatorii:</p>
             
             <div className="space-y-4">
               <div className="bg-slate-50 border border-slate-200 p-5 rounded-xl">
                 <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2"><span className="text-blue-600 bg-blue-100 w-6 h-6 rounded-full flex items-center justify-center text-xs">1</span> Medierea Amiabilă Prealabilă (Obligatorie)</h4>
-                <p className="text-sm text-slate-700 m-0">Înainte de a declanșa orice acțiune litigioasă în instanță sau o plângere la ANPC, vă asumați obligația contractuală de a ne notifica în scris problema la adresa <strong>contact@roomy.ro</strong>. Vom dispune de un termen de grație de <strong>30 de zile calendaristice</strong> pentru a investiga tehnic și a încerca o rezolvare pe cale amiabilă a diferendului.</p>
+                <p className="text-sm text-slate-700 m-0">Înainte de a declanșa orice acțiune litigioasă în instanță sau o plângere la ANPC, vă asumați obligația contractuală de a ne notifica în scris problema la adresa <strong>contact@Rently.ro</strong>. Vom dispune de un termen de grație de <strong>30 de zile calendaristice</strong> pentru a investiga tehnic și a încerca o rezolvare pe cale amiabilă a diferendului.</p>
               </div>
 
               <div className="bg-slate-50 border border-slate-200 p-5 rounded-xl">
@@ -663,8 +663,8 @@ export default function UltimateTermsAndConditionsPage() {
                   <span className="block text-indigo-400 text-[10px] font-black uppercase tracking-[0.2em] mb-4">Adresa Unică de Corespondență</span>
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <span className="text-4xl mb-2 sm:mb-0">✉️</span>
-                    <a href="mailto:contact@roomy.ro" className="text-white text-2xl sm:text-3xl md:text-4xl font-black hover:text-blue-400 transition-colors border-b-[3px] border-transparent hover:border-blue-400 pb-1 break-all">
-                      contact@roomy.ro
+                    <a href="mailto:contact@Rently.ro" className="text-white text-2xl sm:text-3xl md:text-4xl font-black hover:text-blue-400 transition-colors border-b-[3px] border-transparent hover:border-blue-400 pb-1 break-all">
+                      contact@Rently.ro
                     </a>
                   </div>
                 </div>

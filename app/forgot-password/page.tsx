@@ -59,8 +59,8 @@ export default function ForgotPasswordPage() {
         {/* LOGO */}
         <div className="relative z-10">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity w-max">
-            <img src="/logo.png" alt="Roomy Logo" className="h-16 w-auto object-contain brightness-0 invert" />
-            <span className="text-4xl font-black text-white tracking-tighter">Roomy</span>
+            <img src="/logo.png" alt="Rently Logo" className="h-16 w-auto object-contain brightness-0 invert" />
+            <span className="text-4xl font-black text-white tracking-tighter">Rently</span>
           </Link>
         </div>
 
@@ -92,7 +92,7 @@ export default function ForgotPasswordPage() {
             Recuperează-ți <br/> accesul la cont.
           </h2>
           <p className="text-blue-100 text-lg font-medium leading-relaxed">
-            Nu-ți face griji, se mai întâmplă! Îți vom trimite un link securizat pentru a-ți alege o nouă parolă și a te întoarce pe Roomy în câteva secunde.
+            Nu-ți face griji, se mai întâmplă! Îți vom trimite un link securizat pentru a-ți alege o nouă parolă și a te întoarce pe Rently în câteva secunde.
           </p>
         </div>
       </div>
@@ -103,8 +103,8 @@ export default function ForgotPasswordPage() {
         {/* Buton Înapoi / Logo Mobile */}
         <div className="absolute top-6 left-6 lg:hidden flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Roomy Logo" className="h-10 w-auto object-contain" />
-            <span className="text-2xl font-black text-blue-600 tracking-tight">Roomy</span>
+            <img src="/logo.png" alt="Rently Logo" className="h-10 w-auto object-contain" />
+            <span className="text-2xl font-black text-blue-600 tracking-tight">Rently</span>
           </Link>
         </div>
 

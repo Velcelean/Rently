@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-6">
               <span className="text-3xl font-black text-white tracking-tighter">
-                Roomy<span className="text-blue-500">.</span>
+                Rently<span className="text-blue-500">.</span>
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-8 font-medium">
@@ -42,7 +42,7 @@ export default function Footer() {
             <h3 className="font-bold text-white mb-6 uppercase tracking-widest text-xs">Comunitate</h3>
             <ul className="space-y-4 text-sm font-medium">
               <li><Link href="/despre-noi" className="hover:text-blue-400 transition-colors">Despre Noi</Link></li>
-              <li><Link href="/de-ce-roomy" className="hover:text-blue-400 transition-colors">De ce Roomy?</Link></li>
+              <li><Link href="/de-ce-Rently" className="hover:text-blue-400 transition-colors">De ce Rently?</Link></li>
               <li><Link href="/de-ce-sa-imparti-chiria" className="hover:text-blue-400 transition-colors">Ghid: Flatsharing</Link></li>
               <li><Link href="/programul-inchiriaza-o-camera" className="hover:text-blue-400 transition-colors">Ghid: Pentru Proprietari</Link></li>
             </ul>
@@ -64,10 +64,10 @@ export default function Footer() {
 
         <div className="border-t border-slate-800/80 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-slate-500">
           <p>
-            &copy; {currentYear} Roomy.ro. Toate drepturile rezervate. Un proiect independent creat în România.
+            &copy; {currentYear} Rently.ro. Toate drepturile rezervate. Un proiect independent creat în România.
           </p>
           <div className="flex items-center gap-6">
-            <a href="mailto:contact@roomy.ro" className="hover:text-white transition-colors">contact@roomy.ro</a>
+            <a href="mailto:contact@Rently.ro" className="hover:text-white transition-colors">contact@Rently.ro</a>
             <Link href="/intrebari-frecvente" className="hover:text-white transition-colors">Centrul de Suport</Link>
           </div>
         </div>

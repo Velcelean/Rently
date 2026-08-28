@@ -371,7 +371,7 @@ export default function PublicProfilePage() {
               <h3 className="font-black text-2xl text-slate-900">Raportează Profilul</h3>
             </div>
             <p className="text-slate-500 font-medium text-xs mb-6 leading-relaxed">
-              Ajută-ne să păstrăm comunitatea Roomy sigură. Raportarea este 100% confidențială și va fi verificată de echipa noastră.
+              Ajută-ne să păstrăm comunitatea Rently sigură. Raportarea este 100% confidențială și va fi verificată de echipa noastră.
             </p>
 
             <form onSubmit={handleSendReport} className="space-y-4">

@@ -339,7 +339,7 @@ export default function AdminCommandCenter() {
             <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
               <span className="font-black text-xl">R</span>
             </div>
-            <h2 className="text-2xl font-black tracking-tight">Roomy<span className="text-blue-500">OS</span></h2>
+            <h2 className="text-2xl font-black tracking-tight">Rently<span className="text-blue-500">OS</span></h2>
           </div>
           <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 ml-13">Admin Workspace</p>
         </div>
@@ -403,7 +403,7 @@ export default function AdminCommandCenter() {
         
         {/* TOPBAR MOBILE (PENTRU RESPONSIVE) */}
         <div className="lg:hidden bg-slate-900 text-white p-4 flex justify-between items-center z-20">
-           <h2 className="font-black tracking-tight text-xl">Roomy<span className="text-blue-500">OS</span></h2>
+           <h2 className="font-black tracking-tight text-xl">Rently<span className="text-blue-500">OS</span></h2>
            <button onClick={() => router.push('/dashboard')} className="text-xs bg-slate-800 px-3 py-2 rounded-lg font-bold">Ieși</button>
         </div>
 
@@ -417,7 +417,7 @@ export default function AdminCommandCenter() {
                 {activeTab.replace('_', ' ')}
               </h1>
               <p className="text-slate-500 font-medium mt-2 max-w-xl">
-                {activeTab === 'overview' && "Privire de ansamblu asupra performanței și sănătății platformei Roomy."}
+                {activeTab === 'overview' && "Privire de ansamblu asupra performanței și sănătății platformei Rently."}
                 {activeTab === 'listings' && "Gestionează, filtrează și moderează toate anunțurile postate de utilizatori."}
                 {activeTab === 'feedback' && "Citește ce spun utilizatorii despre platformă. Părerile lor contează."}
                 {activeTab === 'reports' && "Atenție necesară: investighează plângerile și asigură un mediu curat."}

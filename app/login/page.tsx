@@ -81,8 +81,8 @@ export default function LoginPage() {
 
         <div className="relative z-10">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity w-max">
-            <img src="/logo.png" alt="Roomy Logo" className="h-16 w-auto object-contain brightness-0 invert" />
-            <span className="text-4xl font-black text-white tracking-tighter">Roomy</span>
+            <img src="/logo.png" alt="Rently Logo" className="h-16 w-auto object-contain brightness-0 invert" />
+            <span className="text-4xl font-black text-white tracking-tighter">Rently</span>
           </Link>
         </div>
 
@@ -113,7 +113,7 @@ export default function LoginPage() {
 
         <div className="relative z-10 max-w-xl">
           <h2 className="text-5xl font-black text-white mb-6 leading-tight tracking-tight">
-            Bine ai revenit <br/> pe Roomy.
+            Bine ai revenit <br/> pe Rently.
           </h2>
           <p className="text-blue-100 text-lg font-medium leading-relaxed">
             Continuă de unde ai rămas. Gestionează-ți anunțurile, răspunde la mesaje și găsește-ți locul ideal în cel mai sigur mediu.
@@ -126,8 +126,8 @@ export default function LoginPage() {
         
         <div className="absolute top-6 left-6 lg:hidden flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Roomy Logo" className="h-10 w-auto object-contain" />
-            <span className="text-2xl font-black text-blue-600 tracking-tight">Roomy</span>
+            <img src="/logo.png" alt="Rently Logo" className="h-10 w-auto object-contain" />
+            <span className="text-2xl font-black text-blue-600 tracking-tight">Rently</span>
           </Link>
         </div>
 
