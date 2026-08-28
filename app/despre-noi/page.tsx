@@ -220,7 +220,7 @@ export default function DespreNoiPage() {
               <span>•</span>
               <Link href="/politica-de-confidentialitate" className="hover:text-blue-600 transition">Confidențialitate</Link>
               <span>•</span>
-              <a href="mailto:contact@Rently.ro" className="hover:text-blue-600 transition">Contactează-ne</a>
+              <a href="mailto:contact@rently.ro" className="hover:text-blue-600 transition">Contactează-ne</a>
             </div>
           </div>
         </div>

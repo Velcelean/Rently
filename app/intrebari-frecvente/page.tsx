@@ -149,7 +149,7 @@ export default function FAQPage() {
               <p className="text-blue-100 mb-6 text-sm leading-relaxed relative z-10">
                 Suntem un proiect independent și răspundem personal la fiecare e-mail. Scrie-ne și te vom ajuta!
               </p>
-              <a href="mailto:contact@Rently.ro" className="inline-flex items-center justify-center w-full bg-white text-blue-700 font-bold py-3 px-6 rounded-xl hover:bg-blue-50 transition-colors shadow-md relative z-10">
+              <a href="mailto:contact@rently.ro" className="inline-flex items-center justify-center w-full bg-white text-blue-700 font-bold py-3 px-6 rounded-xl hover:bg-blue-50 transition-colors shadow-md relative z-10">
                 Contactează-ne ✉️
               </a>
             </div>
