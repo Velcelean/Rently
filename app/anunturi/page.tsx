@@ -24,7 +24,6 @@ interface Listing {
   pet_friendly: boolean;
   accepta_cupluri: boolean;
   utilitati_incluse: boolean;
-  lgbt_friendly: boolean;
   amenities: string[];
   image_url: string | null;
   image_urls: string[] | null;
@@ -32,7 +31,7 @@ interface Listing {
 }
 
 // ==========================================
-// 2. CONSTANTE ȘI DATE FIXE
+// 2. CONSTANTE ȘI FUNCȚII UTILITARE
 // ==========================================
 const AMENITIES_LIST = [
   { id: "wifi", label: "Wi-Fi rapid", icon: "📶" },
@@ -50,6 +49,24 @@ const AMENITIES_LIST = [
   { id: "tv", label: "Televizor", icon: "📺" },
   { id: "birou", label: "Spațiu lucru", icon: "💻" },
 ];
+
+// Funcția magică care transformă textul de sistem în text premium vizual
+const formatareEticheta = (valoare: string | undefined | null) => {
+  if (!valoare) return "";
+  
+  const etichete: Record<string, string> = {
+    'camera_privata': 'Cameră Privată',
+    'camera_partajata': 'Cameră Partajată',
+    'apartament_intreg': 'Apartament Întreg',
+    'single': 'Cameră Single',
+    'dubla': 'Cameră Dublă',
+    'oferta_camera': 'Se Oferă',
+    'cerere_camera': 'Se Caută'
+  };
+
+  // Dacă o găsește în dicționar o înlocuiește. Dacă nu, înlocuiește _ cu spațiu.
+  return etichete[valoare.toLowerCase()] || valoare.replace(/_/g, ' ').toUpperCase();
+};
 
 // ==========================================
 // 3. ICONIȚE SVG VECTORIALE (PREMIUM)
@@ -98,7 +115,6 @@ export default function AnunturiPage() {
   const [baiePrivata, setBaiePrivata] = useState(false);
   const [petFriendly, setPetFriendly] = useState(false);
   const [utilitatiIncluse, setUtilitatiIncluse] = useState(false); // Cheltuieli incluse
-  const [lgbtFriendly, setLgbtFriendly] = useState(false);
   const [acceptaCupluri, setAcceptaCupluri] = useState(false);
   const [selectedAmenities, setSelectedAmenities] = useState<string[]>([]);
 
@@ -125,7 +141,6 @@ export default function AnunturiPage() {
       if (baiePrivata) query = query.eq("baie_privata", true);
       if (petFriendly) query = query.eq("pet_friendly", true);
       if (utilitatiIncluse) query = query.eq("utilitati_incluse", true); // Bifa pentru cheltuieli
-      if (lgbtFriendly) query = query.eq("lgbt_friendly", true);
       if (acceptaCupluri) query = query.eq("accepta_cupluri", true);
       
       // Filtrare după lista de facilități (Amenities)
@@ -150,7 +165,14 @@ export default function AnunturiPage() {
     if (error) {
       console.error("Eroare la aducerea anunțurilor:", error);
     } else if (data) {
-      setAnunturi(data as Listing[]);
+      // Aici e magia: Curățăm datele urâte din DB înainte să le trimitem la Cartonaș
+      const anunturiCurate = (data as Listing[]).map((anunt) => ({
+        ...anunt,
+        tip_locuinta: formatareEticheta(anunt.tip_locuinta),
+        tip_anunt: formatareEticheta(anunt.tip_anunt),
+        tip_camera: formatareEticheta(anunt.tip_camera)
+      }));
+      setAnunturi(anunturiCurate);
     }
     
     setLoading(false);
@@ -168,7 +190,15 @@ export default function AnunturiPage() {
       let initialQuery = supabase.from("listings").select("*").ilike("city", `%${orasDinUrl}%`).order("created_at", { ascending: false });
       
       initialQuery.then(({ data }) => {
-        if (data) setAnunturi(data as Listing[]);
+        if (data) {
+          const anunturiCurate = (data as Listing[]).map((anunt) => ({
+            ...anunt,
+            tip_locuinta: formatareEticheta(anunt.tip_locuinta),
+            tip_anunt: formatareEticheta(anunt.tip_anunt),
+            tip_camera: formatareEticheta(anunt.tip_camera)
+          }));
+          setAnunturi(anunturiCurate);
+        }
         setLoading(false);
       });
     } else {
@@ -209,7 +239,6 @@ export default function AnunturiPage() {
     setBaiePrivata(false);
     setPetFriendly(false);
     setUtilitatiIncluse(false);
-    setLgbtFriendly(false);
     setAcceptaCupluri(false);
     setSelectedAmenities([]);
     
@@ -225,7 +254,6 @@ export default function AnunturiPage() {
     setBaiePrivata(false);
     setPetFriendly(false);
     setUtilitatiIncluse(false);
-    setLgbtFriendly(false);
     setAcceptaCupluri(false);
     setSelectedAmenities([]);
     // Nu închidem modalul și nu facem fetch aici. Așteptăm să dea "Arată rezultatele".
@@ -244,7 +272,6 @@ export default function AnunturiPage() {
     (baiePrivata ? 1 : 0) + 
     (petFriendly ? 1 : 0) + 
     (utilitatiIncluse ? 1 : 0) +
-    (lgbtFriendly ? 1 : 0) +
     (acceptaCupluri ? 1 : 0) +
     selectedAmenities.length;
 
@@ -532,7 +559,7 @@ export default function AnunturiPage() {
                 </div>
               </section>
 
-              {/* 3. Reguli & Financiar (Aici apare și Cheltuieli Incluse) */}
+              {/* 3. Reguli & Financiar */}
               <section>
                 <h4 className="font-black text-slate-900 mb-4 text-lg">Reguli & Financiar</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -551,11 +578,6 @@ export default function AnunturiPage() {
                     label="Acceptă cupluri 👫" 
                     checked={acceptaCupluri} 
                     onChange={() => setAcceptaCupluri(!acceptaCupluri)} 
-                  />
-                  <FilterCheckbox 
-                    label="LGBTQ+ Friendly 🌈" 
-                    checked={lgbtFriendly} 
-                    onChange={() => setLgbtFriendly(!lgbtFriendly)} 
                   />
                 </div>
               </section>

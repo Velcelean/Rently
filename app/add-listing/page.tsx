@@ -91,7 +91,6 @@ export default function AddListingPage() {
   const [acceptaCupluri, setAcceptaCupluri] = useState(false);
   const [fumatori, setFumatori] = useState(false);
   const [petFriendly, setPetFriendly] = useState(false);
-  const [lgbtFriendly, setLgbtFriendly] = useState(false);
 
   const [selectedAmenities, setSelectedAmenities] = useState<string[]>([]);
   
@@ -217,7 +216,12 @@ export default function AddListingPage() {
         const moderationRes = await fetch('/api/moderate', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ text: combinedText, imageUrls })
+          body: JSON.stringify({ 
+            text: combinedText, 
+            imageUrls: imageUrls,
+            title: titlu.trim(),
+            price: Number(pret)
+          })
         });
         
         const moderationData = await moderationRes.json();
@@ -251,7 +255,6 @@ export default function AddListingPage() {
         accepta_cupluri: acceptaCupluri,
         fumatori: fumatori,
         pet_friendly: petFriendly,
-        lgbt_friendly: lgbtFriendly,
         amenities: selectedAmenities,
         image_urls: imageUrls,
         image_url: imageUrls.length > 0 ? imageUrls[0] : null,
@@ -492,11 +495,6 @@ export default function AddListingPage() {
                     checked={petFriendly} 
                     onChange={setPetFriendly} 
                     label={tipAnunt === "cerere_camera" ? "Am animal de companie 🐾" : "Pet-friendly? 🐾"} 
-                  />
-                  <ToggleSwitch 
-                    checked={lgbtFriendly} 
-                    onChange={setLgbtFriendly} 
-                    label={tipAnunt === "cerere_camera" ? "Fac parte din comunitate 🌈" : "LGBTQ+ Friendly? 🌈"} 
                   />
                 </div>
               </div>

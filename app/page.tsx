@@ -13,6 +13,23 @@ function createClient() {
   return createBrowserClient(supabaseUrl, supabaseKey);
 }
 
+// Funcția magică care transformă textul de sistem în text premium vizual
+const formatareEticheta = (valoare: string | undefined | null) => {
+  if (!valoare) return "";
+  
+  const etichete: Record<string, string> = {
+    'camera_privata': 'Cameră Privată',
+    'camera_partajata': 'Cameră Partajată',
+    'apartament_intreg': 'Apartament Întreg',
+    'single': 'Cameră Single',
+    'dubla': 'Cameră Dublă',
+    'oferta_camera': 'Se Oferă',
+    'cerere_camera': 'Se Caută'
+  };
+
+  return etichete[valoare.toLowerCase()] || valoare.replace(/_/g, ' ').toUpperCase();
+};
+
 export default function HomePage() {
   const [supabase] = useState(() => createClient());
   const [latestAds, setLatestAds] = useState<any[]>([]);
@@ -26,13 +43,15 @@ export default function HomePage() {
         const { data, error } = await supabase
           .from(tableName)
           .select("*")
-          .limit(4);
+          .limit(4)
+          .order("created_at", { ascending: false }); // Afișăm mereu cele mai noi
 
         if (error) {
           const { data: retryData, error: retryError } = await supabase
             .from("anunturi")
             .select("*")
-            .limit(4);
+            .limit(4)
+            .order("created_at", { ascending: false });
 
           if (!retryError && retryData) {
             setLatestAds(retryData);
@@ -81,7 +100,6 @@ export default function HomePage() {
               Sigur. Rapid. Transparent. Fie că oferi spre închiriere un apartament, ai o cameră liberă sau cauți un loc de stat, Rently îți face legătura cu persoana potrivită.
             </p>
 
-            {/* BUTOANELE MODIFICATE */}
             <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto justify-center">
               <Link href="/anunturi" className="group flex items-center justify-center gap-3 bg-white text-blue-700 font-black text-lg py-4 px-10 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
                 <span className="text-2xl group-hover:-rotate-12 transition-transform">🔍</span>
@@ -181,8 +199,10 @@ export default function HomePage() {
                   const title = ad.titlu || ad.title || "Anunț";
                   const city = ad.oras || ad.city || ad.locatie || "Locație nespecificată";
                   const price = ad.pret || ad.price || 0;
-                  const labelType = ad.tip_anunt || ad.type || "SE OFERĂ";
-                  const roomType = ad.tip_camera || ad.room_type || "CAMERA_PRIVATA";
+                  
+                  // Aici folosim funcția de formatare vizuală
+                  const labelType = formatareEticheta(ad.tip_anunt || ad.type || "oferta_camera");
+                  const roomType = formatareEticheta(ad.tip_locuinta || ad.tip_camera || ad.room_type || "camera_privata");
 
                   return (
                     <Link href={`/anunturi/${ad.id}`} key={ad.id} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer flex flex-col">
@@ -197,14 +217,14 @@ export default function HomePage() {
                           </div>
                         )}
                         
-                        <div className={`absolute top-4 left-4 text-white text-[10px] font-black px-3 py-1.5 rounded-lg uppercase tracking-widest shadow-md ${labelType.includes('CAUT') ? 'bg-indigo-600' : 'bg-blue-600'}`}>
+                        <div className={`absolute top-4 left-4 text-white text-[10px] font-black px-3 py-1.5 rounded-lg uppercase tracking-widest shadow-md ${labelType.includes('Caută') ? 'bg-indigo-600' : 'bg-blue-600'}`}>
                           {labelType}
                         </div>
                       </div>
                       
                       <div className="p-5 flex flex-col flex-grow">
                         <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">
-                          {roomType.replace('_', ' ')}
+                          {roomType}
                         </div>
                         <h3 className="font-bold text-slate-900 text-lg mb-4 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
                           {title}
