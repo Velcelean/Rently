@@ -209,7 +209,7 @@ export default function UltimateTermsAndConditionsPage() {
             <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl mt-4">
               <ul className="list-disc pl-5 space-y-2 text-slate-700">
                 <li><strong>Jurisdicție:</strong> Proiectul este operat din teritoriul României și se supune legilor statului român și ale Uniunii Europene.</li>
-                <li><strong>Contact Juridic:</strong> Orice corespondență referitoare la încălcări ale prezentului acord, raportări de abuz sau solicitări de natură legală trebuie îndreptată exclusiv și în scris către adresa: <strong className="text-indigo-600">contact@rently.ro</strong>.</li>
+                <li><strong>Contact Juridic:</strong> Orice corespondență referitoare la încălcări ale prezentului acord, raportări de abuz sau solicitări de natură legală trebuie îndreptată exclusiv și în scris către adresa: <strong className="text-indigo-600">contact.rently@gmail.com</strong>.</li>
               </ul>
             </div>
           </TermsSection>
@@ -487,7 +487,7 @@ export default function UltimateTermsAndConditionsPage() {
               Dacă reprezentați o agenție imobiliară, un site concurent sau sunteți un proprietar care observă că pozele sale au fost furate și postate nelegitim pe Rently, punem la dispoziție următoarea procedură (Notice and Takedown):
             </p>
             <ol className="list-decimal pl-6 space-y-2 text-sm text-slate-700 bg-white border border-slate-200 p-6 rounded-2xl shadow-sm">
-              <li>Trimiteți o Notificare Oficială la <strong>contact@rently.ro</strong>.</li>
+              <li>Trimiteți o Notificare Oficială la <strong>contact.rently@gmail.com</strong>.</li>
               <li>Includeți URL-ul (linkul) exact al paginii de pe Rently unde apare conținutul care vă încalcă drepturile.</li>
               <li>Atașați dovada calității dumneavoastră de proprietar al drepturilor (ex: link către prima publicare oficială pe site-ul dvs, actul de proprietate, fotografiile brute RAW).</li>
               <li>Formulați o declarație sub sancțiunea falsului în înscrisuri cum că sunteți persoana vătămată sau reprezentantul autorizat al acesteia.</li>
@@ -620,7 +620,7 @@ export default function UltimateTermsAndConditionsPage() {
             <div className="space-y-4">
               <div className="bg-slate-50 border border-slate-200 p-5 rounded-xl">
                 <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2"><span className="text-blue-600 bg-blue-100 w-6 h-6 rounded-full flex items-center justify-center text-xs">1</span> Medierea Amiabilă Prealabilă (Obligatorie)</h4>
-                <p className="text-sm text-slate-700 m-0">Înainte de a declanșa orice acțiune litigioasă în instanță sau o plângere la ANPC, vă asumați obligația contractuală de a ne notifica în scris problema la adresa <strong>contact@rently.ro</strong>. Vom dispune de un termen de grație de <strong>30 de zile calendaristice</strong> pentru a investiga tehnic și a încerca o rezolvare pe cale amiabilă a diferendului.</p>
+                <p className="text-sm text-slate-700 m-0">Înainte de a declanșa orice acțiune litigioasă în instanță sau o plângere la ANPC, vă asumați obligația contractuală de a ne notifica în scris problema la adresa <strong>contact.rently@gmail.com</strong>. Vom dispune de un termen de grație de <strong>30 de zile calendaristice</strong> pentru a investiga tehnic și a încerca o rezolvare pe cale amiabilă a diferendului.</p>
               </div>
 
               <div className="bg-slate-50 border border-slate-200 p-5 rounded-xl">
@@ -663,8 +663,8 @@ export default function UltimateTermsAndConditionsPage() {
                   <span className="block text-indigo-400 text-[10px] font-black uppercase tracking-[0.2em] mb-4">Adresa Unică de Corespondență</span>
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <span className="text-4xl mb-2 sm:mb-0">✉️</span>
-                    <a href="mailto:contact@rently.ro" className="text-white text-2xl sm:text-3xl md:text-4xl font-black hover:text-blue-400 transition-colors border-b-[3px] border-transparent hover:border-blue-400 pb-1 break-all">
-                      contact@rently.ro
+                    <a href="mailto:contact.rently@gmail.com" className="text-white text-2xl sm:text-3xl md:text-4xl font-black hover:text-blue-400 transition-colors border-b-[3px] border-transparent hover:border-blue-400 pb-1 break-all">
+                      contact.rently@gmail.com
                     </a>
                   </div>
                 </div>

@@ -243,7 +243,7 @@ export default function DiscriminationPolicyPage() {
               <p className="text-slate-300 text-sm mb-6 max-w-2xl mx-auto">
                 Dacă observi un anunț sau primești un mesaj care încalcă regulile de mai sus, te rugăm să folosești imediat butonul <strong>„Raportează”</strong> de pe profilul utilizatorului sau să ne trimiți un e-mail direct. Vom investiga problema în câteva minute.
               </p>
-              <a href="mailto:contact@rently.ro" className="inline-flex items-center justify-center bg-white text-slate-900 font-bold py-3 px-8 rounded-xl hover:bg-slate-100 transition-colors">
+              <a href="mailto:contact.rently@gmail.com" className="inline-flex items-center justify-center bg-white text-slate-900 font-bold py-3 px-8 rounded-xl hover:bg-slate-100 transition-colors">
                 Raportează o problemă &rarr;
               </a>
             </div>

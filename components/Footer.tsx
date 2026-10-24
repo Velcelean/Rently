@@ -67,7 +67,7 @@ export default function Footer() {
             &copy; {currentYear} Rently.ro. Toate drepturile rezervate. Un proiect independent creat în România.
           </p>
           <div className="flex items-center gap-6">
-            <a href="mailto:contact@rently.ro" className="hover:text-white transition-colors">contact@rently.ro</a>
+            <a href="mailto:contact.rently@gmail.com" className="hover:text-white transition-colors">contact.rently@gmail.com</a>
             <Link href="/intrebari-frecvente" className="hover:text-white transition-colors">Centrul de Suport</Link>
           </div>
         </div>

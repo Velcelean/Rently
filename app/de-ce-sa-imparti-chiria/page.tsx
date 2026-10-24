@@ -150,7 +150,7 @@ export default function DeCeSaImpartiChiriaPage() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:contact@rently.ro" className="group flex items-center gap-3 text-slate-600 hover:text-blue-600 font-bold transition-colors p-3 hover:bg-blue-50 rounded-xl -ml-3">
+                <a href="mailto:contact.rently@gmail.com" className="group flex items-center gap-3 text-slate-600 hover:text-blue-600 font-bold transition-colors p-3 hover:bg-blue-50 rounded-xl -ml-3">
                   <div className="w-10 h-10 bg-slate-100 group-hover:bg-blue-100 rounded-lg flex items-center justify-center text-lg transition-colors">✉️</div>
                   Scrie-ne pe E-mail
                 </a>
