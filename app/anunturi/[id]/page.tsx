@@ -6,6 +6,7 @@ import { createBrowserClient } from "@supabase/ssr";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ReportButton from "@/components/ReportButton";
 
 function createClient() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
@@ -51,12 +52,6 @@ export default function AdDetailsPage() {
   const [showContactModal, setShowContactModal] = useState(false);
   const [quickMessage, setQuickMessage] = useState("");
   const [sendingMsg, setSendingMsg] = useState(false);
-
-  // REPORT MODAL STATE
-  const [showReportModal, setShowReportModal] = useState(false);
-  const [reportReason, setReportReason] = useState("scam");
-  const [reportDetails, setReportDetails] = useState("");
-  const [submittingReport, setSubmittingReport] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -205,41 +200,6 @@ export default function AdDetailsPage() {
       alert("A apărut o eroare la trimiterea mesajului.");
     } finally {
       setSendingMsg(false);
-    }
-  };
-
-  // LOGICĂ TRIMITERE RAPORT
-  const handleSendReport = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!currentUser) {
-      alert("Trebuie să fii autentificat pentru a trimite un raport.");
-      router.push("/login");
-      return;
-    }
-
-    setSubmittingReport(true);
-    try {
-      const { error } = await supabase.from("reports").insert([
-        {
-          reporter_id: currentUser.id,
-          reported_user_id: listing?.user_id,
-          listing_id: adId,
-          reason: reportReason,
-          details: reportDetails.trim(),
-          status: "pending"
-        }
-      ]);
-
-      if (error) throw error;
-
-      alert("Raportul a fost trimis! Echipa noastră îl va analiza în cel mai scurt timp.");
-      setShowReportModal(false);
-      setReportDetails("");
-    } catch (err: any) {
-      console.error(err);
-      alert("A apărut o eroare la trimiterea raportului: " + err.message);
-    } finally {
-      setSubmittingReport(false);
     }
   };
 
@@ -518,14 +478,11 @@ export default function AdDetailsPage() {
                     Nu trimite niciodată bani în avans și nu achita garanția înainte de a viziona locuința fizic sau prin apel video cu proprietarul.
                   </p>
                   
-                  {/* BUTON DE RAPORTARE ANUNȚ */}
+                  {/* COMPONENTA NOUĂ DE RAPORTARE */}
                   {!isMyListing && (
-                    <button 
-                      onClick={() => setShowReportModal(true)}
-                      className="w-full pt-3 border-t border-amber-200/60 text-xs font-black text-rose-600 hover:text-rose-800 flex items-center justify-center gap-1.5 transition-colors"
-                    >
-                      🚩 Raportează acest anunț
-                    </button>
+                    <div className="w-full pt-4 mt-2 border-t border-amber-200/60 flex justify-center">
+                      <ReportButton targetId={adId} targetType="LISTING" />
+                    </div>
                   )}
                 </div>
 
@@ -550,46 +507,6 @@ export default function AdDetailsPage() {
             <button onClick={handleSendQuickMessage} disabled={!quickMessage.trim() || sendingMsg} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-xl shadow-lg transition-all disabled:opacity-50">
               {sendingMsg ? "Se trimite..." : "Trimite Primul Mesaj"}
             </button>
-          </div>
-        </div>
-      )}
-
-      {/* MODAL RAPORTARE ANUNȚ */}
-      {showReportModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity">
-          <div className="bg-white rounded-[2rem] w-full max-w-md overflow-hidden shadow-2xl border border-slate-100 relative p-8">
-            <button onClick={() => setShowReportModal(false)} className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-500 rounded-full transition-colors">✕</button>
-            
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-3xl">🚩</span>
-              <h3 className="font-black text-2xl text-slate-900">Raportează Anunțul</h3>
-            </div>
-            <p className="text-slate-500 font-medium text-xs mb-6">Ajută-ne să păstrăm comunitatea Rently sigură. Rapoartele sunt 100% anonime.</p>
-
-            <form onSubmit={handleSendReport} className="space-y-4">
-              <div>
-                <label className="block text-[11px] font-black text-slate-400 uppercase tracking-widest mb-2 ml-1">Motivul Raportului</label>
-                <select value={reportReason} onChange={(e) => setReportReason(e.target.value)} className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl font-bold text-slate-900 text-sm outline-none focus:ring-2 focus:ring-rose-500">
-                  <option value="scam">⚠️ Anunț Fals / Tentativă de Fraudă</option>
-                  <option value="inappropriate">🛑 Limbaj Jignitor / Hărțuire</option>
-                  <option value="fake_photos">📷 Poze False sau Preluate din altă parte</option>
-                  <option value="invalid_info">📞 Date de contact sau adresa incorectă</option>
-                  <option value="other">❓ Alt Motiv</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-[11px] font-black text-slate-400 uppercase tracking-widest mb-2 ml-1">Detalii suplimentare (Opțional)</label>
-                <textarea rows={3} value={reportDetails} onChange={(e) => setReportDetails(e.target.value)} placeholder="Descrie pe scurt ce ți se pare suspect..." className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm font-medium resize-none outline-none focus:ring-2 focus:ring-rose-500" />
-              </div>
-
-              <div className="pt-2 flex gap-3">
-                <button type="button" onClick={() => setShowReportModal(false)} className="flex-1 py-3 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-slate-200 transition-colors text-sm">Renunță</button>
-                <button type="submit" disabled={submittingReport} className="flex-1 py-3 bg-rose-600 hover:bg-rose-700 text-white font-black rounded-xl shadow-md transition-all text-sm disabled:opacity-50">
-                  {submittingReport ? "Se trimite..." : "Trimite Raport"}
-                </button>
-              </div>
-            </form>
           </div>
         </div>
       )}
