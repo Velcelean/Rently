@@ -187,7 +187,7 @@ export default function ContracteInchirierePage() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:contact.rently@gmail.com" className="group flex items-center gap-3 text-slate-600 hover:text-indigo-600 font-bold transition-colors p-3 hover:bg-slate-50 rounded-xl -ml-3">
+                <a href="mailto:rently.studenti@gmail.com" className="group flex items-center gap-3 text-slate-600 hover:text-indigo-600 font-bold transition-colors p-3 hover:bg-slate-50 rounded-xl -ml-3">
                   <div className="w-10 h-10 bg-slate-100 group-hover:bg-indigo-100 rounded-lg flex items-center justify-center text-lg transition-colors">✉️</div>
                   Contactează-ne
                 </a>
