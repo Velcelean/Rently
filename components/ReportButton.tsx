@@ -4,115 +4,127 @@ import { useState } from "react";
 
 interface ReportButtonProps {
   targetId: string;
-  targetType: "USER" | "LISTING";
+  targetType: "LISTING" | "USER";
 }
 
 export default function ReportButton({ targetId, targetType }: ReportButtonProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [reason, setReason] = useState("");
+  const [reason, setReason] = useState("Anunț Fals / Tentativă de Fraudă");
   const [details, setDetails] = useState("");
-  const [status, setStatus] = useState<"IDLE" | "SUBMITTING" | "SUCCESS" | "ERROR">("IDLE");
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("SUBMITTING");
+    setSubmitting(true);
 
     try {
-      const response = await fetch("/api/report", {
+      const res = await fetch("/api/report", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ targetId, targetType, reason, details }),
       });
 
-      if (!response.ok) throw new Error("Eroare la trimitere");
-      
-      // Trecem la starea de succes (Apare bifa verde în modal)
-      setStatus("SUCCESS");
-      
-      // Închidem fereastra automat după 3 secunde și resetăm formularul
+      if (!res.ok) throw new Error("Eroare la trimitere");
+
+      setSuccess(true);
       setTimeout(() => {
+        setSuccess(false);
         setIsOpen(false);
-        setStatus("IDLE");
-        setReason("");
         setDetails("");
-      }, 3000);
-      
-    } catch (error) {
-      setStatus("ERROR");
+      }, 2500);
+    } catch (err) {
+      console.error(err);
+      alert("A apărut o eroare la trimiterea raportului.");
+    } finally {
+      setSubmitting(false);
     }
   };
 
   return (
     <>
-      <button 
+      <button
         onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-red-600 transition-colors"
-        title="Raportează o problemă"
+        className="w-full text-xs font-black text-rose-600 hover:text-rose-800 flex items-center justify-center gap-1.5 transition-colors py-2"
       >
-        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" /></svg>
-        <span>Raportează</span>
+        🚩 Raportează acest anunț
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden animate-in fade-in zoom-in duration-200">
-            
-            {status === "SUCCESS" ? (
-              // MESAJUL NOU DE SUCCES (Fără alert urât)
-              <div className="p-10 text-center">
-                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-5 text-4xl animate-bounce">✓</div>
-                <h4 className="text-xl font-black text-slate-900">Raport Trimis!</h4>
-                <p className="text-slate-500 mt-2 font-medium">Echipa noastră îl va analiza în cel mai scurt timp.</p>
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm overflow-y-auto">
+          <div className="bg-white rounded-[2rem] w-full max-w-md overflow-hidden shadow-2xl border border-slate-100 relative p-6 md:p-8 my-auto">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-500 rounded-full transition-colors font-bold"
+            >
+              ✕
+            </button>
+
+            {success ? (
+              <div className="text-center py-8 space-y-4">
+                <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl font-black">
+                  ✓
+                </div>
+                <h3 className="font-black text-2xl text-slate-900">Raport Trimis!</h3>
+                <p className="text-slate-500 text-sm font-medium">
+                  Mulțumim! Echipa noastră va analiza cazul în cel mai scurt timp.
+                </p>
               </div>
             ) : (
-              // FORMULARUL DE RAPORTARE
               <>
-                <div className="bg-red-50 p-6 border-b border-red-100">
-                  <h3 className="text-xl font-black text-red-900 flex items-center gap-2">
-                    🚨 Raportează acest {targetType === "USER" ? "Utilizator" : "Anunț"}
-                  </h3>
-                  <p className="text-red-700 text-sm mt-2">
-                    Ajută-ne să păstrăm comunitatea sigură. Raportul tău este 100% anonim.
-                  </p>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-3xl">🚨</span>
+                  <h3 className="font-black text-2xl text-slate-900">Raportează acest Anunț</h3>
                 </div>
+                <p className="text-slate-500 font-medium text-xs mb-6">
+                  Ajută-ne să păstrăm comunitatea sigură. Raportul tău este 100% anonim.
+                </p>
 
-                <form onSubmit={handleSubmit} className="p-6 space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-sm font-bold text-slate-700 mb-1">Motivul raportului</label>
-                    <select 
-                      required
+                    <label className="block text-[11px] font-black text-slate-400 uppercase tracking-widest mb-2 ml-1">
+                      Motivul raportului
+                    </label>
+                    <select
                       value={reason}
                       onChange={(e) => setReason(e.target.value)}
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none"
+                      className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl font-bold text-slate-900 text-sm outline-none focus:ring-2 focus:ring-rose-500 cursor-pointer"
                     >
-                      <option value="" disabled>Selectează o problemă...</option>
-                      <option value="SCAM">Anunț Fals / Tentativă de Fraudă</option>
-                      <option value="INAPPROPRIATE">Conținut Inadecvat / Escorte</option>
-                      <option value="HARASSMENT">Limbaj Agresiv</option>
-                      <option value="OTHER">Alt motiv</option>
+                      <option value="Anunț Fals / Tentativă de Fraudă">⚠️ Anunț Fals / Tentativă de Fraudă</option>
+                      <option value="Limbaj Jignitor / Hărțuire">🛑 Limbaj Jignitor / Hărțuire</option>
+                      <option value="Poze False sau Preluate">📷 Poze False sau Preluate din altă parte</option>
+                      <option value="Date de contact sau adresa incorectă">📞 Date de contact sau adresa incorectă</option>
+                      <option value="Alt Motiv">❓ Alt Motiv</option>
                     </select>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-bold text-slate-700 mb-1">Detalii suplimentare</label>
-                    <textarea 
-                      required
+                    <label className="block text-[11px] font-black text-slate-400 uppercase tracking-widest mb-2 ml-1">
+                      Detalii suplimentare
+                    </label>
+                    <textarea
                       rows={3}
                       value={details}
                       onChange={(e) => setDetails(e.target.value)}
                       placeholder="Descrie pe scurt ce ți se pare suspect..."
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none resize-none"
+                      className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm font-medium resize-none outline-none focus:ring-2 focus:ring-rose-500"
                     />
                   </div>
 
-                  {status === "ERROR" && <p className="text-red-600 text-sm font-bold">A apărut o eroare. Te rugăm să încerci din nou.</p>}
-
-                  <div className="flex gap-3 pt-4">
-                    <button type="button" onClick={() => setIsOpen(false)} className="flex-1 py-3 font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors">
+                  <div className="pt-2 flex gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setIsOpen(false)}
+                      className="flex-1 py-3.5 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-slate-200 transition-colors text-sm"
+                    >
                       Renunță
                     </button>
-                    <button type="submit" disabled={status === "SUBMITTING"} className="flex-1 py-3 font-bold text-white bg-red-600 hover:bg-red-700 rounded-xl transition-colors disabled:opacity-50">
-                      {status === "SUBMITTING" ? "Se trimite..." : "Trimite"}
+                    <button
+                      type="submit"
+                      disabled={submitting}
+                      className="flex-1 py-3.5 bg-rose-600 hover:bg-rose-700 text-white font-black rounded-xl shadow-md transition-all text-sm disabled:opacity-50"
+                    >
+                      {submitting ? "Se trimite..." : "Trimite"}
                     </button>
                   </div>
                 </form>
