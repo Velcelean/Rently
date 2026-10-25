@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ReportButton from "./ReportButton";
 
 interface AnuntData {
   id: string;
@@ -10,12 +11,10 @@ interface AnuntData {
   tip_anunt: 'oferta_camera' | 'cerere_camera';
   image_url?: string;
   image_urls?: string[];
-  // Putem adăuga aici și alte câmpuri pe care vrei să le afișăm
   tip_locuinta?: string; 
 }
 
 export default function AnuntCard({ data }: { data: AnuntData }) {
-  // Aici putem pune logica de formatare vizuală
   const esteOferta = data.tip_anunt === 'oferta_camera';
   const label = esteOferta ? 'Se Oferă' : 'Se Caută';
   const bgColor = esteOferta ? 'bg-blue-600' : 'bg-orange-500';
@@ -52,14 +51,22 @@ export default function AnuntCard({ data }: { data: AnuntData }) {
           {data.city}
         </div>
 
-        {/* Preț */}
+        {/* Preț și Acțiuni */}
         <div className="flex items-end justify-between pt-4 border-t border-gray-100">
           <div>
             <span className="block text-2xl font-black text-gray-900">{data.price}€</span>
             <span className="text-xs text-gray-400 font-medium">preț lunar</span>
           </div>
-          <div className="bg-gray-100 text-gray-600 p-2 rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-colors">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/></svg>
+          
+          <div className="flex items-center gap-3">
+            {/* Oprim propagarea click-ului pentru a nu declanșa link-ul părintelui */}
+            <div onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}>
+              <ReportButton targetId={data.id} targetType="LISTING" />
+            </div>
+            
+            <div className="bg-gray-100 text-gray-600 p-2 rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-colors">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
           </div>
         </div>
       </div>
