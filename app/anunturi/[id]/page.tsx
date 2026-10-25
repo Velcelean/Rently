@@ -245,14 +245,6 @@ export default function AdDetailsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className={`text-xs font-black px-3.5 py-1.5 rounded-lg uppercase tracking-widest text-white ${listing.tip_anunt?.includes('CAUT') ? 'bg-indigo-600' : 'bg-blue-600'}`}>
-                    {listing.tip_anunt || "Ofertă"}
-                  </span>
-                  <span className="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider">
-                    {listing.tip_locuinta?.replace('_', ' ') || "Cameră"}
-                  </span>
-                </div>
                 <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
                   {listing.title}
                 </h1>
@@ -478,7 +470,7 @@ export default function AdDetailsPage() {
                     Nu trimite niciodată bani în avans și nu achita garanția înainte de a viziona locuința fizic sau prin apel video cu proprietarul.
                   </p>
                   
-                  {/* COMPONENTA NOUĂ DE RAPORTARE */}
+                  {/* Butonul de raportare pe pagina de detaliu */}
                   {!isMyListing && (
                     <div className="w-full pt-4 mt-2 border-t border-amber-200/60 flex justify-center">
                       <ReportButton targetId={adId} targetType="LISTING" />
