@@ -369,7 +369,7 @@ export default function FAQPage() {
                 Ai găsit colegul perfect și nu mai ai nevoie de noi? Ne bucurăm! 
               </p>
               <p>
-                Dacă vrei să îți radiezi complet prezența de pe site, o poți face tu însuți. Conform politicilor noastre GDPR de confidențialitate, la ștergerea contului vom distruge ireversibil toate anunțurile tale, profilul tău și istoricul tău de pe platformă. Dacă dorești să faci acest lucru, te rugăm să ne scrii un e-mail la <strong>privacy@Rently.ro</strong> de pe adresa ta înregistrată, iar contul tău va fi volatilizat în maxim 48 de ore.
+                Conform politicilor noastre GDPR de confidențialitate, ștergerea contului va distruge ireversibil toate anunțurile, profilul și istoricul tău de pe platformă. Pentru a face acest lucru, accesează secțiunea <strong>Profilul meu</strong> și folosește butonul dedicat pentru ștergerea definitivă a contului.
               </p>
             </FaqItem>
           </FaqCategory>
