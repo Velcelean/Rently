@@ -11,8 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 // 1. METADATELE SITE-ULUI (SEO & Social Media)
 // ==========================================
 export const metadata: Metadata = {
-  title: "Rently - Găsește colegi de apartament și chirii",
-  description: "Platforma #1 din România pentru colegi de apartament și chirii pe termen lung. 100% gratuit, sigur și fără comisioane.",
+  title: "Rently România | Platformă de Chirii și Colegi de Apartament",
+  description: "Găsește colegul de apartament perfect sau chiriile ideale în România. Rently te ajută să împarți costurile simplu și sigur, fără comisioane.",
+  keywords: ["rently romania", "rently chirii", "colegi de apartament", "caut coleg camera", "inchirieri directe", "flatsharing romania"],
 };
 
 // ==========================================
