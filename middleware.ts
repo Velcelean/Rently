@@ -28,7 +28,7 @@ const SECURITY_CONFIG = {
   BANNED_IPS: new Set([
     '203.0.113.50',
     '198.51.100.25',
-    '185.15.59.224' // Ransomware node examplu
+    '185.15.59.224' // Ransomware node exemplu
   ])
 };
 
@@ -152,17 +152,18 @@ function generateBlockResponse(reason: string, status: number, req: NextRequest)
 export function middleware(request: NextRequest) {
   cleanupCache();
 
-  // 1. Extragere Metadate Client
-  const clientIp = request.ip || 
+  // 1. Extragere Metadate Client (Compatibil Next.js 15 & Vercel Edge)
+  const clientIp = (request as any).ip || 
                    request.headers.get('x-real-ip') || 
-                   request.headers.get('x-forwarded-for')?.split(',')[0] || 
+                   request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 
                    'Unknown';
                    
   const userAgent = request.headers.get('user-agent');
   
   // Extragerea țării de proveniență oferită nativ de Vercel Edge
-  // (Funcționează exclusiv în mediul de producție Vercel)
-  const country = request.geo?.country || 'Unknown';
+  const country = (request as any).geo?.country || 
+                  request.headers.get('x-vercel-ip-country') || 
+                  'Unknown';
 
   // 2. SCUTUL 1: IP Blacklist Check
   if (SECURITY_CONFIG.BANNED_IPS.has(clientIp)) {
