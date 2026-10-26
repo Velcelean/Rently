@@ -41,10 +41,9 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-white mb-6 uppercase tracking-widest text-xs">Comunitate</h3>
             <ul className="space-y-4 text-sm font-medium">
-              <li><Link href="/despre-noi" className="hover:text-blue-400 transition-colors">Despre Noi</Link></li>
-              <li><Link href="/de-ce-Rently" className="hover:text-blue-400 transition-colors">De ce Rently?</Link></li>
-              <li><Link href="/de-ce-sa-imparti-chiria" className="hover:text-blue-400 transition-colors">Ghid: Flatsharing</Link></li>
-              <li><Link href="/programul-inchiriaza-o-camera" className="hover:text-blue-400 transition-colors">Ghid: Pentru Proprietari</Link></li>
+              <li><Link href="/despre-noi" className="hover:text-blue-400 transition-colors">Despre Noi / De ce Rently?</Link></li>
+              <li><Link href="/" className="hover:text-blue-400 transition-colors">Ghid: Flatsharing</Link></li>
+              <li><Link href="/" className="hover:text-blue-400 transition-colors">Ghid: Pentru Proprietari</Link></li>
             </ul>
           </div>
 
@@ -52,26 +51,14 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-white mb-6 uppercase tracking-widest text-xs">Suport & Juridic</h3>
             <ul className="space-y-4 text-sm font-medium">
-              <li><Link href="/intrebari-frecvente" className="text-blue-400 hover:text-white transition-colors flex items-center gap-2">Întrebări Frecvente (FAQ) <span className="w-2 h-2 rounded-full bg-blue-500"></span></Link></li>
-              <li><Link href="/politica-anti-discriminare" className="hover:text-blue-400 transition-colors">Politica Anti-Discriminare</Link></li>
-              <li><Link href="/termeni-si-conditii" className="hover:text-blue-400 transition-colors">Termeni și Condiții</Link></li>
-              <li><Link href="/politica-de-confidentialitate" className="hover:text-blue-400 transition-colors">Politica de Confidențialitate</Link></li>
-              <li><Link href="/setari-cookies" className="hover:text-blue-400 transition-colors">Setări Cookies</Link></li>
+              <li><Link href="/" className="text-blue-400 hover:text-white transition-colors flex items-center gap-2">Întrebări Frecvente (FAQ) <span className="w-2 h-2 rounded-full bg-blue-500"></span></Link></li>
+              <li><Link href="/" className="hover:text-blue-400 transition-colors">Politica Anti-Discriminare</Link></li>
+              <li><Link href="/" className="hover:text-blue-400 transition-colors">Termeni și Condiții</Link></li>
+              <li><Link href="/" className="hover:text-blue-400 transition-colors">Politica de Confidențialitate</Link></li>
+              <li><Link href="/" className="hover:text-blue-400 transition-colors">Setări Cookies</Link></li>
             </ul>
           </div>
           
         </div>
 
-        <div className="border-t border-slate-800/80 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-slate-500">
-          <p>
-            &copy; {currentYear} Rently.ro. Toate drepturile rezervate. Un proiect independent creat în România.
-          </p>
-          <div className="flex items-center gap-6">
-            <a href="mailto:rently.studenti@gmail.com" className="hover:text-white transition-colors">rently.studenti@gmail.com</a>
-            <Link href="/intrebari-frecvente" className="hover:text-white transition-colors">Centrul de Suport</Link>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
+        <div className="border-t border-slate-800/80 pt-8
