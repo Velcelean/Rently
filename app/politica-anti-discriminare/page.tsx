@@ -66,8 +66,6 @@ const ExampleBox = ({ type, title, text }: { type: 'good' | 'bad', title: string
 );
 
 export default function DiscriminationPolicyPage() {
-  const mailToLink = "mailto:rently.studenti@gmail.com?subject=Raport%20Abuz%20Rently&body=Buna%20ziua,%0D%0A%0D%0ADoresc%20sa%20raportez%20urmatoarea%20problema%20pe%20platforma%20Rently:%0D%0A%0D%0A[Va%20rugam%20sa%20descrieti%20problema%20aici%20si%20sa%20atasati%20un%20link%20catre%20anunt/utilizator]%0D%0A%0D%0AMultumesc.";
-
   return (
     <div className="min-h-screen bg-[#f8fafc] flex flex-col font-sans selection:bg-blue-200 selection:text-blue-900">
       <Header />
@@ -241,12 +239,9 @@ export default function DiscriminationPolicyPage() {
 
             <div className="mt-8 bg-slate-900 p-8 rounded-3xl text-center shadow-lg">
               <h4 className="font-black text-white text-xl mb-4">Ajută-ne să păstrăm comunitatea curată</h4>
-              <p className="text-slate-300 text-sm mb-6 max-w-2xl mx-auto">
+              <p className="text-slate-300 text-sm mb-0 max-w-2xl mx-auto">
                 Dacă observi un anunț sau primești un mesaj care încalcă regulile de mai sus, te rugăm să folosești imediat butonul <strong>„Raportează”</strong> de pe profilul utilizatorului sau să ne trimiți un e-mail direct. Vom investiga problema în câteva minute.
               </p>
-              <a href={mailToLink} className="inline-flex items-center justify-center bg-white text-slate-900 font-bold py-3 px-8 rounded-xl hover:bg-slate-100 transition-colors">
-                Raportează o problemă &rarr;
-              </a>
             </div>
           </PolicySection>
 
