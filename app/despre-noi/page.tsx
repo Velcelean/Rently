@@ -4,7 +4,6 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-// Componentă reutilizabilă pentru cardurile de valori
 const ValueCard = ({ icon, title, description }: { icon: string, title: string, description: string }) => (
   <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-xl shadow-slate-200/20 hover:-translate-y-2 transition-transform duration-500 group">
     <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
@@ -24,9 +23,7 @@ export default function DespreNoiPage() {
       
       <main className="flex-grow">
         
-        {/* HERO SECTION - MODERN & BOLD */}
         <div className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#020617]">
-          {/* Efecte de background */}
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/20 rounded-full blur-[120px] transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] transform -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
@@ -46,7 +43,6 @@ export default function DespreNoiPage() {
           </div>
         </div>
 
-        {/* SCRISOAREA FONDATORULUI (THE MANIFESTO) */}
         <div className="py-20 bg-white relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-slate-50 border border-slate-200 rounded-[3rem] p-8 md:p-14 relative shadow-xl">
@@ -84,9 +80,7 @@ export default function DespreNoiPage() {
           </div>
         </div>
 
-        {/* VALORILE NOASTRE (GRID) */}
         <div className="py-24 bg-slate-50 relative overflow-hidden">
-          {/* Decor */}
           <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-400/10 rounded-full blur-[100px] transform -translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -105,7 +99,7 @@ export default function DespreNoiPage() {
               <ValueCard 
                 icon="🤝"
                 title="Comunitate Reală"
-                description="Credem că o casă nu înseamnă doar pereți, ci și oamenii cu care o împarți. Prin profiluri detaliate și filtre de stil de viață (inclusiv pet-friendly sau LGBTQ+), te ajutăm să găsești compatibilitate, nu doar un pat."
+                description="Credem că o casă nu înseamnă doar pereți, ci și oamenii cu care o împarți. Prin profiluri detaliate și filtre de stil de viață (inclusiv preferințe pentru fumat sau pet-friendly), te ajutăm să găsești compatibilitate, nu doar un pat."
               />
               <ValueCard 
                 icon="🛡️"
@@ -131,7 +125,6 @@ export default function DespreNoiPage() {
           </div>
         </div>
 
-        {/* COMPARATIE: OLD WAY VS Rently */}
         <div className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-[#020617] rounded-[3rem] p-8 md:p-16 shadow-2xl relative overflow-hidden">
@@ -139,7 +132,6 @@ export default function DespreNoiPage() {
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
                 
-                {/* Modul Vechi */}
                 <div className="space-y-8">
                   <h3 className="text-3xl font-black text-slate-400 flex items-center gap-3">
                     <span className="text-red-500">❌</span> Modul Vechi
@@ -160,7 +152,6 @@ export default function DespreNoiPage() {
                   </ul>
                 </div>
 
-                {/* Modul Rently */}
                 <div className="space-y-8 bg-blue-600/10 p-8 rounded-3xl border border-blue-500/20 relative">
                   <div className="absolute -top-4 -right-4 bg-blue-600 text-white text-xs font-black uppercase tracking-widest px-4 py-2 rounded-full shadow-lg transform rotate-3">
                     Evoluția
@@ -189,7 +180,6 @@ export default function DespreNoiPage() {
           </div>
         </div>
 
-        {/* CTA FINAL */}
         <div className="py-24 bg-white text-center">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">
