@@ -32,13 +32,6 @@ export default function DespreNoiPage() {
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-5 py-2.5 text-xs font-black text-blue-300 uppercase tracking-[0.2em] mb-8 backdrop-blur-md">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
-              </span>
-              Proiect Independent Românesc
-            </div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter text-white leading-tight">
               Împarte chiria. <br className="hidden md:block"/>
@@ -79,12 +72,12 @@ export default function DespreNoiPage() {
               </div>
               
               <div className="mt-10 pt-8 border-t border-slate-200 flex items-center gap-4">
-                <div className="w-14 h-14 bg-slate-900 text-white rounded-full flex items-center justify-center font-black text-xl shadow-md">
-                  R
+                <div className="w-14 h-14 bg-slate-200 rounded-full overflow-hidden flex items-center justify-center shadow-md shrink-0 border-2 border-white">
+                  <img src="/bogdan.jpg" alt="Bogdan Velcelean" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <p className="font-black text-slate-900 text-lg">Fondator Rently</p>
-                  <p className="text-slate-500 text-sm font-bold uppercase tracking-wider">Solo Developer • România</p>
+                  <p className="font-black text-slate-900 text-lg">Bogdan Velcelean</p>
+                  <p className="text-slate-500 text-sm font-bold uppercase tracking-wider">Fondator Rently</p>
                 </div>
               </div>
             </div>
@@ -213,14 +206,6 @@ export default function DespreNoiPage() {
               <Link href="/anunturi" className="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-lg py-4 px-10 rounded-xl transition-all shadow-sm">
                 Explorează Ofertele
               </Link>
-            </div>
-            
-            <div className="mt-12 flex justify-center gap-6 text-sm font-bold text-slate-400">
-              <Link href="/termeni-si-conditii" className="hover:text-blue-600 transition">Termeni și Condiții</Link>
-              <span>•</span>
-              <Link href="/politica-de-confidentialitate" className="hover:text-blue-600 transition">Confidențialitate</Link>
-              <span>•</span>
-              <a href="mailto:rently.studenti@gmail.com" className="hover:text-blue-600 transition">Contactează-ne</a>
             </div>
           </div>
         </div>
