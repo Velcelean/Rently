@@ -178,7 +178,8 @@ export default function HomePage() {
             ) : latestAds.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {latestAds.map((ad) => {
-                  const imgUrl = ad.imagine_principala || ad.image_url || (ad.imagini && ad.imagini[0]) || null;
+                  const hasImage = ad.imagine_principala || ad.image_url || (ad.imagini && ad.imagini.length > 0) || (ad.image_urls && ad.image_urls.length > 0);
+                  const imgUrl = ad.imagine_principala || ad.image_url || (ad.imagini && ad.imagini[0]) || (ad.image_urls && ad.image_urls[0]) || null;
                   const title = ad.titlu || ad.title || "Anunț";
                   const city = ad.oras || ad.city || ad.locatie || "Locație nespecificată";
                   const price = ad.pret || ad.price || 0;
@@ -186,13 +187,24 @@ export default function HomePage() {
                   return (
                     <Link href={`/anunturi/${ad.id}`} key={ad.id} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer flex flex-col">
                       
-                      <div className="relative h-48 overflow-hidden bg-slate-200">
-                        {imgUrl ? (
+                      <div className="relative h-48 overflow-hidden bg-slate-50">
+                        {hasImage ? (
                           <img src={imgUrl} alt={title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                         ) : (
-                          <div className="w-full h-full flex flex-col items-center justify-center text-slate-400 bg-slate-100">
-                            <span className="text-3xl mb-2">📷</span>
-                            <span className="text-xs font-bold uppercase tracking-wider">Fără imagine</span>
+                          // Noul UI (Logo R.) pentru anunțurile fără imagini pe pagina principală
+                          <div className="w-full h-full bg-gradient-to-br from-slate-900 via-[#0f172a] to-slate-800 flex flex-col items-center justify-center text-white relative overflow-hidden group-hover:scale-105 transition-transform duration-500 border-b border-slate-800">
+                            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 rounded-full blur-[40px] transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+                            <div className="absolute bottom-0 left-0 w-32 h-32 bg-indigo-600/20 rounded-full blur-[40px] transform -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+                            
+                            <div className="relative z-10 flex flex-col items-center text-center px-4">
+                              <div className="w-12 h-12 bg-white rounded-[0.8rem] flex items-center justify-center mb-3 shadow-2xl">
+                                <span className="font-black text-blue-700 text-2xl tracking-tighter -ml-0.5">R.</span>
+                              </div>
+                              <span className="font-bold text-sm text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
+                                Fără fotografii
+                              </span>
+                            </div>
                           </div>
                         )}
                       </div>
