@@ -70,7 +70,7 @@ const AlertBox = ({ icon, title, text, type = "info" }: { icon: string, title: s
 };
 
 // ==========================================
-// PAGINA PRINCIPALĂ FAQ (1000+ Linii)
+// PAGINA PRINCIPALĂ FAQ
 // ==========================================
 
 export default function FAQPage() {
@@ -90,7 +90,8 @@ export default function FAQPage() {
             Centrul de Suport
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">
+          {/* Adăugarea de padding vertical (py-4) și leading-normal repară tăierea diacriticelor de către bg-clip-text */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 py-4 leading-normal">
             Întrebări Frecvente
           </h1>
           
@@ -318,7 +319,7 @@ export default function FAQPage() {
               </p>
               <ul>
                 <li>Sunt la muncă sau la facultate și nu au văzut notificarea de pe e-mail.</li>
-                <li>Camera s-a închiriat deja, dar au uitat să șteargă anunțul de pe site (lucru pentru care lucrăm activ să îl automatizăm).</li>
+                <li>Camera s-a închiriat deja, but au uitat să șteargă anunțul de pe site (lucru pentru care lucrăm activ să îl automatizăm).</li>
                 <li>Au primit zeci de mesaje și durează până le răspund tuturor.</li>
               </ul>
               <p>
