@@ -13,23 +13,6 @@ function createClient() {
   return createBrowserClient(supabaseUrl, supabaseKey);
 }
 
-// Funcția magică care transformă textul de sistem în text premium vizual
-const formatareEticheta = (valoare: string | undefined | null) => {
-  if (!valoare) return "";
-  
-  const etichete: Record<string, string> = {
-    'camera_privata': 'Cameră Privată',
-    'camera_partajata': 'Cameră Partajată',
-    'apartament_intreg': 'Apartament Întreg',
-    'single': 'Cameră Single',
-    'dubla': 'Cameră Dublă',
-    'oferta_camera': 'Se Oferă',
-    'cerere_camera': 'Se Caută'
-  };
-
-  return etichete[valoare.toLowerCase()] || valoare.replace(/_/g, ' ').toUpperCase();
-};
-
 export default function HomePage() {
   const [supabase] = useState(() => createClient());
   const [latestAds, setLatestAds] = useState<any[]>([]);
@@ -199,10 +182,6 @@ export default function HomePage() {
                   const title = ad.titlu || ad.title || "Anunț";
                   const city = ad.oras || ad.city || ad.locatie || "Locație nespecificată";
                   const price = ad.pret || ad.price || 0;
-                  
-                  // Aici folosim funcția de formatare vizuală
-                  const labelType = formatareEticheta(ad.tip_anunt || ad.type || "oferta_camera");
-                  const roomType = formatareEticheta(ad.tip_locuinta || ad.tip_camera || ad.room_type || "camera_privata");
 
                   return (
                     <Link href={`/anunturi/${ad.id}`} key={ad.id} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer flex flex-col">
@@ -216,16 +195,9 @@ export default function HomePage() {
                             <span className="text-xs font-bold uppercase tracking-wider">Fără imagine</span>
                           </div>
                         )}
-                        
-                        <div className={`absolute top-4 left-4 text-white text-[10px] font-black px-3 py-1.5 rounded-lg uppercase tracking-widest shadow-md ${labelType.includes('Caută') ? 'bg-indigo-600' : 'bg-blue-600'}`}>
-                          {labelType}
-                        </div>
                       </div>
                       
                       <div className="p-5 flex flex-col flex-grow">
-                        <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">
-                          {roomType}
-                        </div>
                         <h3 className="font-bold text-slate-900 text-lg mb-4 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
                           {title}
                         </h3>
