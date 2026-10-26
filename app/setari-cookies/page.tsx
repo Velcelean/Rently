@@ -178,34 +178,12 @@ export default function AdvancedCookieSettingsPage() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-600/50 rounded-full px-4 py-1.5 text-xs font-black text-blue-300 uppercase tracking-widest mb-6 backdrop-blur-md">
-              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-              Privacy & Consent Management Platform
-            </div>
             <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
               Centrul de Preferințe <br className="hidden md:block"/> pentru Cookie-uri
             </h1>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed font-light">
               Aveți control deplin asupra amprentei dumneavoastră digitale. Respectăm Directiva ePrivacy și GDPR, oferindu-vă transparență totală asupra tehnologiilor de stocare a datelor.
             </p>
-          </div>
-
-          {/* Consent Receipt Mini-Card */}
-          <div className="bg-slate-800/60 border border-slate-700 p-5 rounded-2xl backdrop-blur-md shrink-0 w-full md:w-auto shadow-2xl">
-            <div className="flex items-center gap-2 mb-4 border-b border-slate-700 pb-2">
-              <svg className="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              <h3 className="font-bold text-sm uppercase tracking-wider text-slate-200">Stare Consimțământ</h3>
-            </div>
-            <div className="space-y-3">
-              <div>
-                <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Consent ID (Anonimizat)</p>
-                <p className="text-xs font-mono text-slate-300 truncate max-w-[200px]">{consentId}</p>
-              </div>
-              <div>
-                <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Ultima Actualizare</p>
-                <p className="text-sm font-medium text-slate-300">{consentDate}</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
