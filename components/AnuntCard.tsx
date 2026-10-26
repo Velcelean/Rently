@@ -14,16 +14,39 @@ interface AnuntData {
 }
 
 export default function AnuntCard({ data }: { data: AnuntData }) {
+  // Verificăm dacă există cel puțin o imagine validă
+  const hasImage = data.image_url || (data.image_urls && data.image_urls.length > 0);
+  const imageUrl = data.image_url || (data.image_urls ? data.image_urls[0] : "");
+
   return (
     <Link href={`/anunturi/${data.id}`} className="group block bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
       
       {/* Imaginea - zona de header */}
-      <div className="aspect-[16/10] relative overflow-hidden">
-        <img 
-          src={data.image_url || data.image_urls?.[0] || "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=600&auto=format&fit=crop"} 
-          alt={data.title} 
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
+      <div className="aspect-[16/10] relative overflow-hidden bg-slate-50">
+        {hasImage ? (
+          <img 
+            src={imageUrl} 
+            alt={data.title} 
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-slate-900 via-[#0f172a] to-slate-800 flex flex-col items-center justify-center text-white relative overflow-hidden group-hover:scale-105 transition-transform duration-500 border-b border-slate-800">
+            {/* Efecte de fundal abstracte */}
+            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 rounded-full blur-[40px] transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-indigo-600/20 rounded-full blur-[40px] transform -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+            
+            {/* Conținutul Cadrului Generat */}
+            <div className="relative z-10 flex flex-col items-center text-center px-4">
+              <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-2xl mb-3 shadow-xl backdrop-blur-md">
+                🤝
+              </div>
+              <span className="font-bold text-sm text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
+                Fără fotografii
+              </span>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Detalii anunț */}
