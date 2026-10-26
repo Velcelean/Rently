@@ -97,40 +97,12 @@ export default function UltimateTermsAndConditionsPage() {
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col xl:flex-row justify-between items-start xl:items-end gap-12 border-b border-slate-800/80 pb-16">
             <div className="max-w-5xl">
-              <div className="inline-flex items-center gap-3 bg-slate-900/90 border border-slate-700/60 rounded-full px-5 py-2.5 text-xs font-black text-indigo-300 uppercase tracking-[0.25em] mb-8 backdrop-blur-md shadow-2xl ring-1 ring-white/10">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-500"></span>
-                </span>
-                Contract Juridic Obligatoriu | V. 3.0.0
-              </div>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">
                 Termeni și <br className="hidden md:block" /> Condiții Generale
               </h1>
               <p className="text-slate-400 text-lg md:text-2xl leading-relaxed font-light max-w-4xl">
                 Regulamentul oficial, extins și imperativ al platformei Rently. Acest document guvernează drepturile, obligațiile și limitele de răspundere dintre utilizatori și Operator.
               </p>
-            </div>
-            
-            <div className="bg-slate-900/80 border border-slate-700/80 p-8 rounded-[2rem] backdrop-blur-xl shrink-0 w-full xl:w-auto shadow-2xl ring-1 ring-white/5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-8">
-                <div>
-                  <p className="text-[10px] text-slate-500 uppercase tracking-widest font-black mb-2">Statut Comercial</p>
-                  <p className="text-base font-bold text-green-400 flex items-center gap-2">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    Proiect Liber / Zero Plăți
-                  </p>
-                </div>
-                <div className="hidden sm:block xl:hidden w-px h-full bg-slate-800"></div>
-                <div className="hidden xl:block h-px w-full bg-slate-800"></div>
-                <div>
-                  <p className="text-[10px] text-slate-500 uppercase tracking-widest font-black mb-2">Data Intrării în Vigoare</p>
-                  <p className="text-base font-bold text-indigo-300 flex items-center gap-2">
-                    <svg className="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                    {new Date().toLocaleDateString('ro-RO')} (Efect Imediat)
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
