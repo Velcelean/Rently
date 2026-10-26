@@ -233,6 +233,7 @@ export default function AdDetailsPage() {
     );
   }
 
+  // Verificăm dacă există cel puțin o imagine validă
   const allImages = listing.image_urls || (listing.image_url ? [listing.image_url] : []);
   const isMyListing = currentUser?.id === listing.user_id;
 
@@ -270,6 +271,7 @@ export default function AdDetailsPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {/* SECȚIUNEA PENTRU IMAGINE/FALLBACK */}
           {allImages.length > 0 ? (
             <div className="space-y-4">
               <div className="w-full h-[350px] md:h-[500px] rounded-[2.5rem] overflow-hidden shadow-xl bg-slate-900 relative">
@@ -289,9 +291,24 @@ export default function AdDetailsPage() {
               )}
             </div>
           ) : (
-            <div className="w-full h-72 rounded-[2.5rem] bg-slate-200 flex flex-col items-center justify-center text-slate-400">
-              <span className="text-5xl mb-2">📷</span>
-              <span className="font-bold">Acest anunț nu are fotografii atașate</span>
+            // APLICARE DESIGN NOU (Gradient + Icon) PENTRU ANUNȚURILE FĂRĂ FOTOGRAFII
+            <div className="w-full h-[350px] md:h-[500px] rounded-[2.5rem] bg-gradient-to-br from-slate-900 via-[#0f172a] to-slate-800 flex flex-col items-center justify-center text-white relative overflow-hidden shadow-xl border border-slate-800">
+              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+              <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/20 rounded-full blur-[80px] transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+              <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-600/20 rounded-full blur-[80px] transform -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+              
+              <div className="relative z-10 flex flex-col items-center text-center px-6">
+                <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-2xl backdrop-blur-md">
+                  🤝
+                </div>
+                <h3 className="text-2xl md:text-3xl font-black mb-3 text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
+                  Anunț fără fotografii
+                </h3>
+                <p className="text-slate-400 font-medium max-w-md text-sm md:text-base leading-relaxed">
+                  Acest utilizator caută un coleg de apartament sau o locuință și nu a atașat imagini profilului. 
+                  Folosește mesageria internă pentru a intra în contact.
+                </p>
+              </div>
             </div>
           )}
         </div>
