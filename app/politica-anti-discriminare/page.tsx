@@ -66,6 +66,8 @@ const ExampleBox = ({ type, title, text }: { type: 'good' | 'bad', title: string
 );
 
 export default function DiscriminationPolicyPage() {
+  const mailToLink = "mailto:rently.studenti@gmail.com?subject=Raport%20Abuz%20Rently&body=Buna%20ziua,%0D%0A%0D%0ADoresc%20sa%20raportez%20urmatoarea%20problema%20pe%20platforma%20Rently:%0D%0A%0D%0A[Va%20rugam%20sa%20descrieti%20problema%20aici%20si%20sa%20atasati%20un%20link%20catre%20anunt/utilizator]%0D%0A%0D%0AMultumesc.";
+
   return (
     <div className="min-h-screen bg-[#f8fafc] flex flex-col font-sans selection:bg-blue-200 selection:text-blue-900">
       <Header />
@@ -103,7 +105,7 @@ export default function DiscriminationPolicyPage() {
           <div className="sticky top-10 bg-white p-6 rounded-[2rem] border border-slate-200 shadow-2xl shadow-slate-200/50">
             <h3 className="font-black text-slate-900 mb-6 uppercase tracking-widest text-[11px] border-b border-slate-100 pb-4">Cuprinsul Politicii</h3>
             <nav className="space-y-1 text-[13px] font-bold h-[calc(100vh-220px)] overflow-y-auto pr-3 custom-scrollbar">
-              <a href="#d1" className="block px-4 py-2.5 text-slate-500 hover:text-blue-700 hover:bg-blue-50/80 rounded-xl transition-all">1. Angajamentul Rently</a>
+               <a href="#d1" className="block px-4 py-2.5 text-slate-500 hover:text-blue-700 hover:bg-blue-50/80 rounded-xl transition-all">1. Angajamentul Rently</a>
               <a href="#d2" className="block px-4 py-2.5 text-slate-500 hover:text-blue-700 hover:bg-blue-50/80 rounded-xl transition-all">2. Reguli pentru Proprietari / Agenți</a>
               <a href="#d3" className="block px-4 py-2.5 text-slate-500 hover:text-blue-700 hover:bg-blue-50/80 rounded-xl transition-all">3. Coabitare: Când cauți un coleg</a>
               <a href="#d4" className="block px-4 py-2.5 text-slate-500 hover:text-blue-700 hover:bg-blue-50/80 rounded-xl transition-all">4. Cum scriem un anunț corect</a>
@@ -138,7 +140,6 @@ export default function DiscriminationPolicyPage() {
               <li className="bg-slate-50 border border-slate-100 p-3 rounded-lg flex items-center gap-3"><span className="text-blue-500">🔹</span> Rasă, etnie sau naționalitate</li>
               <li className="bg-slate-50 border border-slate-100 p-3 rounded-lg flex items-center gap-3"><span className="text-blue-500">🔹</span> Dizabilitate fizică sau mentală</li>
               <li className="bg-slate-50 border border-slate-100 p-3 rounded-lg flex items-center gap-3"><span className="text-blue-500">🔹</span> Religie sau credință</li>
-              <li className="bg-slate-50 border border-slate-100 p-3 rounded-lg flex items-center gap-3"><span className="text-blue-500">🔹</span> Orientare sexuală</li>
               <li className="bg-slate-50 border border-slate-100 p-3 rounded-lg flex items-center gap-3"><span className="text-blue-500">🔹</span> Sarcină sau maternitate</li>
               <li className="bg-slate-50 border border-slate-100 p-3 rounded-lg flex items-center gap-3"><span className="text-blue-500">🔹</span> Statut familial (A avea copii)</li>
             </ul>
@@ -243,7 +244,7 @@ export default function DiscriminationPolicyPage() {
               <p className="text-slate-300 text-sm mb-6 max-w-2xl mx-auto">
                 Dacă observi un anunț sau primești un mesaj care încalcă regulile de mai sus, te rugăm să folosești imediat butonul <strong>„Raportează”</strong> de pe profilul utilizatorului sau să ne trimiți un e-mail direct. Vom investiga problema în câteva minute.
               </p>
-              <a href="mailto:rently.studenti@gmail.com" className="inline-flex items-center justify-center bg-white text-slate-900 font-bold py-3 px-8 rounded-xl hover:bg-slate-100 transition-colors">
+              <a href={mailToLink} className="inline-flex items-center justify-center bg-white text-slate-900 font-bold py-3 px-8 rounded-xl hover:bg-slate-100 transition-colors">
                 Raportează o problemă &rarr;
               </a>
             </div>
