@@ -97,20 +97,6 @@ export default function FAQPage() {
           <p className="text-xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed mb-10">
             Află cum funcționează ecosistemul Rently, cum să îți gestionezi anunțurile și cum să folosești platforma în deplină siguranță.
           </p>
-
-          {/* Quick Search Bar (Visual Only) */}
-          <div className="max-w-2xl mx-auto relative group">
-            <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-              <svg className="w-6 h-6 text-slate-400 group-focus-within:text-blue-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-            </div>
-            <input 
-              type="text" 
-              placeholder="Caută o întrebare (ex: cum șterg contul?)" 
-              className="w-full bg-white/10 border border-white/20 text-white rounded-2xl py-4 pl-14 pr-6 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white/20 transition-all backdrop-blur-md placeholder:text-slate-500 text-lg"
-              disabled
-              title="Funcția de căutare va fi disponibilă în curând"
-            />
-          </div>
         </div>
       </div>
 
@@ -125,7 +111,7 @@ export default function FAQPage() {
               </h3>
               <nav className="space-y-1 text-sm font-bold">
                 <a href="#cat-despre" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-blue-700 hover:bg-blue-50 rounded-xl transition-all">
-                  <span className="text-xl">👋</span> 1. Despre Rently
+                  <span className="text-xl">👋</span>1. Despre Rently
                 </a>
                 <a href="#cat-cautare" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:text-blue-700 hover:bg-blue-50 rounded-xl transition-all">
                   <span className="text-xl">🔍</span> 2. Căutare & Vizionări
@@ -140,18 +126,6 @@ export default function FAQPage() {
                   <span className="text-xl">⚙️</span> 5. Contul Meu
                 </a>
               </nav>
-            </div>
-
-            {/* Need More Help Card */}
-            <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-8 rounded-[2rem] shadow-xl text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl transform translate-x-1/2 -translate-y-1/2"></div>
-              <h3 className="font-black text-2xl mb-2 relative z-10">Nu ai găsit răspunsul?</h3>
-              <p className="text-blue-100 mb-6 text-sm leading-relaxed relative z-10">
-                Suntem un proiect independent și răspundem personal la fiecare e-mail. Scrie-ne și te vom ajuta!
-              </p>
-              <a href="mailto:rently.studenti@gmail.com" className="inline-flex items-center justify-center w-full bg-white text-blue-700 font-bold py-3 px-6 rounded-xl hover:bg-blue-50 transition-colors shadow-md relative z-10">
-                Contactează-ne ✉️
-              </a>
             </div>
           </div>
         </aside>
