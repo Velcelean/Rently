@@ -233,6 +233,7 @@ export default function AdDetailsPage() {
     );
   }
 
+  // Verificăm dacă există cel puțin o imagine validă
   const allImages = listing.image_urls || (listing.image_url ? [listing.image_url] : []);
   const isMyListing = currentUser?.id === listing.user_id;
 
@@ -358,7 +359,7 @@ export default function AdDetailsPage() {
                           <span className="font-bold text-slate-800 text-sm">{info.label}</span>
                         </div>
                       );
-                    });}
+                    })}
                   </div>
                 ) : (
                   <p className="text-slate-400 italic">Nu au fost menționate facilități suplimentare.</p>
