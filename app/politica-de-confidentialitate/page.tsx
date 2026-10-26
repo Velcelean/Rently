@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link"; // ACEASTA ESTE LINIA CARE LIPSEA!
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -100,40 +100,12 @@ export default function UltimatePrivacyPolicyPage() {
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col xl:flex-row justify-between items-start xl:items-end gap-12 border-b border-slate-800/80 pb-16">
             <div className="max-w-5xl">
-              <div className="inline-flex items-center gap-3 bg-slate-900/90 border border-slate-700/60 rounded-full px-5 py-2.5 text-xs font-black text-blue-300 uppercase tracking-[0.25em] mb-8 backdrop-blur-md shadow-2xl ring-1 ring-white/10">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
-                </span>
-                Standardul Suprem de Transparență | V. 3.0.0
-              </div>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">
                 Politica Globală <br className="hidden md:block" /> de Confidențialitate
               </h1>
               <p className="text-slate-400 text-lg md:text-2xl leading-relaxed font-light max-w-4xl">
                 Cadrul normativ exhaustiv privind guvernanța datelor, arhitectura de securitate informatică, prelucrarea, retenția și protecția datelor cu caracter personal în ecosistemul Rently.
               </p>
-            </div>
-            
-            <div className="bg-slate-900/80 border border-slate-700/80 p-8 rounded-[2rem] backdrop-blur-xl shrink-0 w-full xl:w-auto shadow-2xl ring-1 ring-white/5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-8">
-                <div>
-                  <p className="text-[10px] text-slate-500 uppercase tracking-widest font-black mb-2">Natura Proiectului</p>
-                  <p className="text-base font-bold text-green-400 flex items-center gap-2">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    100% Gratuit / Solo Developer
-                  </p>
-                </div>
-                <div className="hidden sm:block xl:hidden w-px h-full bg-slate-800"></div>
-                <div className="hidden xl:block h-px w-full bg-slate-800"></div>
-                <div>
-                  <p className="text-[10px] text-slate-500 uppercase tracking-widest font-black mb-2">Conformitate Legislativă</p>
-                  <p className="text-base font-bold text-blue-300 flex items-center gap-2">
-                    <svg className="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
-                    GDPR & ePrivacy Act
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -277,7 +249,7 @@ export default function UltimatePrivacyPolicyPage() {
                   <div>
                     <p className="text-slate-400 mb-1 text-sm font-bold uppercase tracking-wider">Contact Oficial (Data Protection):</p>
                     <p className="font-black text-2xl text-white mb-6 hover:text-blue-300 transition-colors">
-                      <a href="mailto:privacy@Rently.ro">privacy@Rently.ro</a>
+                      <a href="mailto:rently.studenti@gmail.com">rently.studenti@gmail.com</a>
                     </p>
                     
                     <p className="text-slate-400 mb-1 text-sm font-bold uppercase tracking-wider">Jurisdicție Suverană de Operare:</p>
@@ -423,12 +395,7 @@ export default function UltimatePrivacyPolicyPage() {
             <InfoBox type="warning">
               <h4 className="font-black text-lg mb-2">Politica privitoare la caracteristicile vizând viața privată</h4>
               <p className="mb-4">Conform Articolului 9 din GDPR, datele care dezvăluie (chiar și indirect) originile etnice, opiniile politice, afilierile religioase sau orientarea / viața sexuală beneficiază de cel mai înalt grad de protecție legislativă (sunt interzise la prelucrare, cu excepții punctuale).</p>
-              <p className="mb-4">Pe platforma Rently, am introdus filtrul și bifa de compatibilitate <strong>„LGBTQ+ Friendly” 🌈</strong>.</p>
-              <ul className="list-disc pl-5 space-y-2 font-bold mt-2">
-                <li>Acest filtru a fost introdus la cererea comunității, deoarece spațiul de coabitare (camera de apartament) reprezintă nucleul intimității umane. Este esențial ca viitorii colegi de apartament să beneficieze de un mediu 100% sigur (Safe Space), fără judecăți sau conflicte izvorâte din preconcepții.</li>
-                <li><strong>Acționarea acestei bife este 100% Voluntară (Opțională).</strong> Nu veți fi niciodată obligat sau constrâns să o folosiți pentru a posta un anunț.</li>
-                <li>Din punct de vedere legal, bifând această opțiune, ne acordați <strong>Consimțământul Explicit (Art. 9(2)(a) GDPR)</strong> pentru a prelucra, stoca în baza de date și a afișa public pe site această preferință a dumneavoastră, strict în scopul facilitării unui "match" cu un coleg de apartament compatibil.</li>
-              </ul>
+              <p className="mb-4">Pe platforma Rently, nu colectăm, nu procesăm și nu afișăm informații referitoare la aceste categorii speciale sensibile, asigurând astfel un mediu neutru și concentrat exclusiv pe compatibilitatea de coabitare.</p>
             </InfoBox>
           </PolicySection>
 
@@ -817,7 +784,7 @@ export default function UltimatePrivacyPolicyPage() {
                   <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold">1</span>
                   <div>
                     <strong className="block text-slate-900 text-lg mb-1">Inițierea Cererii</strong>
-                    <p>Către cine? Scrieți simplu, direct pe e-mail către <strong className="text-blue-700 text-lg">privacy@Rently.ro</strong>. <br/><br/>
+                    <p>Către cine? Scrieți simplu, direct pe e-mail către <strong className="text-blue-700 text-lg">rently.studenti@gmail.com</strong>. <br/><br/>
                     <strong className="text-red-600 uppercase tracking-widest text-xs">Atenție (Barieră critică de securitate):</strong> Nu vom procesa NICIO cerere dacă este trimisă de pe adresa <em>"bogdan444@yahoo.com"</em> și cereți ștergerea contului de pe <em>"alexandra_chirii@gmail.com"</em>. Ca să putem garanta legal că sunteți "chiar dumneavoastră", trebuie să trimiteți cererea direct din cutia de e-mail asociată contului pe care l-ați făcut la noi. Altfel ne supunem riscului ridicat ca hackeri să închidă conturi aleatorii (Social Engineering attacks).</p>
                   </div>
                 </li>
@@ -832,7 +799,7 @@ export default function UltimatePrivacyPolicyPage() {
                   <span className="bg-slate-300 text-slate-800 w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold">3</span>
                   <div>
                     <strong className="block text-slate-900 text-lg mb-1">Cronometrul de O Lună (SLA)</strong>
-                    <p>Ceasul începe să ticăie în secunda în care am stabilit cine sunteți. Obligația noastră europeană este să livrăm datele/soluția fără întârzieri inutile și sub presiunea unui <strong>termen general de cel mult 30 de zile calendaristice</strong> (O lună). Pentru spețe tehnice hiper-complexe (extragerea unei baze de arhive distruse cu 10,000 de mesaje), prelungim legal termenul la 2 luni, dar vă înștiințăm de această problemă din prima lună.</p>
+                    <p>Ceasul începe să ticăie în secunda în care am stabilit cine sunteți. Obligația noastră europeană este să livrăm datele/soluția fără întârzieri inutile și sub presiunea unui <strong>termen general de cel mult 30 de zile calendaristice</strong> (O lună). Pentru spețe tehnice hiper-complexe (extragerea unei baze de arhive distruse cu 10,000 de mesaje), prelungim legal termenul la 2 luni, but vă înștiințăm de această problemă din prima lună.</p>
                   </div>
                 </li>
               </ul>
@@ -937,8 +904,8 @@ export default function UltimatePrivacyPolicyPage() {
                   <span className="text-4xl">📧</span>
                   <div className="w-full overflow-hidden">
                     <span className="block text-slate-400 text-xs font-bold uppercase tracking-wider mb-2">Trimite-ne un e-mail către DPO la</span>
-                    <a href="mailto:privacy@Rently.ro" className="text-white font-black hover:text-blue-400 transition-colors text-2xl md:text-3xl break-all relative">
-                      privacy@Rently.ro
+                    <a href="mailto:rently.studenti@gmail.com" className="text-white font-black hover:text-blue-400 transition-colors text-2xl md:text-3xl break-all relative">
+                      rently.studenti@gmail.com
                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
                     </a>
                   </div>
