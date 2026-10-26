@@ -377,12 +377,6 @@ export default function AdDetailsPage() {
                     </span>
                   </div>
                   <div className="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                    <span className="font-bold text-slate-700 text-sm">LGBTQ+ Friendly</span>
-                    <span className={`font-black text-xs px-3 py-1.5 rounded-lg ${listing.lgbt_friendly ? 'bg-pink-100 text-pink-700' : 'bg-slate-200 text-slate-600'}`}>
-                      {listing.lgbt_friendly ? "Da 🌈" : "Nu"}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-slate-50 rounded-2xl border border-slate-100">
                     <span className="font-bold text-slate-700 text-sm">Utilități incluse</span>
                     <span className={`font-black text-xs px-3 py-1.5 rounded-lg ${listing.utilitati_incluse ? 'bg-blue-100 text-blue-700' : 'bg-slate-200 text-slate-600'}`}>
                       {listing.utilitati_incluse ? "Incluse în preț ⚡" : "Separate"}
@@ -470,7 +464,6 @@ export default function AdDetailsPage() {
                     Nu trimite niciodată bani în avans și nu achita garanția înainte de a viziona locuința fizic sau prin apel video cu proprietarul.
                   </p>
                   
-                  {/* Butonul de raportare pe pagina de detaliu */}
                   {!isMyListing && (
                     <div className="w-full pt-4 mt-2 border-t border-amber-200/60 flex justify-center">
                       <ReportButton targetId={adId} targetType="LISTING" />
