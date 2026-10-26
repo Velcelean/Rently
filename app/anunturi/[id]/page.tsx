@@ -233,7 +233,6 @@ export default function AdDetailsPage() {
     );
   }
 
-  // Verificăm dacă există cel puțin o imagine validă
   const allImages = listing.image_urls || (listing.image_url ? [listing.image_url] : []);
   const isMyListing = currentUser?.id === listing.user_id;
 
@@ -291,15 +290,15 @@ export default function AdDetailsPage() {
               )}
             </div>
           ) : (
-            // APLICARE DESIGN NOU (Gradient + Icon) PENTRU ANUNȚURILE FĂRĂ FOTOGRAFII
+            // APLICARE DESIGN NOU (Logo R.) PENTRU ANUNȚURILE FĂRĂ FOTOGRAFII
             <div className="w-full h-[350px] md:h-[500px] rounded-[2.5rem] bg-gradient-to-br from-slate-900 via-[#0f172a] to-slate-800 flex flex-col items-center justify-center text-white relative overflow-hidden shadow-xl border border-slate-800">
               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
               <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/20 rounded-full blur-[80px] transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-600/20 rounded-full blur-[80px] transform -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
               
               <div className="relative z-10 flex flex-col items-center text-center px-6">
-                <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-2xl backdrop-blur-md">
-                  🤝
+                <div className="w-20 h-20 bg-white rounded-3xl flex items-center justify-center mb-6 shadow-2xl">
+                  <span className="font-black text-blue-700 text-4xl tracking-tighter -ml-1">R.</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-black mb-3 text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
                   Anunț fără fotografii
@@ -359,7 +358,7 @@ export default function AdDetailsPage() {
                           <span className="font-bold text-slate-800 text-sm">{info.label}</span>
                         </div>
                       );
-                    })}
+                    });}
                   </div>
                 ) : (
                   <p className="text-slate-400 italic">Nu au fost menționate facilități suplimentare.</p>

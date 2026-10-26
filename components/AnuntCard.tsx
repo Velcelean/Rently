@@ -36,10 +36,10 @@ export default function AnuntCard({ data }: { data: AnuntData }) {
             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 rounded-full blur-[40px] transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-indigo-600/20 rounded-full blur-[40px] transform -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
             
-            {/* Conținutul Cadrului Generat */}
+            {/* Logo-ul R. în loc de emoji */}
             <div className="relative z-10 flex flex-col items-center text-center px-4">
-              <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-2xl mb-3 shadow-xl backdrop-blur-md">
-                🤝
+              <div className="w-12 h-12 bg-white rounded-[0.8rem] flex items-center justify-center mb-3 shadow-2xl">
+                <span className="font-black text-blue-700 text-2xl tracking-tighter -ml-0.5">R.</span>
               </div>
               <span className="font-bold text-sm text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
                 Fără fotografii
